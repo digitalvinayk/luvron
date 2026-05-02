@@ -25,7 +25,7 @@ add_action('admin_init', function () {
                 'udyam'      => sanitize_text_field($v['udyam'] ?? 'UDYAM-UP-XX-XXXXXXX'),
                 'msme'       => sanitize_text_field($v['msme'] ?? ''),
                 'iso'        => sanitize_text_field($v['iso'] ?? ''),
-                'founded'    => (int) ($v['founded'] ?? 2018),
+                'founded'    => (int) ($v['founded'] ?? 2022),
                 'dealer_count' => (int) ($v['dealer_count'] ?? 50),
                 'dispatch_sla' => sanitize_text_field($v['dispatch_sla'] ?? '48 hours'),
                 'capacity'   => sanitize_text_field($v['capacity'] ?? '12,000 units / month'),
@@ -47,7 +47,7 @@ function luvron_trust_settings() {
                 <tr><th>GSTIN</th><td><input type="text" class="regular-text" name="<?php echo LUVRON_TRUST_OPT; ?>[gstin]" value="<?php echo esc_attr($o['gstin'] ?? ''); ?>"></td></tr>
                 <tr><th>Udyam (MSME) Reg No.</th><td><input type="text" class="regular-text" name="<?php echo LUVRON_TRUST_OPT; ?>[udyam]" value="<?php echo esc_attr($o['udyam'] ?? ''); ?>"></td></tr>
                 <tr><th>ISO Certification</th><td><input type="text" class="regular-text" name="<?php echo LUVRON_TRUST_OPT; ?>[iso]" value="<?php echo esc_attr($o['iso'] ?? ''); ?>" placeholder="ISO 9001:2015 (optional)"></td></tr>
-                <tr><th>Founded Year</th><td><input type="number" min="1990" max="<?php echo date('Y'); ?>" name="<?php echo LUVRON_TRUST_OPT; ?>[founded]" value="<?php echo (int) ($o['founded'] ?? 2018); ?>"></td></tr>
+                <tr><th>Founded Year</th><td><input type="number" min="1990" max="<?php echo date('Y'); ?>" name="<?php echo LUVRON_TRUST_OPT; ?>[founded]" value="<?php echo (int) ($o['founded'] ?? 2022); ?>"></td></tr>
                 <tr><th>Active Dealer Count</th><td><input type="number" min="0" name="<?php echo LUVRON_TRUST_OPT; ?>[dealer_count]" value="<?php echo (int) ($o['dealer_count'] ?? 50); ?>"></td></tr>
                 <tr><th>Dispatch SLA</th><td><input type="text" class="regular-text" name="<?php echo LUVRON_TRUST_OPT; ?>[dispatch_sla]" value="<?php echo esc_attr($o['dispatch_sla'] ?? '48 hours'); ?>"></td></tr>
                 <tr><th>Manufacturing Capacity</th><td><input type="text" class="regular-text" name="<?php echo LUVRON_TRUST_OPT; ?>[capacity]" value="<?php echo esc_attr($o['capacity'] ?? '12,000 units / month'); ?>"></td></tr>
@@ -61,7 +61,7 @@ function luvron_trust_settings() {
 
 add_shortcode('luvron_stats', function () {
     $o = get_option(LUVRON_TRUST_OPT, []);
-    $years = max(1, (int) date('Y') - (int) ($o['founded'] ?? 2018));
+    $years = max(1, (int) date('Y') - (int) ($o['founded'] ?? 2022));
     $dealer_count = (int) ($o['dealer_count'] ?? 50);
     $product_count = wp_count_posts('product')->publish ?? 40;
 
