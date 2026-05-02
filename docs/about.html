@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Luvron · Manufacturer of Kids Tricycles in Loni, Ghaziabad UP</title>
+<meta name="description" content="Luvron is a kids tricycle manufacturer founded in 2022 by Rajneesh Kumar Pandey in Loni, Ghaziabad UP. We supply 44 SKUs to dealers and distributors across India.">
+<meta name="theme-color" content="#ff6b5b">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+.about-hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-peach) 100%);
+    position: relative;
+    overflow: hidden;
+}
+.about-hero::before, .about-hero::after {
+    content: ""; position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.5;
+}
+.about-hero::before { top: -100px; right: -50px; width: 400px; height: 400px; background: var(--coral-soft); }
+.about-hero::after { bottom: -100px; left: -50px; width: 400px; height: 400px; background: var(--sky-soft); }
+.about-hero-content { position: relative; z-index: 1; max-width: 760px; }
+.about-hero h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-variation-settings: "opsz" 96;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 20px;
+}
+.about-hero h1 .accent { color: var(--coral); }
+.about-hero h1 .hand { font-family: "Caveat", cursive; color: var(--coral); transform: rotate(-3deg); display: inline-block; font-weight: 700; }
+.about-hero p.lead { font-size: 19px; color: var(--ink-soft); max-width: 600px; line-height: 1.6; }
+
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+.story-img {
+    aspect-ratio: 4/5;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, var(--bg-cream), var(--bg-peach));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.story-img img { max-width: 70%; max-height: 70%; object-fit: contain; filter: drop-shadow(0 24px 30px rgba(15, 23, 42, 0.15)); }
+.story-img .stamp {
+    position: absolute;
+    top: 24px; right: 24px;
+    background: var(--coral);
+    color: var(--white);
+    padding: 12px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 700;
+    transform: rotate(4deg);
+    box-shadow: var(--shadow-2);
+}
+.story h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-variation-settings: "opsz" 96;
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+.story h2 .accent { color: var(--coral); }
+.story p { font-size: 16px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 16px; }
+.story p strong { color: var(--ink); font-weight: 600; }
+.story .signature {
+    font-family: "Caveat", cursive;
+    font-size: 28px;
+    color: var(--coral);
+    margin-top: 8px;
+}
+.story .role {
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin-top: -4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+@media (max-width: 980px) {
+    .story { grid-template-columns: 1fr; gap: 32px; }
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+}
+.timeline::before {
+    content: ""; position: absolute; top: 30px; left: 5%; right: 5%;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--ink-ghost), var(--ink-ghost) 6px, transparent 6px, transparent 12px);
+    z-index: 0;
+}
+.tl-item { position: relative; padding-top: 70px; text-align: center; }
+.tl-item .dot {
+    position: absolute;
+    top: 18px; left: 50%; transform: translateX(-50%);
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 4px solid var(--coral);
+    z-index: 1;
+}
+.tl-item h4 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-variation-settings: "opsz" 24;
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+.tl-item .yr {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--coral);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.tl-item p { font-size: 13.5px; color: var(--ink-soft); line-height: 1.5; }
+@media (max-width: 720px) {
+    .timeline { grid-template-columns: 1fr 1fr; }
+    .timeline::before { display: none; }
+}
+@media (max-width: 480px) { .timeline { grid-template-columns: 1fr; } }
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--line);
+}
+.value {
+    padding: 40px 32px;
+    border-right: 1px solid var(--line);
+    text-align: center;
+}
+.value:last-child { border-right: 0; }
+.value .num {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 14px;
+    color: var(--coral);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+}
+.value h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-variation-settings: "opsz" 32;
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+.value p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.6; }
+@media (max-width: 720px) {
+    .values-grid { grid-template-columns: 1fr; }
+    .value { border-right: 0; border-bottom: 1px solid var(--line); }
+    .value:last-child { border-bottom: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="announce">
+    <strong>FREE DISPATCH IN 48 HRS</strong> on confirmed orders ex-Loni · GSTIN 09GOCPP5350G1ZQ · <a href="contact.html">Apply for Dealer Account →</a>
+</div>
+
+<header class="site-header">
+    <div class="wrap header-row">
+        <a href="index.html" class="logo-link"><img src="logo.png" alt="LuvRon"></a>
+        <nav class="site-nav" id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="contact.html" class="btn btn-primary header-cta">Become a Dealer</a>
+        <button class="mobile-toggle" aria-label="Menu" id="mobile-toggle-btn">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+        </button>
+    </div>
+</header>
+
+<section class="about-hero">
+    <div class="wrap about-hero-content">
+        <div class="breadcrumb" style="margin-bottom: 18px;"><a href="index.html">Home</a> · <span>About</span></div>
+        <h1>From a small Loni floor — <span class="hand">to your shelf,</span> across India.</h1>
+        <p class="lead">Luvron is a kids tricycle manufacturer based in Loni, Ghaziabad UP. We make 44 SKUs across 11 series, packed in master cartons of 12 to 24 pieces, dispatched in 48 hours, and supplied directly to dealers and distributors across India.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="story">
+            <div class="story-img">
+                <span class="stamp">EST. 2022</span>
+                <img src="products/sigma-plus.jpg" alt="Luvron flagship">
+            </div>
+            <div>
+                <span style="display:inline-block; color: var(--coral); font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px;">Our Story</span>
+                <h2 class="display">Built by a manufacturer, <span class="accent">for the dealer.</span></h2>
+                <p>Luvron began on a small manufacturing floor in Loni, Ghaziabad in <strong>2022</strong>. The brief was simple: build kids tricycles that retailers could stock with confidence — sturdy enough to ride hard, packaged tight enough to survive long-haul transport, priced so the dealer makes a real margin.</p>
+                <p>Four years on, that floor has expanded to a steady output of <strong>12,000 units a month</strong> across <strong>44 SKUs</strong>. We now supply over <strong>50 active dealers and distributors</strong> in cities from Delhi NCR to Patna, Lucknow to Kanpur — and we're growing.</p>
+                <p>Our promise to every dealer: we manufacture, we pack, we dispatch in 48 hours. No middlemen, no margin layers, no surprises on the invoice.</p>
+                <div class="signature">— Rajneesh</div>
+                <div class="role">Founder, Luvron Tricycles</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-canvas">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="label">Our Journey</span>
+            <h2 class="display">Four years. <span class="accent">Forty-four SKUs.</span></h2>
+            <p>The arc from a small workshop to a national B2B brand.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="tl-item">
+                <span class="dot"></span>
+                <div class="yr">2022</div>
+                <h4>Founded</h4>
+                <p>Rajneesh Kumar Pandey opens the first Luvron manufacturing floor in Loni, Ghaziabad UP.</p>
+            </div>
+            <div class="tl-item">
+                <span class="dot"></span>
+                <div class="yr">2023</div>
+                <h4>11 Series</h4>
+                <p>Range expands to cover entry, mid, and premium tiers across 11 model families.</p>
+            </div>
+            <div class="tl-item">
+                <span class="dot"></span>
+                <div class="yr">2024</div>
+                <h4>50 Dealers</h4>
+                <p>Crossed 50 active dealer and distributor accounts spanning North, East, and South India.</p>
+            </div>
+            <div class="tl-item">
+                <span class="dot"></span>
+                <div class="yr">2026</div>
+                <h4>Direct Online</h4>
+                <p>Launch of B2B ordering portal at luvron.in — dealer self-service, GST e-invoicing, dispatch tracking.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="label">Our Values</span>
+            <h2 class="display">Three things we never <span class="accent">compromise on.</span></h2>
+        </div>
+
+        <div class="values-grid">
+            <div class="value">
+                <div class="num">01 — QUALITY</div>
+                <h3>Built to ride hard.</h3>
+                <p>Every tricycle goes through chassis, wheel, and finish QC before it enters a carton. We test ride-quality, not just specs.</p>
+            </div>
+            <div class="value">
+                <div class="num">02 — SAFETY</div>
+                <h3>Engineered for kids.</h3>
+                <p>Rounded corners, food-grade plastics, sturdy weld points. Compliance with Indian toy-safety standards on every batch.</p>
+            </div>
+            <div class="value">
+                <div class="num">03 — RELIABILITY</div>
+                <h3>48-hour dispatch.</h3>
+                <p>Confirmed orders leave Loni within 48 working hours. Stock-outs are flagged at proforma stage, never silently delayed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-mint">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="label">By the Numbers</span>
+            <h2 class="display">A small floor with a <span class="accent">big footprint.</span></h2>
+        </div>
+
+        <div class="stats-band">
+            <div class="stat-cell">
+                <div class="num display">12<em>K</em></div>
+                <div class="label">Units / Month</div>
+            </div>
+            <div class="stat-cell">
+                <div class="num display">44</div>
+                <div class="label">Active SKUs</div>
+            </div>
+            <div class="stat-cell">
+                <div class="num display">50<em>+</em></div>
+                <div class="label">Active Dealers</div>
+            </div>
+            <div class="stat-cell">
+                <div class="num display"><em>4</em>yrs</div>
+                <div class="label">In Production</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-canvas">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="label">Where We Make Them</span>
+            <h2 class="display">Loni, Ghaziabad. <span class="accent">India's manufacturing heartland.</span></h2>
+            <p>Strategically located 30 km from Delhi NCR — close to North India's main retail centres, well-connected to railhead and surface transport networks.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center;">
+            <div style="background: var(--bg-cream); border-radius: var(--radius-xl); padding: 48px; text-align: center;">
+                <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 48px; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 16px; letter-spacing: -0.02em;">Loni Workshop</div>
+                <p style="color: var(--ink-soft); font-size: 16px; margin-bottom: 24px;">OFF-D-337, T-04<br>Indraprastha Colony, Jawli Road<br>Loni, Ghaziabad UP – 201102</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Loni+Ghaziabad+UP+201102" class="btn btn-outline-coral" target="_blank">Open in Maps →</a>
+            </div>
+            <div>
+                <ul style="display: grid; gap: 12px;">
+                    <li style="display: flex; gap: 14px; padding: 14px 18px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line);">
+                        <span style="background: var(--bg-peach); color: var(--coral-deep); width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">📦</span>
+                        <span><strong style="display:block;">Master cartons</strong><span style="color: var(--ink-soft); font-size: 14px;">12, 15, 16, 20, or 24 pieces depending on SKU</span></span>
+                    </li>
+                    <li style="display: flex; gap: 14px; padding: 14px 18px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line);">
+                        <span style="background: var(--bg-sky); color: var(--sky-deep); width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">🚚</span>
+                        <span><strong style="display:block;">Pan-India dispatch</strong><span style="color: var(--ink-soft); font-size: 14px;">Via Delhivery, Gati, VRL, TCI, Safexpress</span></span>
+                    </li>
+                    <li style="display: flex; gap: 14px; padding: 14px 18px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line);">
+                        <span style="background: var(--bg-mint); color: var(--mint-deep); width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">🧾</span>
+                        <span><strong style="display:block;">GST-compliant</strong><span style="color: var(--ink-soft); font-size: 14px;">IRN/QR e-invoicing, CGST/SGST/IGST automation</span></span>
+                    </li>
+                    <li style="display: flex; gap: 14px; padding: 14px 18px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line);">
+                        <span style="background: var(--bg-cream); color: var(--marigold-deep); width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">🛡️</span>
+                        <span><strong style="display:block;">Damage rate &lt;0.5%</strong><span style="color: var(--ink-soft); font-size: 14px;">Carton-tested across our top three transit corridors</span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="cta-banner">
+            <div class="cta-banner-grid">
+                <div>
+                    <h2 class="display">Want to be a <span class="accent">Luvron dealer?</span></h2>
+                    <p>Verified GSTIN gets you wholesale pricing within 24 hours. Distributors with PIN-code commitments get exclusive territory rights.</p>
+                </div>
+                <div class="actions">
+                    <a href="contact.html" class="btn btn-light">Apply for Dealer Account</a>
+                    <a href="tel:+919212389139" class="btn btn-yellow">📞 +91 9212 389 139</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="logo.png" alt="LuvRon">
+                <p class="nap">
+                    <strong>Luvron Tricycles</strong><br>
+                    OFF-D-337, T-04, Indraprastha Colony,<br>
+                    Jawli Road, Loni, Ghaziabad UP – 201102<br><br>
+                    <strong>Founder:</strong> Rajneesh Kumar Pandey<br>
+                    <strong>Phone:</strong> <a href="tel:+919212389139">+91 9212 389 139</a><br>
+                    <strong>Email:</strong> <a href="mailto:orders@luvron.in">orders@luvron.in</a>
+                </p>
+                <div class="footer-stamp">GSTIN 09GOCPP5350G1ZQ · MADE IN INDIA 🇮🇳</div>
+            </div>
+            <div class="footer-col">
+                <h4>Catalogue</h4>
+                <ul>
+                    <li><a href="products.html">All 44 SKUs</a></li>
+                    <li><a href="products.html?tier=musical">Musical (18%)</a></li>
+                    <li><a href="products.html?tier=normal">Normal (5%)</a></li>
+                    <li><a href="categories.html">All Series</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>For Dealers</h4>
+                <ul>
+                    <li><a href="contact.html">Become a Dealer</a></li>
+                    <li><a href="#">Dealer Login</a></li>
+                    <li><a href="contact.html">Bulk Enquiry</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund &amp; Returns</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="colophon">
+            <span>© 2026 Luvron Tricycles · All rights reserved</span>
+            <span>Manufactured in Loni, Ghaziabad UP since 2022</span>
+        </div>
+    </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919212389139" target="_blank">
+    <span class="ico"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5-1.3c1.5.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></span>
+    <span class="txt">Talk to founder</span>
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>

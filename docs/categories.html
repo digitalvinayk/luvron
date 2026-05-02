@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Series · 11 Tricycle Collections · Luvron</title>
+<meta name="description" content="Explore Luvron's 11 tricycle series — SIGMA, AURA, EAGLE, ALEX, ECOTECH, RAMBO, LEON, LION, CHARLIE, EMMA, HULK. Manufacturer-direct from Loni, Ghaziabad UP.">
+<meta name="theme-color" content="#ff6b5b">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+.series-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--line);
+}
+.series-block:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
+.series-block.reverse { direction: rtl; }
+.series-block.reverse > * { direction: ltr; }
+.series-block .visual {
+    aspect-ratio: 1;
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.series-block .visual img {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
+    filter: drop-shadow(0 24px 30px rgba(15, 23, 42, 0.15));
+    transition: transform .35s var(--transition);
+}
+.series-block:hover .visual img { transform: scale(1.04) rotate(-2deg); }
+.series-block .visual.bg-coral    { background: linear-gradient(135deg, var(--bg-peach), #ffd9d3); }
+.series-block .visual.bg-sky      { background: linear-gradient(135deg, var(--bg-sky), #c7e2fb); }
+.series-block .visual.bg-mint     { background: linear-gradient(135deg, var(--bg-mint), #c3e8c8); }
+.series-block .visual.bg-cream    { background: linear-gradient(135deg, var(--bg-cream), #ffe9a8); }
+.series-block .visual.bg-lavender { background: linear-gradient(135deg, var(--bg-lavender), #ddd0fa); }
+.series-block .ribbon {
+    position: absolute;
+    top: 24px; left: 24px;
+    background: var(--white);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    box-shadow: var(--shadow-1);
+}
+.series-block .num {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-variation-settings: "opsz" 96;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--coral);
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+}
+.series-block h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-variation-settings: "opsz" 96;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+    color: var(--ink);
+}
+.series-block h2 .accent { color: var(--coral); }
+.series-block .pitch {
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+.series-block .specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+.series-block .spec {
+    background: var(--bg-cream);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    color: var(--ink);
+    font-weight: 500;
+}
+.series-block .spec strong { color: var(--coral-deep); font-weight: 700; }
+@media (max-width: 980px) {
+    .series-block { grid-template-columns: 1fr; gap: 32px; padding-bottom: 56px; margin-bottom: 56px; }
+    .series-block.reverse { direction: ltr; }
+}
+</style>
+</head>
+<body>
+
+<div class="announce">
+    <strong>FREE DISPATCH IN 48 HRS</strong> on confirmed orders ex-Loni · GSTIN 09GOCPP5350G1ZQ · <a href="contact.html">Apply for Dealer Account →</a>
+</div>
+
+<header class="site-header">
+    <div class="wrap header-row">
+        <a href="index.html" class="logo-link"><img src="logo.png" alt="LuvRon"></a>
+        <nav class="site-nav" id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html" class="active">Categories</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="contact.html" class="btn btn-primary header-cta">Become a Dealer</a>
+        <button class="mobile-toggle" aria-label="Menu" id="mobile-toggle-btn">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+        </button>
+    </div>
+</header>
+
+<section class="hero-slim">
+    <div class="wrap">
+        <div class="breadcrumb"><a href="index.html">Home</a> · <span>Categories</span></div>
+        <h1 class="display">Eleven <span class="accent">series.</span> Built for every shelf.</h1>
+        <p class="lead">From premium SIGMA Plus to value-tier RAMBO 100 — every series is engineered for a specific retail price band and customer profile.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+
+        <!-- SIGMA -->
+        <div class="series-block">
+            <div class="visual bg-coral">
+                <span class="ribbon">★ Premium</span>
+                <img src="products/sigma-plus.jpg" alt="SIGMA Series">
+            </div>
+            <div>
+                <div class="num">SERIES 01 — TOP TIER</div>
+                <h2 class="display"><span class="accent">SIGMA</span> Series</h2>
+                <p class="pitch">Our flagship range. Premium chassis, full canopy, and the largest pricing band in the catalogue. Available in 4 SKUs (Plus &amp; R1 variants, both Musical and Normal tiers). Best for mainline urban retailers and gift-segment buyers.</p>
+                <div class="specs">
+                    <span class="spec"><strong>4</strong> SKUs</span>
+                    <span class="spec">Pack <strong>1×1 / 12</strong></span>
+                    <span class="spec">From <strong>₹1,600</strong></span>
+                    <span class="spec">Tier <strong>Premium</strong></span>
+                </div>
+                <a href="products.html?series=SIGMA" class="btn btn-outline-coral">View 4 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- AURA -->
+        <div class="series-block reverse">
+            <div class="visual bg-sky">
+                <span class="ribbon">Mid-Range</span>
+                <img src="products/aura-plus.jpg" alt="AURA Series">
+            </div>
+            <div>
+                <div class="num">SERIES 02 — MID-TIER</div>
+                <h2 class="display"><span class="accent">AURA</span> Series</h2>
+                <p class="pitch">A mid-tier favourite balancing build quality with accessible price. 4 SKUs across Musical and Normal tiers. Sweet spot for tier-2 city retailers chasing volume with margin protection.</p>
+                <div class="specs">
+                    <span class="spec"><strong>4</strong> SKUs</span>
+                    <span class="spec">Pack <strong>1×1 / 12</strong></span>
+                    <span class="spec">From <strong>₹1,510</strong></span>
+                    <span class="spec">Tier <strong>Mid</strong></span>
+                </div>
+                <a href="products.html?series=AURA" class="btn btn-outline-coral">View 4 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- EAGLE -->
+        <div class="series-block">
+            <div class="visual bg-mint">
+                <span class="ribbon">Sporty</span>
+                <img src="products/eagle-plus.jpg" alt="EAGLE Series">
+            </div>
+            <div>
+                <div class="num">SERIES 03 — SPORTY DESIGN</div>
+                <h2 class="display"><span class="accent">EAGLE</span> Series</h2>
+                <p class="pitch">A sportier silhouette built for the boys' segment. Bolder colourways and aerodynamic-style frame. 4 SKUs across both pricing tiers.</p>
+                <div class="specs">
+                    <span class="spec"><strong>4</strong> SKUs</span>
+                    <span class="spec">Pack <strong>1×1 / 12</strong></span>
+                    <span class="spec">From <strong>₹1,375</strong></span>
+                </div>
+                <a href="products.html?series=EAGLE" class="btn btn-outline-coral">View 4 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- ALEX -->
+        <div class="series-block reverse">
+            <div class="visual bg-cream">
+                <span class="ribbon">★ Bestseller</span>
+                <img src="products/alex-plus.jpg" alt="ALEX Series">
+            </div>
+            <div>
+                <div class="num">SERIES 04 — BESTSELLER</div>
+                <h2 class="display"><span class="accent">ALEX</span> Series</h2>
+                <p class="pitch">Our highest-volume series across all dealer accounts. Soft pastel colourways that work for both gender segments. 4 SKUs, available in Musical and Normal tiers.</p>
+                <div class="specs">
+                    <span class="spec"><strong>4</strong> SKUs</span>
+                    <span class="spec">Pack <strong>1×1 / 12</strong></span>
+                    <span class="spec">From <strong>₹1,435</strong></span>
+                    <span class="spec">★ <strong>Most Ordered</strong></span>
+                </div>
+                <a href="products.html?series=ALEX" class="btn btn-outline-coral">View 4 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- ECOTECH -->
+        <div class="series-block">
+            <div class="visual bg-lavender">
+                <span class="ribbon">Eco-Friendly</span>
+                <img src="products/ecotech-plus.jpg" alt="ECOTECH Series">
+            </div>
+            <div>
+                <div class="num">SERIES 05 — ECO BUILD</div>
+                <h2 class="display"><span class="accent">ECOTECH</span> Series</h2>
+                <p class="pitch">Built with eco-conscious materials. 4 SKUs at the lower-mid price point — appeals to environmentally-aware retailers and educational toy buyers.</p>
+                <div class="specs">
+                    <span class="spec"><strong>4</strong> SKUs</span>
+                    <span class="spec">Pack <strong>1×1 / 12</strong></span>
+                    <span class="spec">From <strong>₹1,270</strong></span>
+                </div>
+                <a href="products.html?series=ECOTECH" class="btn btn-outline-coral">View 4 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- RAMBO -->
+        <div class="series-block reverse">
+            <div class="visual bg-coral">
+                <span class="ribbon">Volume Pack</span>
+                <img src="products/rambo-333-plus.jpg" alt="RAMBO Series">
+            </div>
+            <div>
+                <div class="num">SERIES 06 — VALUE TIER</div>
+                <h2 class="display"><span class="accent">RAMBO</span> Series</h2>
+                <p class="pitch">Our largest series with 8 SKUs spanning 333, 111, and 100 sub-models. Best for dealers selling in tier-3 markets and rural India where price sensitivity is high. Master cartons of 12 or 24 pieces.</p>
+                <div class="specs">
+                    <span class="spec"><strong>8</strong> SKUs</span>
+                    <span class="spec">Pack <strong>3×4 or 6×4</strong></span>
+                    <span class="spec">From <strong>₹560</strong></span>
+                    <span class="spec">Tier <strong>Value</strong></span>
+                </div>
+                <a href="products.html?series=RAMBO" class="btn btn-outline-coral">View 8 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- LEON -->
+        <div class="series-block">
+            <div class="visual bg-sky">
+                <span class="ribbon">Dual Pack</span>
+                <img src="products/leon-r1-grey-plus.jpg" alt="LEON Series">
+            </div>
+            <div>
+                <div class="num">SERIES 07 — DUAL PACK</div>
+                <h2 class="display"><span class="accent">LEON</span> Series</h2>
+                <p class="pitch">Available in both Inner Box (single retail unit) and Master Carton packing — dealers choose what suits their retail flow. 2 SKUs in grey colourway, both tiers.</p>
+                <div class="specs">
+                    <span class="spec"><strong>2</strong> SKUs</span>
+                    <span class="spec">Pack <strong>1×1 / 15</strong> or <strong>3×4 / 12</strong></span>
+                    <span class="spec">From <strong>₹1,090</strong></span>
+                </div>
+                <a href="products.html?series=LEON" class="btn btn-outline-coral">View 2 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- LION -->
+        <div class="series-block reverse">
+            <div class="visual bg-mint">
+                <span class="ribbon">Dual Pack</span>
+                <img src="products/lion-r1-plus.jpg" alt="LION Series">
+            </div>
+            <div>
+                <div class="num">SERIES 08 — DUAL PACK</div>
+                <h2 class="display"><span class="accent">LION</span> Series</h2>
+                <p class="pitch">Companion line to LEON — same chassis, bolder colourway. Inner Box or Master Carton packing. 2 SKUs across pricing tiers.</p>
+                <div class="specs">
+                    <span class="spec"><strong>2</strong> SKUs</span>
+                    <span class="spec">Pack <strong>1×1 / 15</strong> or <strong>3×4 / 12</strong></span>
+                    <span class="spec">From <strong>₹1,020</strong></span>
+                </div>
+                <a href="products.html?series=LION" class="btn btn-outline-coral">View 2 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- CHARLIE -->
+        <div class="series-block">
+            <div class="visual bg-cream">
+                <span class="ribbon">Compact</span>
+                <img src="products/charlie-r1-plus.jpg" alt="CHARLIE Series">
+            </div>
+            <div>
+                <div class="num">SERIES 09 — COMPACT STARTER</div>
+                <h2 class="display"><span class="accent">CHARLIE</span> Series</h2>
+                <p class="pitch">A compact starter range for younger toddlers. 4 SKUs across two body sizes (R1 and base) with both Musical and Normal tiers. Perfect entry-price line for value retailers.</p>
+                <div class="specs">
+                    <span class="spec"><strong>4</strong> SKUs</span>
+                    <span class="spec">Pack <strong>1×1 / 15</strong> or higher carton</span>
+                    <span class="spec">From <strong>₹720</strong></span>
+                </div>
+                <a href="products.html?series=CHARLIE" class="btn btn-outline-coral">View 4 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- EMMA -->
+        <div class="series-block reverse">
+            <div class="visual bg-lavender">
+                <span class="ribbon">Soft Tones</span>
+                <img src="products/emma-r1-plus.jpg" alt="EMMA Series">
+            </div>
+            <div>
+                <div class="num">SERIES 10 — SOFT TONES</div>
+                <h2 class="display"><span class="accent">EMMA</span> Series</h2>
+                <p class="pitch">Soft, parent-friendly colourways aimed at the gift-giving segment. 4 SKUs across two body sizes, dual tier pricing.</p>
+                <div class="specs">
+                    <span class="spec"><strong>4</strong> SKUs</span>
+                    <span class="spec">Pack varies</span>
+                    <span class="spec">From <strong>₹780</strong></span>
+                </div>
+                <a href="products.html?series=EMMA" class="btn btn-outline-coral">View 4 SKUs →</a>
+            </div>
+        </div>
+
+        <!-- HULK -->
+        <div class="series-block">
+            <div class="visual bg-mint">
+                <span class="ribbon">Sturdy</span>
+                <img src="products/hulk-pro-plus.jpg" alt="HULK Series">
+            </div>
+            <div>
+                <div class="num">SERIES 11 — STURDY CHASSIS</div>
+                <h2 class="display"><span class="accent">HULK</span> Series</h2>
+                <p class="pitch">Reinforced chassis built for rough riding and longer life. 4 SKUs across HULK and HULK Pro variants, both tiers. Best for dealers in markets where durability is the top decision factor.</p>
+                <div class="specs">
+                    <span class="spec"><strong>4</strong> SKUs</span>
+                    <span class="spec">Pack <strong>1×1 / 15</strong> or <strong>4×4 / 16</strong></span>
+                    <span class="spec">From <strong>₹750</strong></span>
+                </div>
+                <a href="products.html?series=HULK" class="btn btn-outline-coral">View 4 SKUs →</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section bg-cream compact">
+    <div class="wrap">
+        <div class="cta-banner">
+            <div class="cta-banner-grid">
+                <div>
+                    <h2 class="display">Pick a series. <span class="accent">Order in cartons.</span></h2>
+                    <p>Apply for a dealer account to unlock wholesale pricing across all 11 series.</p>
+                </div>
+                <div class="actions">
+                    <a href="contact.html" class="btn btn-light">Become a Dealer</a>
+                    <a href="products.html" class="btn btn-yellow">View All 44 SKUs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="logo.png" alt="LuvRon">
+                <p class="nap">
+                    <strong>Luvron Tricycles</strong><br>
+                    OFF-D-337, T-04, Indraprastha Colony,<br>
+                    Jawli Road, Loni, Ghaziabad UP – 201102<br><br>
+                    <strong>Founder:</strong> Rajneesh Kumar Pandey<br>
+                    <strong>Phone:</strong> <a href="tel:+919212389139">+91 9212 389 139</a><br>
+                    <strong>Email:</strong> <a href="mailto:orders@luvron.in">orders@luvron.in</a>
+                </p>
+                <div class="footer-stamp">GSTIN 09GOCPP5350G1ZQ · MADE IN INDIA 🇮🇳</div>
+            </div>
+            <div class="footer-col">
+                <h4>Catalogue</h4>
+                <ul>
+                    <li><a href="products.html">All 44 SKUs</a></li>
+                    <li><a href="products.html?tier=musical">Musical (18%)</a></li>
+                    <li><a href="products.html?tier=normal">Normal (5%)</a></li>
+                    <li><a href="categories.html">All Series</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>For Dealers</h4>
+                <ul>
+                    <li><a href="contact.html">Become a Dealer</a></li>
+                    <li><a href="#">Dealer Login</a></li>
+                    <li><a href="contact.html">Bulk Enquiry</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund &amp; Returns</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="colophon">
+            <span>© 2026 Luvron Tricycles · All rights reserved</span>
+            <span>Manufactured in Loni, Ghaziabad UP since 2022</span>
+        </div>
+    </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919212389139" target="_blank">
+    <span class="ico"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5-1.3c1.5.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></span>
+    <span class="txt">Talk to founder</span>
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>
