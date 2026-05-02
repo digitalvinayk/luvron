@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luvron — India's Trusted Tricycle Manufacturer | B2B Wholesale</title>
+<meta name="description" content="Trusted Indian manufacturer of kids tricycles for B2B dealers and distributors. 14+ model families, 40+ SKUs, GST-compliant invoicing, 48-hour dispatch ex-Loni Ghaziabad UP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a1a; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.button { display: inline-block; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; transition: transform .15s, box-shadow .15s; }
+.button:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+.button.primary { background: #ff8c00; color: #fff; }
+.button.outline { background: transparent; color: #fff; border: 2px solid #fff; }
+.button.dark { background: #1a1a1a; color: #fff; }
+.button.light { background: #fff; color: #1a1a1a; }
+
+/* Top Strip */
+.top-strip { background: #1a1a1a; color: #ccc; font-size: 13px; padding: 8px 0; text-align: center; }
+.top-strip a { color: #fff; margin: 0 8px; }
+
+/* Trust Strip */
+.trust-strip { background: #fff8e1; padding: 14px 0; text-align: center; font-size: 13px; color: #5c4a17; border-bottom: 1px solid #f0e0a8; }
+.trust-strip span { display: inline-block; margin: 0 8px; }
+.trust-strip strong { font-weight: 700; }
+
+/* Header */
+header { background: #fff; padding: 16px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+.nav-wrap { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 28px; font-weight: 800; letter-spacing: -1px; color: #1a1a1a; }
+.logo span { color: #ff8c00; }
+nav ul { list-style: none; display: flex; gap: 28px; }
+nav a { font-weight: 500; font-size: 15px; color: #333; transition: color .15s; }
+nav a:hover { color: #ff8c00; }
+.nav-cta { background: #ff8c00; color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: 600; font-size: 14px; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); color: #fff; padding: 100px 0 80px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: radial-gradient(ellipse at top right, rgba(255,140,0,0.15), transparent 70%); }
+.hero-content { position: relative; max-width: 720px; }
+.hero-badge { display: inline-block; background: rgba(255,140,0,0.15); color: #ff8c00; padding: 6px 14px; border-radius: 99px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
+.hero h1 { font-size: 56px; line-height: 1.1; font-weight: 800; margin-bottom: 20px; letter-spacing: -1.5px; }
+.hero p { font-size: 19px; color: #ccc; margin-bottom: 32px; max-width: 560px; }
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* Stats */
+.stats { padding: 56px 0; background: #fafafa; border-bottom: 1px solid #eee; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; text-align: center; }
+.stat .num { display: block; font-size: 40px; font-weight: 800; color: #1a1a1a; margin-bottom: 4px; }
+.stat .label { display: block; font-size: 12px; text-transform: uppercase; color: #666; letter-spacing: 1px; }
+
+/* Section */
+.section { padding: 80px 0; }
+.section-head { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+.section-head h2 { font-size: 36px; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.section-head p { color: #666; font-size: 17px; }
+.section-light { background: #fafafa; }
+
+/* Product Categories */
+.categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.cat-card { background: #fff; border-radius: 10px; padding: 20px; text-align: center; border: 1px solid #eee; transition: all .2s; cursor: pointer; }
+.cat-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); border-color: #ff8c00; }
+.cat-card img { width: 100%; height: 160px; object-fit: contain; margin-bottom: 12px; background: #fafafa; border-radius: 6px; padding: 10px; }
+.cat-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.cat-card p { font-size: 12px; color: #888; }
+
+/* Why Luvron */
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+.why-card { text-align: center; padding: 24px; }
+.why-card .icon { font-size: 48px; margin-bottom: 16px; display: block; }
+.why-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+.why-card p { color: #666; font-size: 15px; }
+
+/* Products Grid */
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+.product-card { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #eee; transition: all .2s; }
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+.product-card-img { background: #fafafa; padding: 20px; height: 200px; display: flex; align-items: center; justify-content: center; }
+.product-card-img img { max-height: 100%; max-width: 100%; object-fit: contain; }
+.product-card-body { padding: 16px; }
+.product-card .sku { font-family: 'SF Mono', Monaco, monospace; font-size: 11px; color: #999; margin-bottom: 4px; }
+.product-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; line-height: 1.3; }
+.product-card .pack { font-size: 12px; color: #666; margin-bottom: 8px; }
+.product-card .gst-badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 11px; font-weight: 600; }
+.product-card .gst-5 { background: #dcf8c6; color: #1d6f1d; }
+.product-card .gst-18 { background: #fff3cd; color: #856404; }
+.product-card .quote { display: block; margin-top: 10px; padding: 8px; text-align: center; background: #fff8e1; color: #5c4a17; border-radius: 4px; font-size: 12px; font-weight: 600; }
+
+/* CTA Band */
+.cta-band { background: linear-gradient(135deg, #ff8c00 0%, #ff7300 100%); color: #fff; padding: 56px 0; text-align: center; }
+.cta-band h2 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+.cta-band p { font-size: 17px; opacity: .9; margin-bottom: 24px; }
+.cta-band .button-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* Testimonials */
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.testimonial { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.testimonial .quote-mark { color: #ff8c00; font-size: 40px; line-height: 1; font-family: Georgia, serif; }
+.testimonial p { font-size: 14px; color: #333; line-height: 1.6; font-style: italic; margin: 8px 0 16px; }
+.testimonial-author { display: flex; align-items: center; gap: 14px; }
+.testimonial-author img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #ff8c00; }
+.testimonial-author strong { display: block; font-weight: 700; font-size: 15px; }
+.testimonial-author small { color: #888; font-size: 12px; }
+
+/* Footer */
+footer { background: #1a1a1a; color: #999; padding: 48px 0 16px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+.footer-brand h3 { color: #fff; font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+.footer-brand p { font-size: 13px; line-height: 1.7; }
+.footer-col h4 { color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; font-weight: 600; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; font-size: 13px; }
+.footer-col a:hover { color: #ff8c00; }
+.footer-legal { border-top: 1px solid #333; padding-top: 16px; font-size: 12px; text-align: center; color: #666; }
+
+/* WhatsApp Float */
+.wa-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); z-index: 999; }
+.wa-float svg { width: 32px; height: 32px; fill: #fff; }
+
+/* Banner */
+.demo-banner { background: #ff8c00; color: #fff; padding: 8px 16px; text-align: center; font-size: 13px; font-weight: 600; }
+.demo-banner a { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul { display: none; }
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 16px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .section { padding: 56px 0; }
+    .section-head h2 { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+    🚧 PREVIEW BUILD — Live B2B store launches at <a href="https://luvron.in">luvron.in</a> · This is a static design preview
+</div>
+
+<div class="top-strip">
+    <span>📞 <a href="tel:+919212389139">+91-9212389139</a></span>
+    <span>·</span>
+    <span>📱 <a href="https://wa.me/919212389139">WhatsApp</a></span>
+    <span>·</span>
+    <span>📦 Pan-India Dispatch Ex-Loni Ghaziabad UP</span>
+</div>
+
+<header>
+    <div class="container nav-wrap">
+        <div class="logo">Luv<span>Ron</span></div>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#why">Why Luvron</a></li>
+                <li><a href="#testimonials">Dealers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#dealer" class="nav-cta">Become a Dealer</a>
+    </div>
+</header>
+
+<div class="trust-strip">
+    <span><strong>GSTIN:</strong> 09XXXXXXXXXXX1Z5</span>
+    <span style="opacity:.4">|</span>
+    <span><strong>Udyam:</strong> UDYAM-UP-XX-XXXXXXX</span>
+    <span style="opacity:.4">|</span>
+    <span><strong>Made in India</strong> 🇮🇳</span>
+    <span style="opacity:.4">|</span>
+    <span>48-hr Dispatch SLA</span>
+</div>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-badge">Direct from Manufacturer · B2B Wholesale</span>
+            <h1>India's Trusted Tricycle Manufacturer</h1>
+            <p>For Dealers, Distributors and Retailers across India. 40+ models · GST-compliant invoicing · Dealer territory protection · 48-hour dispatch ex-Loni, Ghaziabad UP.</p>
+            <div class="hero-ctas">
+                <a href="#dealer" class="button primary">Become a Dealer</a>
+                <a href="#products" class="button outline">Browse Catalogue</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="container stats-grid">
+        <div class="stat">
+            <span class="num">8+</span>
+            <span class="label">Years Manufacturing</span>
+        </div>
+        <div class="stat">
+            <span class="num">50+</span>
+            <span class="label">Active Dealers</span>
+        </div>
+        <div class="stat">
+            <span class="num">44</span>
+            <span class="label">Active SKUs</span>
+        </div>
+        <div class="stat">
+            <span class="num">48hr</span>
+            <span class="label">Dispatch SLA</span>
+        </div>
+        <div class="stat">
+            <span class="num">12k</span>
+            <span class="label">Units / Month</span>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="categories">
+    <div class="container">
+        <div class="section-head">
+            <h2>Explore Our Models</h2>
+            <p>11 product series · 44 SKUs · From entry-tier RAMBO to premium SIGMA Plus</p>
+        </div>
+        <div class="categories">
+            <div class="cat-card">
+                <img src="products/sigma-plus.jpg" alt="SIGMA series">
+                <h3>SIGMA</h3>
+                <p>Premium with canopy</p>
+            </div>
+            <div class="cat-card">
+                <img src="products/aura-plus.jpg" alt="AURA series">
+                <h3>AURA</h3>
+                <p>Mid-range favourite</p>
+            </div>
+            <div class="cat-card">
+                <img src="products/eagle-plus.jpg" alt="EAGLE series">
+                <h3>EAGLE</h3>
+                <p>Sporty design</p>
+            </div>
+            <div class="cat-card">
+                <img src="products/alex-plus.jpg" alt="ALEX series">
+                <h3>ALEX</h3>
+                <p>Bestselling base</p>
+            </div>
+            <div class="cat-card">
+                <img src="products/ecotech-plus.jpg" alt="ECOTECH series">
+                <h3>ECOTECH</h3>
+                <p>Eco-friendly build</p>
+            </div>
+            <div class="cat-card">
+                <img src="products/rambo-333-plus.jpg" alt="RAMBO series">
+                <h3>RAMBO</h3>
+                <p>Volume value pack</p>
+            </div>
+            <div class="cat-card">
+                <img src="products/hulk-pro-plus.jpg" alt="HULK series">
+                <h3>HULK</h3>
+                <p>Sturdy chassis</p>
+            </div>
+            <div class="cat-card">
+                <img src="products/charlie-r1-plus.jpg" alt="CHARLIE series">
+                <h3>CHARLIE</h3>
+                <p>Compact starter</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light" id="why">
+    <div class="container">
+        <div class="section-head">
+            <h2>Why Luvron</h2>
+            <p>Built for dealers who measure margins, transit reliability, and supply consistency</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <span class="icon">💰</span>
+                <h3>Bulk Margins</h3>
+                <p>Direct from manufacturer pricing — no middleman markup. Tier discounts for distributors and high-volume dealers.</p>
+            </div>
+            <div class="why-card">
+                <span class="icon">🚚</span>
+                <h3>Fast Supply</h3>
+                <p>48-hour dispatch on confirmed orders from our Loni, Ghaziabad facility. Pan-India delivery via Delhivery, Gati, VRL, TCI.</p>
+            </div>
+            <div class="why-card">
+                <span class="icon">📦</span>
+                <h3>Strong Packaging</h3>
+                <p>Master cartons engineered for stack and transit. Branded retail boxes for premium SKUs. Damage rate under 0.5%.</p>
+            </div>
+            <div class="why-card">
+                <span class="icon">📋</span>
+                <h3>GST Compliant</h3>
+                <p>5% / 18% GST billing with HSN codes, automatic CGST/SGST/IGST split, and IRN/QR e-invoicing for input credit.</p>
+            </div>
+            <div class="why-card">
+                <span class="icon">🛡️</span>
+                <h3>Territory Protection</h3>
+                <p>Distributors get exclusive PIN-code zones. We don't appoint dealers in your protected territory.</p>
+            </div>
+            <div class="why-card">
+                <span class="icon">💬</span>
+                <h3>Real Human Support</h3>
+                <p>Direct WhatsApp line to founder Rajneesh Kumar Pandey. We pick up the phone — that's not common in this industry.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="products">
+    <div class="container">
+        <div class="section-head">
+            <h2>Featured Products</h2>
+            <p>Login to see dealer pricing · MOQ 1 master carton (12 / 15 / 16 / 20 / 24 pieces depending on model)</p>
+        </div>
+        <div class="products-grid" id="product-grid">
+            <!-- products injected by JS -->
+        </div>
+    </div>
+</section>
+
+<section class="cta-band" id="dealer">
+    <div class="container">
+        <h2>Already a Luvron dealer?</h2>
+        <p>Login to see your tier pricing and place bulk orders. New here? Apply in 2 minutes — approval within 24 hours.</p>
+        <div class="button-row">
+            <a href="#" class="button dark">Dealer Login</a>
+            <a href="#" class="button light">Apply for Dealer Account</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light" id="testimonials">
+    <div class="container">
+        <div class="section-head">
+            <h2>What Our Dealers Say</h2>
+            <p>Trusted by distributors and retailers across India</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <span class="quote-mark">&ldquo;</span>
+                <p>I have been distributing Luvron tricycles for two seasons now. The packaging holds up perfectly even after long-haul transport, and the price points let me run healthy retail margins across all my outlets.</p>
+                <div class="testimonial-author">
+                    <img src="testimonials/aditya-sharma.jpg" alt="Aditya Sharma">
+                    <div>
+                        <strong>Aditya Sharma</strong>
+                        <small>Distributor, Lucknow</small>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <span class="quote-mark">&ldquo;</span>
+                <p>What I value most is the dispatch speed. We confirm an order, the cartons leave Loni in 48 hours. That predictability is rare with kids products in India.</p>
+                <div class="testimonial-author">
+                    <img src="testimonials/ambuj.jpg" alt="Ambuj Kumar">
+                    <div>
+                        <strong>Ambuj Kumar</strong>
+                        <small>Dealer, Patna</small>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <span class="quote-mark">&ldquo;</span>
+                <p>Luvron Sigma Plus is our bestseller in the premium segment. Customers come back for the second child too — the build quality speaks for itself.</p>
+                <div class="testimonial-author">
+                    <img src="testimonials/dinesh-kanojia.jpg" alt="Dinesh Kanojia">
+                    <div>
+                        <strong>Dinesh Kanojia</strong>
+                        <small>Retailer, Delhi NCR</small>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <span class="quote-mark">&ldquo;</span>
+                <p>Direct manufacturer pricing, GST-compliant invoices, and a team that picks up the phone. That is all I need from a supplier.</p>
+                <div class="testimonial-author">
+                    <img src="testimonials/dinesh.jpg" alt="Dinesh">
+                    <div>
+                        <strong>Dinesh</strong>
+                        <small>Dealer, Kanpur</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Luv<span style="color:#ff8c00">Ron</span></h3>
+                <p>India's trusted manufacturer of kids tricycles for B2B dealers and distributors.<br><br>
+                OFF-D-337, T-04, Indraprastha Colony,<br>Jawli Road, Loni, Ghaziabad UP – 201102<br><br>
+                <strong>Founder:</strong> Rajneesh Kumar Pandey<br>
+                <strong>Phone:</strong> +91-9212389139<br>
+                <strong>Email:</strong> orders@luvron.in</p>
+            </div>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#">SIGMA Series</a></li>
+                    <li><a href="#">AURA Series</a></li>
+                    <li><a href="#">EAGLE Series</a></li>
+                    <li><a href="#">RAMBO Series</a></li>
+                    <li><a href="#">HULK Series</a></li>
+                    <li><a href="#">View Full Catalogue</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>For Dealers</h4>
+                <ul>
+                    <li><a href="#">Dealer Login</a></li>
+                    <li><a href="#">Become a Dealer</a></li>
+                    <li><a href="#">Bulk Order Grid</a></li>
+                    <li><a href="#">Quick Quote</a></li>
+                    <li><a href="#">Download Price List</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund &amp; Returns</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-legal">
+            © 2026 Luvron Tricycles · GSTIN 09XXXXXXXXXXX1Z5 · Made in India 🇮🇳
+        </div>
+    </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919212389139" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 2C6.486 2 2 6.486 2 12c0 1.776.464 3.515 1.346 5.034L2.05 22l5.062-1.327A9.953 9.953 0 0 0 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2z"/></svg>
+</a>
+
+<script>
+const products = [
+    {sku:'SIGMA-PLUS',name:'SIGMA Plus Tricycle',img:'sigma-plus.jpg',pack:'1x1 / 12',gst:18},
+    {sku:'AURA-PLUS',name:'AURA Plus Tricycle',img:'aura-plus.jpg',pack:'1x1 / 12',gst:18},
+    {sku:'EAGLE-PLUS',name:'EAGLE Plus Tricycle',img:'eagle-plus.jpg',pack:'1x1 / 12',gst:18},
+    {sku:'ALEX-PLUS',name:'ALEX Plus Tricycle',img:'alex-plus.jpg',pack:'1x1 / 12',gst:18},
+    {sku:'ECOTECH-PLUS',name:'ECOTECH Plus Tricycle',img:'ecotech-plus.jpg',pack:'1x1 / 12',gst:18},
+    {sku:'RAMBO-333-PLUS',name:'RAMBO 333 Plus',img:'rambo-333-plus.jpg',pack:'3x4 / 12',gst:18},
+    {sku:'LEON-R1-GREY-PLUS',name:'LEON R1 Grey Plus',img:'leon-r1-grey-plus.jpg',pack:'1x1 / 15',gst:18},
+    {sku:'LION-R1-PLUS',name:'LION R1 Plus',img:'lion-r1-plus.jpg',pack:'1x1 / 15',gst:18},
+    {sku:'CHARLIE-R1-PLUS',name:'CHARLIE R1 Plus',img:'charlie-r1-plus.jpg',pack:'1x1 / 15',gst:18},
+    {sku:'EMMA-R1-PLUS',name:'EMMA R1 Plus',img:'emma-r1-plus.jpg',pack:'1x1 / 15',gst:18},
+    {sku:'HULK-PRO-PLUS',name:'HULK Pro Plus',img:'hulk-pro-plus.jpg',pack:'1x1 / 15',gst:18},
+    {sku:'RAMBO-111',name:'RAMBO 111',img:'rambo-111.jpg',pack:'6x4 / 24',gst:5},
+];
+const grid = document.getElementById('product-grid');
+products.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    const imgWrap = document.createElement('div'); imgWrap.className = 'product-card-img';
+    const img = document.createElement('img'); img.src = 'products/' + p.img; img.alt = p.name; imgWrap.appendChild(img);
+    const body = document.createElement('div'); body.className = 'product-card-body';
+    const sku = document.createElement('div'); sku.className = 'sku'; sku.textContent = p.sku;
+    const h4 = document.createElement('h4'); h4.textContent = p.name;
+    const pack = document.createElement('div'); pack.className = 'pack'; pack.textContent = 'Pack: ' + p.pack;
+    const gstBadge = document.createElement('span'); gstBadge.className = 'gst-badge gst-' + p.gst; gstBadge.textContent = p.gst + '% GST';
+    const quote = document.createElement('a'); quote.className = 'quote'; quote.href = '#dealer'; quote.textContent = 'Login or Request Quote';
+    body.append(sku, h4, pack, gstBadge, quote);
+    card.append(imgWrap, body);
+    grid.appendChild(card);
+});
+</script>
+
+</body>
+</html>
