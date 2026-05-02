@@ -217,6 +217,6 @@ add_action('wp_footer', function () {
         if ($i > 0) echo ' &middot; ';
         echo '<a href="' . esc_url($l[0]) . '" style="color:#ccc;text-decoration:none;">' . $l[1] . '</a>';
     }
-    echo '<br><span style="color:#666;">© ' . date('Y') . ' Luvron Tricycles · GSTIN 09XXXXXXXXXXX1Z5 · Made in India</span>';
+    echo '<br><span style="color:#666;">© ' . date('Y') . ' Luvron Tricycles · GSTIN 09GOCPP5350G1ZQ · Made in India</span>';
     echo '</div>';
 });

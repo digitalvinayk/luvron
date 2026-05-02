@@ -21,7 +21,7 @@ add_action('admin_init', function () {
     register_setting('luvron_trust_group', LUVRON_TRUST_OPT, [
         'sanitize_callback' => function ($v) {
             return [
-                'gstin'      => sanitize_text_field($v['gstin'] ?? '09XXXXXXXXXXX1Z5'),
+                'gstin'      => sanitize_text_field($v['gstin'] ?? '09GOCPP5350G1ZQ'),
                 'udyam'      => sanitize_text_field($v['udyam'] ?? 'UDYAM-UP-XX-XXXXXXX'),
                 'msme'       => sanitize_text_field($v['msme'] ?? ''),
                 'iso'        => sanitize_text_field($v['iso'] ?? ''),
@@ -96,7 +96,7 @@ add_shortcode('luvron_trust_strip', function () {
     $o = get_option(LUVRON_TRUST_OPT, []);
     ob_start(); ?>
     <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;padding:18px 16px;background:#fff8e1;border-bottom:1px solid #f0e0a8;font-size:13px;color:#5c4a17;">
-        <span><strong>GSTIN:</strong> <?php echo esc_html($o['gstin'] ?? '09XXXXXXXXXXX1Z5'); ?></span>
+        <span><strong>GSTIN:</strong> <?php echo esc_html($o['gstin'] ?? '09GOCPP5350G1ZQ'); ?></span>
         <span style="opacity:.4;">|</span>
         <span><strong>Udyam:</strong> <?php echo esc_html($o['udyam'] ?? 'UDYAM-UP-XX-XXXXXXX'); ?></span>
         <?php if (!empty($o['iso'])): ?>

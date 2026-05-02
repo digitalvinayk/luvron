@@ -83,7 +83,7 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
         Issued to: <strong><?php echo esc_html($user->display_name); ?></strong><br>
         Date: <?php echo date('d M Y'); ?><br>
         Valid for 30 days · Subject to change<br>
-        GSTIN: 09XXXXXXXXXXX1Z5
+        GSTIN: 09GOCPP5350G1ZQ
     </div>
 </div>
 

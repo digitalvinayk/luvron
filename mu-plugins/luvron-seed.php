@@ -20,7 +20,7 @@ const LUVRON_IMAGE_DIR = 'luvron-products';
 function luvron_product_data() {
     return [
         // ─── SINGLE-PACK SIMPLE PRODUCTS (1×1 inner, master 12) ─────────────────
-        ['SIGMA-PLUS','SIGMA Plus Tricycle','SIGMA',1760,1637,18,'1x1',12,'95030010','sigma-plus.jpg','Premium SIGMA series tricycle with canopy and parental push handle.'],
+        ['SIGMA-PLUS','SIGMA Plus Tricycle','SIGMA',1760,1637,18,'1x1',12,'95030010','sigma-plus.jpg','Premium musical tricycle with horn, lights, music and canopy.'],
         ['SIGMA-BASE','SIGMA Tricycle','SIGMA',1700,1581,5,'1x1',12,'87120010','sigma.jpg','SIGMA series base model tricycle. Master carton of 12.'],
         ['SIGMA-R1-PLUS','SIGMA R1 Plus Tricycle','SIGMA',1660,1544,18,'1x1',12,'95030010','sigma-r1-plus.jpg','SIGMA R1 Plus variant with canopy.'],
         ['SIGMA-R1','SIGMA R1 Tricycle','SIGMA',1600,1488,5,'1x1',12,'87120010','sigma-r1.jpg','SIGMA R1 base variant tricycle.'],

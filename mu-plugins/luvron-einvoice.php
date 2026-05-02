@@ -29,7 +29,7 @@ add_action('admin_init', function () {
                 'api_endpoint' => esc_url_raw($v['api_endpoint'] ?? ''),
                 'api_user'   => sanitize_text_field($v['api_user'] ?? ''),
                 'api_secret' => sanitize_text_field($v['api_secret'] ?? ''),
-                'gstin'      => sanitize_text_field($v['gstin'] ?? '09XXXXXXXXXXX1Z5'),
+                'gstin'      => sanitize_text_field($v['gstin'] ?? '09GOCPP5350G1ZQ'),
                 'turnover_threshold' => (float) ($v['turnover_threshold'] ?? 50000000), // ₹5 cr
             ];
         },
@@ -105,7 +105,7 @@ function luvron_einvoice_payload($order) {
             'Dt'   => $order->get_date_created()->format('d/m/Y'),
         ],
         'SellerDtls'  => [
-            'Gstin' => $o['gstin'] ?? '09XXXXXXXXXXX1Z5',
+            'Gstin' => $o['gstin'] ?? '09GOCPP5350G1ZQ',
             'LglNm' => 'Luvron Tricycles',
             'Addr1' => 'OFF-D-337, T-04, Indraprastha Colony',
             'Loc'   => 'Loni, Ghaziabad',

@@ -3,421 +3,1306 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luvron — India's Trusted Tricycle Manufacturer | B2B Wholesale</title>
-<meta name="description" content="Trusted Indian manufacturer of kids tricycles for B2B dealers and distributors. 14+ model families, 40+ SKUs, GST-compliant invoicing, 48-hour dispatch ex-Loni Ghaziabad UP.">
+<title>Luvron — Manufacturer-Direct Kids Tricycles for Indian Dealers · Loni, Ghaziabad</title>
+<meta name="description" content="Forty-four tricycles, packed and dispatched in 48 hours from our Loni floor. India's manufacturer-direct B2B platform for kids tricycles. GSTIN 09GOCPP5350G1ZQ.">
+<meta name="theme-color" content="#1a1d29">
+<link rel="icon" type="image/png" href="favicon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=DM+Sans:opsz,wght@9..40,300..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a1a; line-height: 1.5; -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.button { display: inline-block; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; transition: transform .15s, box-shadow .15s; }
-.button:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
-.button.primary { background: #ff8c00; color: #fff; }
-.button.outline { background: transparent; color: #fff; border: 2px solid #fff; }
-.button.dark { background: #1a1a1a; color: #fff; }
-.button.light { background: #fff; color: #1a1a1a; }
+/* ============================================================
+   LUVRON · Editorial Trade Catalogue
+   Designed as a cream-paper magazine for B2B dealers.
+   Palette drawn from the multi-color logo wordmark.
+   ============================================================ */
 
-/* Top Strip */
-.top-strip { background: #1a1a1a; color: #ccc; font-size: 13px; padding: 8px 0; text-align: center; }
-.top-strip a { color: #fff; margin: 0 8px; }
+:root {
+    --canvas: #faf6ef;
+    --canvas-2: #f3ece0;
+    --canvas-3: #ebe2d2;
+    --paper:   #fffdf7;
+    --paper-2: #f5efe2;
 
-/* Trust Strip */
-.trust-strip { background: #fff8e1; padding: 14px 0; text-align: center; font-size: 13px; color: #5c4a17; border-bottom: 1px solid #f0e0a8; }
-.trust-strip span { display: inline-block; margin: 0 8px; }
-.trust-strip strong { font-weight: 700; }
+    --ink:        #1a1d29;
+    --ink-soft:   #4a4f5e;
+    --ink-faint:  #8a8e9a;
+    --ink-ghost:  #b8b3a5;
 
-/* Header */
-header { background: #fff; padding: 16px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
-.nav-wrap { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 28px; font-weight: 800; letter-spacing: -1px; color: #1a1a1a; }
-.logo span { color: #ff8c00; }
-nav ul { list-style: none; display: flex; gap: 28px; }
-nav a { font-weight: 500; font-size: 15px; color: #333; transition: color .15s; }
-nav a:hover { color: #ff8c00; }
-.nav-cta { background: #ff8c00; color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: 600; font-size: 14px; }
+    --line:       #d8d0bf;
+    --line-soft:  #e6dfce;
 
-/* Hero */
-.hero { background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); color: #fff; padding: 100px 0 80px; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: radial-gradient(ellipse at top right, rgba(255,140,0,0.15), transparent 70%); }
-.hero-content { position: relative; max-width: 720px; }
-.hero-badge { display: inline-block; background: rgba(255,140,0,0.15); color: #ff8c00; padding: 6px 14px; border-radius: 99px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
-.hero h1 { font-size: 56px; line-height: 1.1; font-weight: 800; margin-bottom: 20px; letter-spacing: -1.5px; }
-.hero p { font-size: 19px; color: #ccc; margin-bottom: 32px; max-width: 560px; }
-.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    /* Brand accents — sampled from logo letters and tagline */
+    --coral:       #e84a3f;
+    --coral-deep:  #c93a30;
+    --coral-soft:  #f4d2cd;
+    --coral-paper: #fbe9e6;
 
-/* Stats */
-.stats { padding: 56px 0; background: #fafafa; border-bottom: 1px solid #eee; }
-.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; text-align: center; }
-.stat .num { display: block; font-size: 40px; font-weight: 800; color: #1a1a1a; margin-bottom: 4px; }
-.stat .label { display: block; font-size: 12px; text-transform: uppercase; color: #666; letter-spacing: 1px; }
+    --indigo:      #2e3a8c;
+    --indigo-deep: #1f2966;
+    --indigo-soft: #d6daf0;
+    --indigo-paper:#ebedfa;
 
-/* Section */
-.section { padding: 80px 0; }
-.section-head { text-align: center; max-width: 720px; margin: 0 auto 48px; }
-.section-head h2 { font-size: 36px; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
-.section-head p { color: #666; font-size: 17px; }
-.section-light { background: #fafafa; }
+    --mint:        #7aae8e;
+    --mint-deep:   #5a8c70;
+    --mint-soft:   #c8e2d2;
+    --mint-paper:  #e8f1ec;
 
-/* Product Categories */
-.categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-.cat-card { background: #fff; border-radius: 10px; padding: 20px; text-align: center; border: 1px solid #eee; transition: all .2s; cursor: pointer; }
-.cat-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); border-color: #ff8c00; }
-.cat-card img { width: 100%; height: 160px; object-fit: contain; margin-bottom: 12px; background: #fafafa; border-radius: 6px; padding: 10px; }
-.cat-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-.cat-card p { font-size: 12px; color: #888; }
+    --marigold:      #d4a847;
+    --marigold-deep: #b08a30;
+    --marigold-soft: #f0e3c0;
+    --marigold-paper:#faf3df;
 
-/* Why Luvron */
-.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
-.why-card { text-align: center; padding: 24px; }
-.why-card .icon { font-size: 48px; margin-bottom: 16px; display: block; }
-.why-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
-.why-card p { color: #666; font-size: 15px; }
+    --shadow-1: 0 1px 2px rgba(26, 29, 41, 0.04), 0 2px 8px rgba(26, 29, 41, 0.04);
+    --shadow-2: 0 8px 24px rgba(26, 29, 41, 0.06), 0 16px 48px rgba(26, 29, 41, 0.04);
+    --shadow-3: 0 24px 56px rgba(26, 29, 41, 0.10), 0 4px 16px rgba(26, 29, 41, 0.06);
 
-/* Products Grid */
-.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
-.product-card { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #eee; transition: all .2s; }
-.product-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
-.product-card-img { background: #fafafa; padding: 20px; height: 200px; display: flex; align-items: center; justify-content: center; }
-.product-card-img img { max-height: 100%; max-width: 100%; object-fit: contain; }
-.product-card-body { padding: 16px; }
-.product-card .sku { font-family: 'SF Mono', Monaco, monospace; font-size: 11px; color: #999; margin-bottom: 4px; }
-.product-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; line-height: 1.3; }
-.product-card .pack { font-size: 12px; color: #666; margin-bottom: 8px; }
-.product-card .gst-badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 11px; font-weight: 600; }
-.product-card .gst-5 { background: #dcf8c6; color: #1d6f1d; }
-.product-card .gst-18 { background: #fff3cd; color: #856404; }
-.product-card .quote { display: block; margin-top: 10px; padding: 8px; text-align: center; background: #fff8e1; color: #5c4a17; border-radius: 4px; font-size: 12px; font-weight: 600; }
-
-/* CTA Band */
-.cta-band { background: linear-gradient(135deg, #ff8c00 0%, #ff7300 100%); color: #fff; padding: 56px 0; text-align: center; }
-.cta-band h2 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
-.cta-band p { font-size: 17px; opacity: .9; margin-bottom: 24px; }
-.cta-band .button-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-/* Testimonials */
-.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-.testimonial { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-.testimonial .quote-mark { color: #ff8c00; font-size: 40px; line-height: 1; font-family: Georgia, serif; }
-.testimonial p { font-size: 14px; color: #333; line-height: 1.6; font-style: italic; margin: 8px 0 16px; }
-.testimonial-author { display: flex; align-items: center; gap: 14px; }
-.testimonial-author img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #ff8c00; }
-.testimonial-author strong { display: block; font-weight: 700; font-size: 15px; }
-.testimonial-author small { color: #888; font-size: 12px; }
-
-/* Footer */
-footer { background: #1a1a1a; color: #999; padding: 48px 0 16px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
-.footer-brand h3 { color: #fff; font-size: 24px; font-weight: 800; margin-bottom: 12px; }
-.footer-brand p { font-size: 13px; line-height: 1.7; }
-.footer-col h4 { color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; font-weight: 600; }
-.footer-col ul { list-style: none; }
-.footer-col li { margin-bottom: 8px; font-size: 13px; }
-.footer-col a:hover { color: #ff8c00; }
-.footer-legal { border-top: 1px solid #333; padding-top: 16px; font-size: 12px; text-align: center; color: #666; }
-
-/* WhatsApp Float */
-.wa-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); z-index: 999; }
-.wa-float svg { width: 32px; height: 32px; fill: #fff; }
-
-/* Banner */
-.demo-banner { background: #ff8c00; color: #fff; padding: 8px 16px; text-align: center; font-size: 13px; font-weight: 600; }
-.demo-banner a { text-decoration: underline; }
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav ul { display: none; }
-    .hero h1 { font-size: 36px; }
-    .hero p { font-size: 16px; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-    .stats-grid { grid-template-columns: 1fr 1fr; }
-    .section { padding: 56px 0; }
-    .section-head h2 { font-size: 28px; }
+    --max-w: 1240px;
 }
+
+/* Reset */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+    font-family: "DM Sans", -apple-system, sans-serif;
+    font-variation-settings: "opsz" 14;
+    color: var(--ink);
+    background: var(--canvas);
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-image:
+        radial-gradient(circle at 20% 10%, rgba(232, 74, 63, 0.03) 0, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(46, 58, 140, 0.025) 0, transparent 50%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.16 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 100% 100%, 100% 100%, 240px 240px;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; background: none; border: 0; color: inherit; }
+ul { list-style: none; }
+em { font-style: italic; }
+
+.display { font-family: "Fraunces", Georgia, serif; font-variation-settings: "opsz" 144, "SOFT" 50; line-height: 0.94; letter-spacing: -0.02em; }
+.mono    { font-family: "IBM Plex Mono", monospace; }
+
+.wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 720px) { .wrap { padding: 0 20px; } }
+
+/* PREVIEW BAR */
+.preview-bar {
+    background: var(--ink); color: var(--canvas);
+    padding: 8px 0; font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; text-align: center; letter-spacing: 0.08em;
+}
+.preview-bar a { color: var(--coral); border-bottom: 1px dotted var(--coral); padding-bottom: 1px; }
+
+/* UTILITY STRIP */
+.utility {
+    background: var(--ink); color: rgba(250, 246, 239, 0.7);
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px;
+    padding: 9px 0; letter-spacing: 0.02em;
+}
+.utility .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.utility a { color: var(--canvas); transition: color .15s; }
+.utility a:hover { color: var(--coral); }
+.utility .pipe { color: rgba(250, 246, 239, 0.25); margin: 0 8px; }
+@media (max-width: 720px) {
+    .utility .wrap { justify-content: center; font-size: 10.5px; }
+    .utility .hide-mobile { display: none; }
+}
+
+/* HEADER */
+.site-header {
+    border-bottom: 1px solid var(--line-soft);
+    padding: 18px 0; position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(12px);
+    background: rgba(250, 246, 239, 0.92);
+}
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.logo-link { display: flex; align-items: center; }
+.logo-link img { height: 44px; width: auto; }
+
+.site-nav ul { display: flex; gap: 32px; align-items: center; }
+.site-nav a {
+    font-family: "DM Sans", sans-serif; font-size: 14.5px; font-weight: 500;
+    color: var(--ink); transition: color .15s;
+    position: relative; padding-bottom: 2px;
+}
+.site-nav a:hover { color: var(--coral); }
+.site-nav a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -3px;
+    height: 1px; background: var(--coral);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .25s ease;
+}
+.site-nav a:hover::after { transform: scaleX(1); }
+
+.cta-button {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 999px;
+    font-family: "DM Sans", sans-serif; font-weight: 600; font-size: 14px;
+    transition: transform .15s, box-shadow .15s, background .15s;
+    border: 1px solid transparent;
+}
+.cta-button.primary {
+    background: var(--coral); color: white;
+    box-shadow: 0 4px 16px rgba(232, 74, 63, 0.25);
+}
+.cta-button.primary:hover {
+    background: var(--coral-deep); transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(232, 74, 63, 0.32);
+}
+.cta-button.ghost {
+    background: transparent; color: var(--ink); border-color: var(--ink);
+}
+.cta-button.ghost:hover { background: var(--ink); color: var(--canvas); }
+.cta-button.outline-cream {
+    background: transparent; color: var(--canvas);
+    border: 1px solid rgba(250, 246, 239, 0.4);
+}
+.cta-button.outline-cream:hover { background: var(--canvas); color: var(--ink); }
+.cta-button .arrow { width: 14px; height: 14px; transition: transform .2s; }
+.cta-button:hover .arrow { transform: translateX(3px); }
+
+.mobile-toggle { display: none; }
+@media (max-width: 900px) {
+    .site-nav { display: none; }
+    .site-nav.open {
+        display: block; position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--canvas); padding: 24px;
+        border-bottom: 1px solid var(--line);
+    }
+    .site-nav.open ul { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .mobile-toggle {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 40px; height: 40px;
+        border: 1px solid var(--ink); border-radius: 999px;
+    }
+    .mobile-toggle svg { width: 16px; height: 16px; }
+    .nav-cta-desktop { display: none; }
+}
+
+/* HERO */
+.hero { padding: 64px 0 80px; position: relative; overflow: hidden; }
+.hero::before {
+    content: ""; position: absolute;
+    top: 0; left: -10%; width: 30%; height: 100%;
+    background: radial-gradient(ellipse at center, rgba(46, 58, 140, 0.05), transparent 60%);
+    pointer-events: none;
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 72px; align-items: center; position: relative;
+}
+@media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+    .hero { padding: 48px 0 64px; }
+}
+
+.hero-eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--coral);
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 32px;
+}
+.hero-eyebrow .dash { width: 32px; height: 1px; background: var(--coral); }
+
+.hero-title {
+    font-size: clamp(56px, 9vw, 124px);
+    font-weight: 400; margin-bottom: 28px; color: var(--ink);
+}
+.hero-title em {
+    color: var(--coral); font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+    display: block;
+}
+.hero-title .punc { color: var(--coral); font-style: normal; }
+
+.hero-sub {
+    font-size: 18px; line-height: 1.55;
+    color: var(--ink-soft); max-width: 480px;
+    margin-bottom: 36px; font-weight: 400;
+}
+.hero-sub strong { color: var(--ink); font-weight: 600; }
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.hero-actions .meta {
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px;
+    color: var(--ink-faint); letter-spacing: 0.04em; margin-left: 6px;
+}
+
+.hero-feature {
+    position: relative; aspect-ratio: 4 / 5;
+    background: var(--paper); border-radius: 4px;
+}
+.hero-feature::after {
+    content: ""; position: absolute;
+    inset: 8% 12%;
+    background: radial-gradient(ellipse at center, var(--coral-soft), transparent 65%);
+    z-index: 0; filter: blur(40px);
+}
+.hero-feature-img {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1;
+}
+.hero-feature-img img {
+    max-width: 78%; max-height: 82%; object-fit: contain;
+    filter: drop-shadow(0 32px 48px rgba(26, 29, 41, 0.18));
+    transform-origin: center;
+    transition: transform .4s cubic-bezier(.23,1,.32,1);
+}
+.hero-feature:hover .hero-feature-img img { transform: scale(1.03) rotate(-1deg); }
+
+.hero-tag {
+    position: absolute; z-index: 2;
+    background: var(--paper); border: 1px solid var(--line);
+    padding: 12px 16px; box-shadow: var(--shadow-2);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; line-height: 1.45; letter-spacing: 0.02em;
+    color: var(--ink); border-radius: 2px;
+}
+.hero-tag .label {
+    display: block; color: var(--ink-faint);
+    font-size: 9.5px; text-transform: uppercase;
+    letter-spacing: 0.14em; margin-bottom: 3px;
+}
+.hero-tag .val {
+    font-weight: 600; font-size: 13px;
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 24;
+    letter-spacing: -0.01em;
+}
+.hero-tag.tl { top: 6%; left: -4%; transform: rotate(-2deg); }
+.hero-tag.tr { top: 14%; right: -8%; transform: rotate(1.5deg); }
+.hero-tag.bl { bottom: 18%; left: -10%; transform: rotate(-1deg); }
+.hero-tag.br { bottom: 6%; right: -4%; transform: rotate(2deg); }
+.hero-tag.feature {
+    background: var(--ink); color: var(--canvas); border-color: var(--ink);
+}
+.hero-tag.feature .label { color: rgba(250, 246, 239, 0.6); }
+.hero-tag.feature .val { color: var(--marigold-soft); }
+
+@media (max-width: 980px) {
+    .hero-tag.tl, .hero-tag.tr, .hero-tag.bl, .hero-tag.br {
+        position: static; transform: none;
+        display: inline-block; margin: 4px;
+    }
+}
+
+.hero-deco-arrow {
+    position: absolute; width: 90px; z-index: 1;
+    color: var(--ink-faint); opacity: 0.5;
+}
+.hero-deco-arrow.a1 { top: 22%; left: -6%; transform: rotate(-15deg); }
+.hero-deco-arrow.a2 { bottom: 22%; right: -6%; transform: rotate(160deg); }
+@media (max-width: 980px) { .hero-deco-arrow { display: none; } }
+
+/* MARQUEE */
+.marquee-strip {
+    background: var(--ink); color: var(--canvas);
+    padding: 22px 0; overflow: hidden;
+    border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+}
+.marquee-track {
+    display: flex; gap: 56px; width: fit-content;
+    animation: marquee 38s linear infinite; white-space: nowrap;
+}
+.marquee-item {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-family: "Fraunces", serif; font-size: 28px; font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 100; letter-spacing: -0.01em;
+}
+.marquee-item .dot {
+    display: inline-block; width: 6px; height: 6px;
+    border-radius: 50%; background: var(--coral);
+}
+.marquee-item .dot.indigo { background: var(--indigo); }
+.marquee-item .dot.mint { background: var(--mint); }
+.marquee-item .dot.gold { background: var(--marigold); }
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* STATS */
+.stats { padding: 80px 0 56px; }
+.stats-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.stat-cell {
+    padding: 36px 24px;
+    border-right: 1px solid var(--line-soft); position: relative;
+}
+.stat-cell:last-child { border-right: 0; }
+.stat-cell .num {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 60;
+    font-size: 64px; line-height: 1; color: var(--ink);
+    margin-bottom: 8px; letter-spacing: -0.02em; font-weight: 400;
+}
+.stat-cell .num em { color: var(--coral); font-style: italic; }
+.stat-cell .num .small { font-size: 32px; }
+.stat-cell .label {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px;
+    color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.1em;
+}
+@media (max-width: 980px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-cell { border-bottom: 1px solid var(--line-soft); }
+    .stat-cell:nth-child(odd) { border-right: 1px solid var(--line-soft); }
+    .stat-cell:nth-child(even) { border-right: 0; }
+    .stat-cell:nth-child(5) { grid-column: 1 / -1; border-right: 0; border-bottom: 0; }
+    .stat-cell .num { font-size: 48px; }
+}
+@media (max-width: 480px) {
+    .stat-cell { padding: 24px 16px; }
+    .stat-cell .num { font-size: 40px; }
+}
+
+/* SECTION HEADERS */
+.section-head {
+    display: grid; grid-template-columns: 200px 1fr;
+    gap: 64px; margin-bottom: 56px; align-items: end;
+    padding-bottom: 24px; border-bottom: 1px solid var(--line);
+}
+.section-num {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+    font-size: 88px; line-height: 0.85;
+    color: var(--coral); font-style: italic; font-weight: 400;
+}
+.section-meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--ink-faint); margin-bottom: 8px;
+}
+.section-title {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1; color: var(--ink);
+    letter-spacing: -0.02em; font-weight: 400;
+}
+.section-title em { color: var(--coral); font-style: italic; }
+.section-title .alt { color: var(--indigo); font-style: italic; }
+.section-blurb {
+    font-size: 16px; color: var(--ink-soft);
+    max-width: 520px; line-height: 1.6; margin-top: 16px;
+}
+@media (max-width: 720px) {
+    .section-head { grid-template-columns: 1fr; gap: 16px; }
+    .section-num { font-size: 64px; }
+}
+
+/* CATALOGUE */
+.catalogue { padding: 96px 0; }
+
+.cat-toolbar {
+    display: flex; flex-wrap: wrap; gap: 24px;
+    align-items: center; justify-content: space-between;
+    margin-bottom: 40px; padding: 20px 24px;
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 4px;
+}
+.cat-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.cat-filters .filter-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--ink-faint); margin-right: 4px;
+}
+.chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 14px; border-radius: 999px;
+    font-family: "DM Sans", sans-serif; font-size: 12.5px; font-weight: 500;
+    color: var(--ink-soft); background: var(--canvas-2);
+    border: 1px solid transparent; transition: all .15s; cursor: pointer;
+}
+.chip:hover { background: var(--canvas-3); color: var(--ink); }
+.chip.active { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+.chip .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: currentColor; opacity: 0.5;
+}
+.chip.active .dot { opacity: 1; }
+.chip.musical-chip .dot { background: var(--marigold-deep); opacity: 1; }
+.chip.normal-chip .dot { background: var(--mint-deep); opacity: 1; }
+
+.cat-count {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px; color: var(--ink-soft); letter-spacing: 0.04em;
+}
+.cat-count strong { color: var(--ink); font-weight: 600; }
+
+.cat-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    border-top: 1px solid var(--line-soft);
+    border-left: 1px solid var(--line-soft);
+}
+.cat-item {
+    background: var(--paper);
+    border-right: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    padding: 28px 24px 24px;
+    transition: background .25s, transform .25s;
+    position: relative; cursor: pointer;
+    display: flex; flex-direction: column;
+}
+.cat-item:hover { background: var(--canvas-2); }
+.cat-item.hidden { display: none; }
+.cat-img {
+    aspect-ratio: 1 / 1.05; background: var(--canvas);
+    border-radius: 2px; display: flex;
+    align-items: center; justify-content: center;
+    margin-bottom: 18px; overflow: hidden; position: relative;
+}
+.cat-img img {
+    max-width: 82%; max-height: 82%; object-fit: contain;
+    transition: transform .35s cubic-bezier(.23,1,.32,1);
+}
+.cat-item:hover .cat-img img { transform: scale(1.06) rotate(-2deg); }
+.cat-tier-badge {
+    position: absolute; top: 10px; left: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.1em; padding: 3px 8px;
+    border-radius: 999px; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 4px;
+}
+.cat-tier-badge.musical {
+    background: var(--marigold-paper); color: var(--marigold-deep);
+    border: 1px solid var(--marigold-soft);
+}
+.cat-tier-badge.normal {
+    background: var(--mint-paper); color: var(--mint-deep);
+    border: 1px solid var(--mint-soft);
+}
+.cat-tier-badge svg { width: 9px; height: 9px; }
+
+.cat-sku {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px; color: var(--ink-faint);
+    text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px;
+}
+.cat-name {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 36, "SOFT" 50;
+    font-size: 19px; color: var(--ink);
+    margin-bottom: 12px; letter-spacing: -0.01em;
+    line-height: 1.15; flex-grow: 1;
+}
+.cat-meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px; color: var(--ink-soft);
+    line-height: 1.7; letter-spacing: 0.02em;
+    border-top: 1px dashed var(--line);
+    padding-top: 12px; margin-top: 4px;
+}
+.cat-meta-row { display: flex; justify-content: space-between; }
+.cat-meta-row .k {
+    color: var(--ink-faint); text-transform: uppercase;
+    letter-spacing: 0.1em; font-size: 9.5px;
+}
+.cat-meta-row .v { color: var(--ink); font-weight: 500; }
+
+.cat-cta {
+    display: block; margin-top: 14px;
+    padding: 8px 12px; border: 1px solid var(--ink);
+    border-radius: 999px; text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12.5px; font-weight: 500; color: var(--ink);
+    transition: background .15s, color .15s;
+}
+.cat-item:hover .cat-cta { background: var(--ink); color: var(--canvas); }
+
+@media (max-width: 980px) { .cat-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 720px) {
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .cat-item { padding: 20px 16px 16px; }
+    .cat-name { font-size: 16px; }
+}
+@media (max-width: 480px) {
+    .cat-grid { grid-template-columns: 1fr; }
+}
+
+/* TIERS */
+.tiers {
+    padding: 80px 0; background: var(--canvas-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.tiers-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 40px; margin-top: 32px;
+}
+.tier-card {
+    background: var(--paper); border: 1px solid var(--line);
+    padding: 44px 40px; border-radius: 4px;
+    position: relative; overflow: hidden;
+}
+.tier-card::before {
+    content: ""; position: absolute;
+    top: -40px; right: -40px;
+    width: 220px; height: 220px;
+    border-radius: 50%; opacity: 0.18;
+}
+.tier-card.musical::before { background: var(--marigold); }
+.tier-card.normal::before { background: var(--mint); }
+.tier-marker {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.14em; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+}
+.tier-card.musical .tier-marker { color: var(--marigold-deep); }
+.tier-card.normal .tier-marker { color: var(--mint-deep); }
+.tier-marker .icon-circle {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+}
+.tier-card.musical .tier-marker .icon-circle {
+    background: var(--marigold-paper);
+    border: 1px solid var(--marigold-soft);
+}
+.tier-card.normal .tier-marker .icon-circle {
+    background: var(--mint-paper);
+    border: 1px solid var(--mint-soft);
+}
+.tier-marker svg { width: 14px; height: 14px; }
+
+.tier-name {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-size: 56px; color: var(--ink);
+    line-height: 1; margin-bottom: 14px;
+    letter-spacing: -0.02em; font-weight: 400;
+    position: relative;
+}
+.tier-name em { font-style: italic; }
+.tier-card.musical .tier-name em { color: var(--marigold-deep); }
+.tier-card.normal .tier-name em { color: var(--mint-deep); }
+
+.tier-rate {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 36;
+    font-size: 22px; margin-bottom: 24px;
+    color: var(--ink-soft); font-style: italic; font-weight: 400;
+}
+.tier-rate .num {
+    font-size: 28px; font-weight: 600;
+    color: var(--ink); margin-right: 8px; font-style: normal;
+}
+
+.tier-features { font-size: 14.5px; color: var(--ink-soft); }
+.tier-features li {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0; border-top: 1px dashed var(--line);
+}
+.tier-features li:first-child { border-top: 0; padding-top: 0; }
+.tier-features .check {
+    flex-shrink: 0; width: 16px; height: 16px;
+    border-radius: 50%; background: var(--canvas-2);
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+}
+.tier-card.musical .tier-features .check {
+    background: var(--marigold-paper); color: var(--marigold-deep);
+}
+.tier-card.normal .tier-features .check {
+    background: var(--mint-paper); color: var(--mint-deep);
+}
+.tier-features .check svg { width: 9px; height: 9px; }
+.tier-features li strong { color: var(--ink); font-weight: 600; }
+.tier-features .hsn {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; color: var(--ink-faint);
+    margin-top: 16px; padding-top: 16px;
+    border-top: 1px solid var(--line); display: block;
+    letter-spacing: 0.02em;
+}
+@media (max-width: 720px) {
+    .tiers-grid { grid-template-columns: 1fr; gap: 24px; }
+    .tier-card { padding: 32px 24px; }
+    .tier-name { font-size: 44px; }
+}
+
+/* PACT */
+.pact { padding: 96px 0; }
+.pact-list {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+    border-top: 1px solid var(--line);
+}
+.pact-item {
+    padding: 36px 32px 36px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 80px 1fr;
+    gap: 24px; align-items: start; position: relative;
+}
+.pact-item:nth-child(odd) {
+    border-right: 1px solid var(--line);
+    padding-right: 32px; padding-left: 0;
+}
+.pact-item:nth-child(even) { padding-left: 32px; }
+.pact-num {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+    font-size: 48px; line-height: 0.9;
+    color: var(--coral); font-style: italic; font-weight: 400;
+}
+.pact-h {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 36, "SOFT" 50;
+    font-size: 22px; color: var(--ink);
+    margin-bottom: 8px; letter-spacing: -0.01em;
+    line-height: 1.2; font-weight: 400;
+}
+.pact-h em { color: var(--indigo); font-style: italic; }
+.pact-p { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); }
+@media (max-width: 720px) {
+    .pact-list { grid-template-columns: 1fr; }
+    .pact-item { padding: 24px 0 !important; border-right: 0 !important; }
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    padding: 96px 0; background: var(--canvas-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.testimonial-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+}
+.testimonial {
+    background: var(--paper); border: 1px solid var(--line);
+    padding: 40px 36px; border-radius: 4px; position: relative;
+}
+.testimonial::before {
+    content: "\201C"; position: absolute;
+    top: 8px; left: 24px;
+    font-family: "Fraunces", serif; font-size: 96px; line-height: 1;
+    color: var(--coral); opacity: 0.18;
+    font-style: italic; font-weight: 400;
+}
+.testimonial-q {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 36, "SOFT" 50;
+    font-size: 22px; line-height: 1.4;
+    color: var(--ink); font-style: italic; font-weight: 400;
+    margin-bottom: 28px; position: relative; z-index: 1;
+}
+.testimonial-meta {
+    display: flex; align-items: center; gap: 16px;
+    padding-top: 20px; border-top: 1px dashed var(--line);
+}
+.testimonial-meta img {
+    width: 56px; height: 56px;
+    border-radius: 50%; object-fit: cover;
+    background: var(--canvas-2); border: 2px solid var(--paper);
+    box-shadow: 0 0 0 1px var(--line);
+}
+.testimonial-meta .who { flex-grow: 1; line-height: 1.3; }
+.testimonial-meta .who strong {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 24;
+    font-size: 17px; color: var(--ink); display: block;
+    font-weight: 500; letter-spacing: -0.01em;
+}
+.testimonial-meta .who small {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px; color: var(--ink-faint);
+    text-transform: uppercase; letter-spacing: 0.08em;
+}
+@media (max-width: 720px) {
+    .testimonial-grid { grid-template-columns: 1fr; }
+    .testimonial { padding: 28px 24px; }
+    .testimonial-q { font-size: 18px; }
+}
+
+/* CTA BAND */
+.cta-band {
+    padding: 120px 0; background: var(--ink);
+    color: var(--canvas); position: relative; overflow: hidden;
+}
+.cta-band::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 30%, rgba(232, 74, 63, 0.18), transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(46, 58, 140, 0.25), transparent 50%);
+    pointer-events: none;
+}
+.cta-band-grid {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 64px; align-items: end; position: relative; z-index: 1;
+}
+.cta-eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px; text-transform: uppercase;
+    letter-spacing: 0.14em; color: var(--coral); margin-bottom: 24px;
+}
+.cta-title {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.95; color: var(--canvas);
+    letter-spacing: -0.02em; margin-bottom: 24px; font-weight: 400;
+}
+.cta-title em { color: var(--coral); font-style: italic; }
+.cta-sub {
+    font-size: 17px; line-height: 1.55;
+    max-width: 420px; color: rgba(250, 246, 239, 0.7);
+}
+.cta-actions {
+    display: flex; flex-direction: column;
+    gap: 14px; align-items: stretch; min-width: 240px;
+}
+.cta-actions .cta-button { justify-content: center; }
+.cta-tel {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px; color: rgba(250, 246, 239, 0.5);
+    text-align: center; letter-spacing: 0.06em; margin-top: 4px;
+}
+@media (max-width: 720px) {
+    .cta-band-grid { grid-template-columns: 1fr; gap: 32px; }
+    .cta-band { padding: 80px 0; }
+}
+
+/* FOOTER */
+footer.site-footer {
+    padding: 72px 0 32px; background: var(--canvas);
+    border-top: 1px solid var(--line);
+}
+.footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px; margin-bottom: 56px;
+}
+.footer-brand .logo-mark { height: 48px; margin-bottom: 24px; width: auto; }
+.footer-brand .nap {
+    font-size: 13.5px; color: var(--ink-soft);
+    line-height: 1.7; max-width: 340px;
+}
+.footer-brand .nap strong { color: var(--ink); font-weight: 600; }
+.footer-stamp {
+    margin-top: 24px;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 10px 16px;
+    border: 1.5px solid var(--coral); border-radius: 4px;
+    color: var(--coral);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px; text-transform: uppercase;
+    letter-spacing: 0.1em; background: var(--coral-paper);
+    transform: rotate(-1deg);
+}
+.footer-stamp .gstin { font-weight: 600; }
+.footer-col h4 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.14em; color: var(--ink-faint);
+    margin-bottom: 18px; font-weight: 500;
+}
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+    font-size: 14px; color: var(--ink); transition: color .15s;
+    border-bottom: 1px solid transparent; padding-bottom: 1px;
+}
+.footer-col a:hover { color: var(--coral); border-bottom-color: var(--coral); }
+
+.colophon {
+    border-top: 1px solid var(--line); padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; color: var(--ink-faint); letter-spacing: 0.04em;
+}
+.colophon .heart { color: var(--coral); }
+@media (max-width: 720px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+    .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* WHATSAPP FLOAT */
+.wa-float {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--ink); color: var(--canvas);
+    border-radius: 999px; padding: 14px 22px 14px 14px;
+    display: flex; align-items: center; gap: 12px;
+    box-shadow: var(--shadow-3); z-index: 99;
+    transition: transform .2s, background .2s;
+}
+.wa-float:hover { transform: translateY(-2px); background: #25D366; }
+.wa-float .ico {
+    width: 36px; height: 36px;
+    background: #25D366; color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+.wa-float:hover .ico { background: var(--paper); color: #25D366; }
+.wa-float .ico svg { width: 18px; height: 18px; fill: currentColor; }
+.wa-float .txt { display: flex; flex-direction: column; line-height: 1.2; }
+.wa-float .txt small {
+    font-family: "IBM Plex Mono", monospace; font-size: 9.5px;
+    color: rgba(250, 246, 239, 0.6);
+    text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 2px;
+}
+.wa-float .txt strong {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 24;
+    font-size: 14px; font-weight: 500; letter-spacing: -0.01em;
+}
+@media (max-width: 720px) {
+    .wa-float { padding: 10px; }
+    .wa-float .txt { display: none; }
+}
+
+/* REVEAL ANIMATIONS */
+.reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity .8s cubic-bezier(.23,1,.32,1),
+                transform .8s cubic-bezier(.23,1,.32,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+.reveal-delay-5 { transition-delay: .5s; }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow, .hero-title, .hero-sub, .hero-actions {
+    animation: fadeUp .7s cubic-bezier(.23,1,.32,1) backwards;
+}
+.hero-title { animation-delay: .1s; }
+.hero-sub { animation-delay: .2s; }
+.hero-actions { animation-delay: .3s; }
+.hero-feature { animation: fadeUp .9s cubic-bezier(.23,1,.32,1) .15s backwards; }
+.hero-tag { animation: fadeUp .8s cubic-bezier(.23,1,.32,1) backwards; }
+.hero-tag.tl { animation-delay: .5s; }
+.hero-tag.tr { animation-delay: .6s; }
+.hero-tag.bl { animation-delay: .7s; }
+.hero-tag.br { animation-delay: .8s; }
 </style>
 </head>
 <body>
 
-<div class="demo-banner">
-    🚧 PREVIEW BUILD — Live B2B store launches at <a href="https://luvron.in">luvron.in</a> · This is a static design preview
+<!-- SVG icon templates (cloned by JS — avoids innerHTML) -->
+<template id="icon-music">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="16" r="2.2"/>
+    </svg>
+</template>
+<template id="icon-leaf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <circle cx="6" cy="17" r="2.2"/><circle cx="18" cy="17" r="2.2"/><path d="M9 17l4-9h3"/>
+    </svg>
+</template>
+
+<!-- Preview notice -->
+<div class="preview-bar">
+    DESIGN PREVIEW · LIVE B2B COMMERCE LAUNCHES AT <a href="https://luvron.in" target="_blank">luvron.in</a> · 26 mu-plugins ready for cPanel deploy
 </div>
 
-<div class="top-strip">
-    <span>📞 <a href="tel:+919212389139">+91-9212389139</a></span>
-    <span>·</span>
-    <span>📱 <a href="https://wa.me/919212389139">WhatsApp</a></span>
-    <span>·</span>
-    <span>📦 Pan-India Dispatch Ex-Loni Ghaziabad UP</span>
+<!-- Utility strip -->
+<div class="utility">
+    <div class="wrap">
+        <div>
+            <span>EST. 2018</span>
+            <span class="pipe">·</span>
+            <span>LONI, GHAZIABAD UP</span>
+            <span class="pipe hide-mobile">·</span>
+            <span class="hide-mobile">DISPATCH 48HR</span>
+        </div>
+        <div>
+            <a href="tel:+919212389139">+91 9212 389 139</a>
+            <span class="pipe">·</span>
+            <a href="https://wa.me/919212389139" target="_blank">WHATSAPP</a>
+            <span class="pipe hide-mobile">·</span>
+            <span class="hide-mobile">GSTIN 09GOCPP5350G1ZQ</span>
+        </div>
+    </div>
 </div>
 
-<header>
-    <div class="container nav-wrap">
-        <div class="logo">Luv<span>Ron</span></div>
-        <nav>
+<!-- Header -->
+<header class="site-header">
+    <div class="wrap header-row">
+        <a href="#" class="logo-link" aria-label="Luvron home">
+            <img src="logo.png" alt="LuvRon — A Trusted Brand For Your Child's Fun" />
+        </a>
+        <nav class="site-nav" id="nav">
             <ul>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#why">Why Luvron</a></li>
-                <li><a href="#testimonials">Dealers</a></li>
+                <li><a href="#catalogue">Catalogue</a></li>
+                <li><a href="#tiers">Pricing Tiers</a></li>
+                <li><a href="#pact">The Pact</a></li>
+                <li><a href="#dealers">Dealers</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <a href="#dealer" class="nav-cta">Become a Dealer</a>
+        <a href="#cta" class="cta-button primary nav-cta-desktop">
+            Become a Dealer
+            <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h12m-4-4l4 4-4 4"/></svg>
+        </a>
+        <button class="mobile-toggle" aria-label="Menu" id="mobile-toggle-btn">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+        </button>
     </div>
 </header>
 
-<div class="trust-strip">
-    <span><strong>GSTIN:</strong> 09XXXXXXXXXXX1Z5</span>
-    <span style="opacity:.4">|</span>
-    <span><strong>Udyam:</strong> UDYAM-UP-XX-XXXXXXX</span>
-    <span style="opacity:.4">|</span>
-    <span><strong>Made in India</strong> 🇮🇳</span>
-    <span style="opacity:.4">|</span>
-    <span>48-hr Dispatch SLA</span>
+<!-- Hero -->
+<section class="hero">
+    <div class="wrap hero-grid">
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="dash"></span>
+                <span>Wholesale · Manufacturer Direct</span>
+            </div>
+            <h1 class="display hero-title">
+                Three wheels<span class="punc">.</span>
+                <em>Forty-four reasons.</em>
+            </h1>
+            <p class="hero-sub">
+                <strong>India's most carefully packed kids tricycles</strong>, dispatched in 48 hours from our manufacturing floor in Loni, Ghaziabad — for the dealer who measures margins, not marketing.
+            </p>
+            <div class="hero-actions">
+                <a href="#cta" class="cta-button primary">
+                    Become a Dealer
+                    <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h12m-4-4l4 4-4 4"/></svg>
+                </a>
+                <a href="#catalogue" class="cta-button ghost">Browse 44 SKUs</a>
+                <span class="meta">MOQ · 1 master carton</span>
+            </div>
+        </div>
+
+        <div class="hero-feature">
+            <svg class="hero-deco-arrow a1" viewBox="0 0 100 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M5 30 Q 30 5, 60 25 T 95 35" stroke-dasharray="2 4"/>
+                <path d="M88 28 L 95 35 L 87 41"/>
+            </svg>
+            <svg class="hero-deco-arrow a2" viewBox="0 0 100 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M5 30 Q 30 5, 60 25 T 95 35" stroke-dasharray="2 4"/>
+                <path d="M88 28 L 95 35 L 87 41"/>
+            </svg>
+
+            <div class="hero-tag tl">
+                <span class="label">Series</span>
+                <span class="val">SIGMA Plus</span>
+            </div>
+            <div class="hero-tag tr feature">
+                <span class="label">Tier</span>
+                <span class="val">Musical · 18%</span>
+            </div>
+            <div class="hero-tag bl">
+                <span class="label">Master Carton</span>
+                <span class="val">12 pieces</span>
+            </div>
+            <div class="hero-tag br">
+                <span class="label">Wholesale</span>
+                <span class="val">₹ 1,760</span>
+            </div>
+
+            <div class="hero-feature-img">
+                <img src="products/sigma-plus.jpg" alt="SIGMA Plus tricycle, our musical flagship" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+        <span class="marquee-item">Made in Loni <span class="dot"></span></span>
+        <span class="marquee-item">Forty-four SKUs <span class="dot indigo"></span></span>
+        <span class="marquee-item">48-hour dispatch <span class="dot mint"></span></span>
+        <span class="marquee-item">GSTIN 09GOCPP5350G1ZQ <span class="dot gold"></span></span>
+        <span class="marquee-item">Master cartons of 12, 15, 16, 20, 24 <span class="dot"></span></span>
+        <span class="marquee-item">Pan-India dispatch <span class="dot indigo"></span></span>
+        <span class="marquee-item">Made in Loni <span class="dot"></span></span>
+        <span class="marquee-item">Forty-four SKUs <span class="dot indigo"></span></span>
+        <span class="marquee-item">48-hour dispatch <span class="dot mint"></span></span>
+        <span class="marquee-item">GSTIN 09GOCPP5350G1ZQ <span class="dot gold"></span></span>
+        <span class="marquee-item">Master cartons of 12, 15, 16, 20, 24 <span class="dot"></span></span>
+        <span class="marquee-item">Pan-India dispatch <span class="dot indigo"></span></span>
+    </div>
 </div>
 
-<section class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <span class="hero-badge">Direct from Manufacturer · B2B Wholesale</span>
-            <h1>India's Trusted Tricycle Manufacturer</h1>
-            <p>For Dealers, Distributors and Retailers across India. 40+ models · GST-compliant invoicing · Dealer territory protection · 48-hour dispatch ex-Loni, Ghaziabad UP.</p>
-            <div class="hero-ctas">
-                <a href="#dealer" class="button primary">Become a Dealer</a>
-                <a href="#products" class="button outline">Browse Catalogue</a>
-            </div>
-        </div>
-    </div>
-</section>
-
+<!-- Stats -->
 <section class="stats">
-    <div class="container stats-grid">
-        <div class="stat">
-            <span class="num">8+</span>
-            <span class="label">Years Manufacturing</span>
-        </div>
-        <div class="stat">
-            <span class="num">50+</span>
-            <span class="label">Active Dealers</span>
-        </div>
-        <div class="stat">
-            <span class="num">44</span>
-            <span class="label">Active SKUs</span>
-        </div>
-        <div class="stat">
-            <span class="num">48hr</span>
-            <span class="label">Dispatch SLA</span>
-        </div>
-        <div class="stat">
-            <span class="num">12k</span>
-            <span class="label">Units / Month</span>
+    <div class="wrap">
+        <div class="stats-grid">
+            <div class="stat-cell"><div class="num display">44</div><div class="label">Active SKUs</div></div>
+            <div class="stat-cell"><div class="num display">11</div><div class="label">Model Series</div></div>
+            <div class="stat-cell"><div class="num display"><em>48</em><span class="small">hr</span></div><div class="label">Dispatch SLA</div></div>
+            <div class="stat-cell"><div class="num display">50+</div><div class="label">Active Dealers</div></div>
+            <div class="stat-cell"><div class="num display">8<span class="small">yrs</span></div><div class="label">In Production</div></div>
         </div>
     </div>
 </section>
 
-<section class="section" id="categories">
-    <div class="container">
+<!-- Catalogue -->
+<section class="catalogue" id="catalogue">
+    <div class="wrap">
         <div class="section-head">
-            <h2>Explore Our Models</h2>
-            <p>11 product series · 44 SKUs · From entry-tier RAMBO to premium SIGMA Plus</p>
-        </div>
-        <div class="categories">
-            <div class="cat-card">
-                <img src="products/sigma-plus.jpg" alt="SIGMA series">
-                <h3>SIGMA</h3>
-                <p>Premium with canopy</p>
-            </div>
-            <div class="cat-card">
-                <img src="products/aura-plus.jpg" alt="AURA series">
-                <h3>AURA</h3>
-                <p>Mid-range favourite</p>
-            </div>
-            <div class="cat-card">
-                <img src="products/eagle-plus.jpg" alt="EAGLE series">
-                <h3>EAGLE</h3>
-                <p>Sporty design</p>
-            </div>
-            <div class="cat-card">
-                <img src="products/alex-plus.jpg" alt="ALEX series">
-                <h3>ALEX</h3>
-                <p>Bestselling base</p>
-            </div>
-            <div class="cat-card">
-                <img src="products/ecotech-plus.jpg" alt="ECOTECH series">
-                <h3>ECOTECH</h3>
-                <p>Eco-friendly build</p>
-            </div>
-            <div class="cat-card">
-                <img src="products/rambo-333-plus.jpg" alt="RAMBO series">
-                <h3>RAMBO</h3>
-                <p>Volume value pack</p>
-            </div>
-            <div class="cat-card">
-                <img src="products/hulk-pro-plus.jpg" alt="HULK series">
-                <h3>HULK</h3>
-                <p>Sturdy chassis</p>
-            </div>
-            <div class="cat-card">
-                <img src="products/charlie-r1-plus.jpg" alt="CHARLIE series">
-                <h3>CHARLIE</h3>
-                <p>Compact starter</p>
+            <div class="section-num display">01</div>
+            <div>
+                <div class="section-meta">The Catalogue · Updated 01 April 2026</div>
+                <h2 class="section-title">Forty-four <em>tricycles.</em><br>One <em>careful</em> floor.</h2>
+                <p class="section-blurb">Browse the full catalogue, filter by series or pricing tier. <strong style="color:var(--ink);">Login as a dealer to unlock wholesale pricing.</strong> Every SKU dispatches in master cartons.</p>
             </div>
         </div>
+
+        <div class="cat-toolbar">
+            <div class="cat-filters">
+                <span class="filter-label">Tier</span>
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip musical-chip" data-filter="musical"><span class="dot"></span>Musical · 18%</button>
+                <button class="chip normal-chip" data-filter="normal"><span class="dot"></span>Normal · 5%</button>
+            </div>
+            <div class="cat-filters">
+                <span class="filter-label">Series</span>
+                <button class="chip series-chip active" data-series="all">All</button>
+                <button class="chip series-chip" data-series="SIGMA">SIGMA</button>
+                <button class="chip series-chip" data-series="AURA">AURA</button>
+                <button class="chip series-chip" data-series="EAGLE">EAGLE</button>
+                <button class="chip series-chip" data-series="ALEX">ALEX</button>
+                <button class="chip series-chip" data-series="ECOTECH">ECOTECH</button>
+                <button class="chip series-chip" data-series="RAMBO">RAMBO</button>
+                <button class="chip series-chip" data-series="LEON">LEON</button>
+                <button class="chip series-chip" data-series="LION">LION</button>
+                <button class="chip series-chip" data-series="CHARLIE">CHARLIE</button>
+                <button class="chip series-chip" data-series="EMMA">EMMA</button>
+                <button class="chip series-chip" data-series="HULK">HULK</button>
+            </div>
+            <div class="cat-count"><strong id="visible-count">44</strong>&nbsp;of&nbsp;44 SKUs</div>
+        </div>
+
+        <div class="cat-grid" id="cat-grid"></div>
     </div>
 </section>
 
-<section class="section section-light" id="why">
-    <div class="container">
+<!-- Tiers -->
+<section class="tiers" id="tiers">
+    <div class="wrap">
         <div class="section-head">
-            <h2>Why Luvron</h2>
-            <p>Built for dealers who measure margins, transit reliability, and supply consistency</p>
+            <div class="section-num display">02</div>
+            <div>
+                <div class="section-meta">Two Tiers · Two GST Rates</div>
+                <h2 class="section-title">Same chassis. <em class="alt">Different soundtrack.</em></h2>
+                <p class="section-blurb">Every model comes in two tiers — Musical (with horn, lights, music) at 18% GST, or Normal (clean ride, no electronics) at 5% GST. Same body, same wheels, same packing.</p>
+            </div>
         </div>
-        <div class="why-grid">
-            <div class="why-card">
-                <span class="icon">💰</span>
-                <h3>Bulk Margins</h3>
-                <p>Direct from manufacturer pricing — no middleman markup. Tier discounts for distributors and high-volume dealers.</p>
+
+        <div class="tiers-grid">
+            <div class="tier-card musical">
+                <div class="tier-marker">
+                    <span class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+                        </svg>
+                    </span>
+                    Musical · 18% GST
+                </div>
+                <h3 class="tier-name display">Plus <em>variants</em></h3>
+                <div class="tier-rate"><span class="num">₹680—1,760</span> wholesale, ex-Loni</div>
+                <ul class="tier-features">
+                    <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M3 8l3 3 7-7"/></svg></span><span><strong>Horn, lights &amp; music</strong> on the handlebar — kids' top decision driver in retail</span></li>
+                    <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M3 8l3 3 7-7"/></svg></span><span>Premium <strong>retail boxed packaging</strong> with brand graphics</span></li>
+                    <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M3 8l3 3 7-7"/></svg></span><span>Higher margin tier — <strong>better shelf attraction</strong> in mainline stores</span></li>
+                    <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M3 8l3 3 7-7"/></svg></span><span><span class="hsn">HSN 9503 · Toys with mechanical sound</span></span></li>
+                </ul>
             </div>
-            <div class="why-card">
-                <span class="icon">🚚</span>
-                <h3>Fast Supply</h3>
-                <p>48-hour dispatch on confirmed orders from our Loni, Ghaziabad facility. Pan-India delivery via Delhivery, Gati, VRL, TCI.</p>
-            </div>
-            <div class="why-card">
-                <span class="icon">📦</span>
-                <h3>Strong Packaging</h3>
-                <p>Master cartons engineered for stack and transit. Branded retail boxes for premium SKUs. Damage rate under 0.5%.</p>
-            </div>
-            <div class="why-card">
-                <span class="icon">📋</span>
-                <h3>GST Compliant</h3>
-                <p>5% / 18% GST billing with HSN codes, automatic CGST/SGST/IGST split, and IRN/QR e-invoicing for input credit.</p>
-            </div>
-            <div class="why-card">
-                <span class="icon">🛡️</span>
-                <h3>Territory Protection</h3>
-                <p>Distributors get exclusive PIN-code zones. We don't appoint dealers in your protected territory.</p>
-            </div>
-            <div class="why-card">
-                <span class="icon">💬</span>
-                <h3>Real Human Support</h3>
-                <p>Direct WhatsApp line to founder Rajneesh Kumar Pandey. We pick up the phone — that's not common in this industry.</p>
+
+            <div class="tier-card normal">
+                <div class="tier-marker">
+                    <span class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/>
+                            <path d="M9 17l4-9h3M6 14l3-7h2"/>
+                        </svg>
+                    </span>
+                    Normal · 5% GST
+                </div>
+                <h3 class="tier-name display">Base <em>variants</em></h3>
+                <div class="tier-rate"><span class="num">₹560—1,700</span> wholesale, ex-Loni</div>
+                <ul class="tier-features">
+                    <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M3 8l3 3 7-7"/></svg></span><span><strong>Same chassis &amp; wheels</strong> as Plus — ride quality identical</span></li>
+                    <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M3 8l3 3 7-7"/></svg></span><span><strong>Lower price point</strong> — best for value retailers and tier-2/3 markets</span></li>
+                    <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M3 8l3 3 7-7"/></svg></span><span>Lower GST — <strong>customer-friendly tax pass-through</strong></span></li>
+                    <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M3 8l3 3 7-7"/></svg></span><span><span class="hsn">HSN 8712 · Children's bicycles &amp; tricycles</span></span></li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" id="products">
-    <div class="container">
+<!-- The Pact -->
+<section class="pact" id="pact">
+    <div class="wrap">
         <div class="section-head">
-            <h2>Featured Products</h2>
-            <p>Login to see dealer pricing · MOQ 1 master carton (12 / 15 / 16 / 20 / 24 pieces depending on model)</p>
+            <div class="section-num display">03</div>
+            <div>
+                <div class="section-meta">The Pact · What we promise dealers</div>
+                <h2 class="section-title">Six <em>promises.</em><br>Zero <em>fine print.</em></h2>
+                <p class="section-blurb">A direct-from-manufacturer relationship is only worth as much as the operational rigour behind it. Here is what we commit to, in writing.</p>
+            </div>
         </div>
-        <div class="products-grid" id="product-grid">
-            <!-- products injected by JS -->
+
+        <div class="pact-list">
+            <div class="pact-item">
+                <div class="pact-num display">01</div>
+                <div>
+                    <h3 class="pact-h">Bulk margins, <em>no middlemen</em></h3>
+                    <p class="pact-p">You buy directly from the workshop, not through a distributor's distributor. The price you see is the price we make.</p>
+                </div>
+            </div>
+            <div class="pact-item">
+                <div class="pact-num display">02</div>
+                <div>
+                    <h3 class="pact-h">48-hour dispatch <em>SLA</em></h3>
+                    <p class="pact-p">Confirmed orders leave Loni within 48 working hours. Out-of-stock SKUs are flagged at proforma stage, never silently delayed.</p>
+                </div>
+            </div>
+            <div class="pact-item">
+                <div class="pact-num display">03</div>
+                <div>
+                    <h3 class="pact-h">Carton-tested <em>packaging</em></h3>
+                    <p class="pact-p">Inner boxes engineered for stack and transit. Damage rate held below 0.5% across our top three transit corridors.</p>
+                </div>
+            </div>
+            <div class="pact-item">
+                <div class="pact-num display">04</div>
+                <div>
+                    <h3 class="pact-h">GST-compliant <em>invoicing</em></h3>
+                    <p class="pact-p">Every B2B tax invoice carries IRN/QR code generated against the IRP. CGST/SGST split for UP, IGST for the rest of India.</p>
+                </div>
+            </div>
+            <div class="pact-item">
+                <div class="pact-num display">05</div>
+                <div>
+                    <h3 class="pact-h">Territory <em>protection</em></h3>
+                    <p class="pact-p">Distributors get exclusive PIN-code zones. We do not appoint competing dealers in your protected area.</p>
+                </div>
+            </div>
+            <div class="pact-item">
+                <div class="pact-num display">06</div>
+                <div>
+                    <h3 class="pact-h">A direct line <em>to founder</em></h3>
+                    <p class="pact-p">Rajneesh picks up the phone. WhatsApp +91 9212 389 139 — that is not common in this category, and it shows in our retention.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="cta-band" id="dealer">
-    <div class="container">
-        <h2>Already a Luvron dealer?</h2>
-        <p>Login to see your tier pricing and place bulk orders. New here? Apply in 2 minutes — approval within 24 hours.</p>
-        <div class="button-row">
-            <a href="#" class="button dark">Dealer Login</a>
-            <a href="#" class="button light">Apply for Dealer Account</a>
-        </div>
-    </div>
-</section>
-
-<section class="section section-light" id="testimonials">
-    <div class="container">
+<!-- Testimonials -->
+<section class="testimonials" id="dealers">
+    <div class="wrap">
         <div class="section-head">
-            <h2>What Our Dealers Say</h2>
-            <p>Trusted by distributors and retailers across India</p>
+            <div class="section-num display">04</div>
+            <div>
+                <div class="section-meta">The Dealers · In their words</div>
+                <h2 class="section-title">What dealers <em>actually</em> say.</h2>
+                <p class="section-blurb">Quotes from working dealers across Lucknow, Patna, Delhi NCR and Kanpur. Photographs and names used with their consent.</p>
+            </div>
         </div>
-        <div class="testimonials-grid">
+
+        <div class="testimonial-grid">
             <div class="testimonial">
-                <span class="quote-mark">&ldquo;</span>
-                <p>I have been distributing Luvron tricycles for two seasons now. The packaging holds up perfectly even after long-haul transport, and the price points let me run healthy retail margins across all my outlets.</p>
-                <div class="testimonial-author">
+                <p class="testimonial-q">I have been distributing Luvron tricycles for two seasons now. The packaging holds up perfectly even after long-haul transport, and the price points let me run healthy retail margins across all my outlets.</p>
+                <div class="testimonial-meta">
                     <img src="testimonials/aditya-sharma.jpg" alt="Aditya Sharma">
-                    <div>
-                        <strong>Aditya Sharma</strong>
-                        <small>Distributor, Lucknow</small>
-                    </div>
+                    <div class="who"><strong>Aditya Sharma</strong><small>Distributor · Lucknow</small></div>
                 </div>
             </div>
             <div class="testimonial">
-                <span class="quote-mark">&ldquo;</span>
-                <p>What I value most is the dispatch speed. We confirm an order, the cartons leave Loni in 48 hours. That predictability is rare with kids products in India.</p>
-                <div class="testimonial-author">
+                <p class="testimonial-q">What I value most is the dispatch speed. We confirm an order, the cartons leave Loni in 48 hours. That predictability is rare with kids products in India.</p>
+                <div class="testimonial-meta">
                     <img src="testimonials/ambuj.jpg" alt="Ambuj Kumar">
-                    <div>
-                        <strong>Ambuj Kumar</strong>
-                        <small>Dealer, Patna</small>
-                    </div>
+                    <div class="who"><strong>Ambuj Kumar</strong><small>Dealer · Patna</small></div>
                 </div>
             </div>
             <div class="testimonial">
-                <span class="quote-mark">&ldquo;</span>
-                <p>Luvron Sigma Plus is our bestseller in the premium segment. Customers come back for the second child too — the build quality speaks for itself.</p>
-                <div class="testimonial-author">
+                <p class="testimonial-q">Luvron Sigma Plus is our bestseller in the premium segment. Customers come back for the second child too — the build quality speaks for itself.</p>
+                <div class="testimonial-meta">
                     <img src="testimonials/dinesh-kanojia.jpg" alt="Dinesh Kanojia">
-                    <div>
-                        <strong>Dinesh Kanojia</strong>
-                        <small>Retailer, Delhi NCR</small>
-                    </div>
+                    <div class="who"><strong>Dinesh Kanojia</strong><small>Retailer · Delhi NCR</small></div>
                 </div>
             </div>
             <div class="testimonial">
-                <span class="quote-mark">&ldquo;</span>
-                <p>Direct manufacturer pricing, GST-compliant invoices, and a team that picks up the phone. That is all I need from a supplier.</p>
-                <div class="testimonial-author">
+                <p class="testimonial-q">Direct manufacturer pricing, GST-compliant invoices, and a team that picks up the phone. That is all I need from a supplier.</p>
+                <div class="testimonial-meta">
                     <img src="testimonials/dinesh.jpg" alt="Dinesh">
-                    <div>
-                        <strong>Dinesh</strong>
-                        <small>Dealer, Kanpur</small>
-                    </div>
+                    <div class="who"><strong>Dinesh</strong><small>Dealer · Kanpur</small></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<footer id="contact">
-    <div class="container">
+<!-- CTA Band -->
+<section class="cta-band" id="cta">
+    <div class="wrap cta-band-grid">
+        <div>
+            <div class="cta-eyebrow">— Apply in two minutes</div>
+            <h2 class="cta-title">Open a dealer account.<br><em>Unlock the catalogue.</em></h2>
+            <p class="cta-sub">Verified GSTIN gets you wholesale pricing within 24 hours. Distributors with PIN-code commitments get exclusive territory rights and an additional 7% off dealer.</p>
+        </div>
+        <div class="cta-actions">
+            <a href="#" class="cta-button primary">
+                Apply for Dealer Account
+                <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h12m-4-4l4 4-4 4"/></svg>
+            </a>
+            <a href="#" class="cta-button outline-cream">Existing Dealer Login</a>
+            <span class="cta-tel">OR CALL +91 9212 389 139</span>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer" id="contact">
+    <div class="wrap">
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3>Luv<span style="color:#ff8c00">Ron</span></h3>
-                <p>India's trusted manufacturer of kids tricycles for B2B dealers and distributors.<br><br>
-                OFF-D-337, T-04, Indraprastha Colony,<br>Jawli Road, Loni, Ghaziabad UP – 201102<br><br>
-                <strong>Founder:</strong> Rajneesh Kumar Pandey<br>
-                <strong>Phone:</strong> +91-9212389139<br>
-                <strong>Email:</strong> orders@luvron.in</p>
+                <img src="logo.png" alt="LuvRon" class="logo-mark">
+                <p class="nap">
+                    <strong>Luvron Tricycles</strong><br>
+                    OFF-D-337, T-04, Indraprastha Colony,<br>
+                    Jawli Road, Loni, Ghaziabad UP – 201102<br><br>
+                    <strong>Founder:</strong> Rajneesh Kumar Pandey<br>
+                    <strong>Phone:</strong> <a href="tel:+919212389139">+91 9212 389 139</a><br>
+                    <strong>Email:</strong> <a href="mailto:orders@luvron.in">orders@luvron.in</a>
+                </p>
+                <div class="footer-stamp">
+                    <span class="gstin">GSTIN 09GOCPP5350G1ZQ</span>
+                    <span>·</span>
+                    <span>MADE IN INDIA</span>
+                </div>
             </div>
             <div class="footer-col">
-                <h4>Products</h4>
+                <h4>Catalogue</h4>
                 <ul>
-                    <li><a href="#">SIGMA Series</a></li>
-                    <li><a href="#">AURA Series</a></li>
-                    <li><a href="#">EAGLE Series</a></li>
-                    <li><a href="#">RAMBO Series</a></li>
-                    <li><a href="#">HULK Series</a></li>
-                    <li><a href="#">View Full Catalogue</a></li>
+                    <li><a href="#catalogue">All 44 SKUs</a></li>
+                    <li><a href="#catalogue">Musical (18%)</a></li>
+                    <li><a href="#catalogue">Normal (5%)</a></li>
+                    <li><a href="#">Download Price List</a></li>
+                    <li><a href="#">2026 PDF Catalogue</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>For Dealers</h4>
                 <ul>
+                    <li><a href="#cta">Become a Dealer</a></li>
                     <li><a href="#">Dealer Login</a></li>
-                    <li><a href="#">Become a Dealer</a></li>
                     <li><a href="#">Bulk Order Grid</a></li>
                     <li><a href="#">Quick Quote</a></li>
-                    <li><a href="#">Download Price List</a></li>
+                    <li><a href="#">Dealer Dashboard</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -430,47 +1315,190 @@ footer { background: #1a1a1a; color: #999; padding: 48px 0 16px; }
                 </ul>
             </div>
         </div>
-        <div class="footer-legal">
-            © 2026 Luvron Tricycles · GSTIN 09XXXXXXXXXXX1Z5 · Made in India 🇮🇳
+        <div class="colophon">
+            <span>© 2026 LUVRON TRICYCLES · ALL RIGHTS RESERVED</span>
+            <span>SET IN FRAUNCES, DM SANS &amp; IBM PLEX MONO</span>
+            <span>BUILT WITH <span class="heart">♥</span> IN INDIA</span>
         </div>
     </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/919212389139" target="_blank" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 2C6.486 2 2 6.486 2 12c0 1.776.464 3.515 1.346 5.034L2.05 22l5.062-1.327A9.953 9.953 0 0 0 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2z"/></svg>
+<!-- WhatsApp Float -->
+<a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%27m%20interested%20in%20wholesale%20pricing." target="_blank" rel="noopener" class="wa-float">
+    <span class="ico">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 2C6.486 2 2 6.486 2 12c0 1.776.464 3.515 1.346 5.034L2.05 22l5.062-1.327A9.953 9.953 0 0 0 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2z"/></svg>
+    </span>
+    <div class="txt">
+        <small>TALK TO FOUNDER</small>
+        <strong>Rajneesh on WhatsApp</strong>
+    </div>
 </a>
 
 <script>
-const products = [
-    {sku:'SIGMA-PLUS',name:'SIGMA Plus Tricycle',img:'sigma-plus.jpg',pack:'1x1 / 12',gst:18},
-    {sku:'AURA-PLUS',name:'AURA Plus Tricycle',img:'aura-plus.jpg',pack:'1x1 / 12',gst:18},
-    {sku:'EAGLE-PLUS',name:'EAGLE Plus Tricycle',img:'eagle-plus.jpg',pack:'1x1 / 12',gst:18},
-    {sku:'ALEX-PLUS',name:'ALEX Plus Tricycle',img:'alex-plus.jpg',pack:'1x1 / 12',gst:18},
-    {sku:'ECOTECH-PLUS',name:'ECOTECH Plus Tricycle',img:'ecotech-plus.jpg',pack:'1x1 / 12',gst:18},
-    {sku:'RAMBO-333-PLUS',name:'RAMBO 333 Plus',img:'rambo-333-plus.jpg',pack:'3x4 / 12',gst:18},
-    {sku:'LEON-R1-GREY-PLUS',name:'LEON R1 Grey Plus',img:'leon-r1-grey-plus.jpg',pack:'1x1 / 15',gst:18},
-    {sku:'LION-R1-PLUS',name:'LION R1 Plus',img:'lion-r1-plus.jpg',pack:'1x1 / 15',gst:18},
-    {sku:'CHARLIE-R1-PLUS',name:'CHARLIE R1 Plus',img:'charlie-r1-plus.jpg',pack:'1x1 / 15',gst:18},
-    {sku:'EMMA-R1-PLUS',name:'EMMA R1 Plus',img:'emma-r1-plus.jpg',pack:'1x1 / 15',gst:18},
-    {sku:'HULK-PRO-PLUS',name:'HULK Pro Plus',img:'hulk-pro-plus.jpg',pack:'1x1 / 15',gst:18},
-    {sku:'RAMBO-111',name:'RAMBO 111',img:'rambo-111.jpg',pack:'6x4 / 24',gst:5},
+"use strict";
+
+const PRODUCTS = [
+    {sku:'SIGMA-PLUS', name:'SIGMA Plus', series:'SIGMA', price:1760, gst:18, inner:'1×1', master:'12', img:'sigma-plus.jpg'},
+    {sku:'SIGMA-BASE', name:'SIGMA', series:'SIGMA', price:1700, gst:5, inner:'1×1', master:'12', img:'sigma.jpg'},
+    {sku:'SIGMA-R1-PLUS', name:'SIGMA R1 Plus', series:'SIGMA', price:1660, gst:18, inner:'1×1', master:'12', img:'sigma-r1-plus.jpg'},
+    {sku:'SIGMA-R1', name:'SIGMA R1', series:'SIGMA', price:1600, gst:5, inner:'1×1', master:'12', img:'sigma-r1.jpg'},
+    {sku:'AURA-PLUS', name:'AURA Plus', series:'AURA', price:1670, gst:18, inner:'1×1', master:'12', img:'aura-plus.jpg'},
+    {sku:'AURA-BASE', name:'AURA', series:'AURA', price:1610, gst:5, inner:'1×1', master:'12', img:'aura.jpg'},
+    {sku:'AURA-R1-PLUS', name:'AURA R1 Plus', series:'AURA', price:1570, gst:18, inner:'1×1', master:'12', img:'aura-r1-plus.jpg'},
+    {sku:'AURA-R1', name:'AURA R1', series:'AURA', price:1510, gst:5, inner:'1×1', master:'12', img:'aura-r1.jpg'},
+    {sku:'EAGLE-PLUS', name:'EAGLE Plus', series:'EAGLE', price:1535, gst:18, inner:'1×1', master:'12', img:'eagle-plus.jpg'},
+    {sku:'EAGLE-BASE', name:'EAGLE', series:'EAGLE', price:1475, gst:5, inner:'1×1', master:'12', img:'eagle.jpg'},
+    {sku:'EAGLE-R1-PLUS', name:'EAGLE R1 Plus', series:'EAGLE', price:1435, gst:18, inner:'1×1', master:'12', img:'eagle-r1-plus.jpg'},
+    {sku:'EAGLE-R1', name:'EAGLE R1', series:'EAGLE', price:1375, gst:5, inner:'1×1', master:'12', img:'eagle-r1.jpg'},
+    {sku:'ALEX-PLUS', name:'ALEX Plus', series:'ALEX', price:1595, gst:18, inner:'1×1', master:'12', img:'alex-plus.jpg'},
+    {sku:'ALEX-BASE', name:'ALEX', series:'ALEX', price:1535, gst:5, inner:'1×1', master:'12', img:'alex.jpg'},
+    {sku:'ALEX-R1-PLUS', name:'ALEX R1 Plus', series:'ALEX', price:1495, gst:18, inner:'1×1', master:'12', img:'alex-r1-plus.jpg'},
+    {sku:'ALEX-R1', name:'ALEX R1', series:'ALEX', price:1435, gst:5, inner:'1×1', master:'12', img:'alex-r1.jpg'},
+    {sku:'ECOTECH-PLUS', name:'ECOTECH Plus', series:'ECOTECH', price:1430, gst:18, inner:'1×1', master:'12', img:'ecotech-plus.jpg'},
+    {sku:'ECOTECH-BASE', name:'ECOTECH', series:'ECOTECH', price:1370, gst:5, inner:'1×1', master:'12', img:'ecotech.jpg'},
+    {sku:'ECOTECH-R1-PLUS', name:'ECOTECH R1 Plus', series:'ECOTECH', price:1320, gst:18, inner:'1×1', master:'12', img:'ecotech-r1-plus.jpg'},
+    {sku:'ECOTECH-R1', name:'ECOTECH R1', series:'ECOTECH', price:1270, gst:5, inner:'1×1', master:'12', img:'ecotech-r1.jpg'},
+    {sku:'RAMBO-333-PLUS', name:'RAMBO 333 Plus', series:'RAMBO', price:1240, gst:18, inner:'3×4', master:'12', img:'rambo-333-plus.jpg'},
+    {sku:'RAMBO-333', name:'RAMBO 333', series:'RAMBO', price:1180, gst:5, inner:'3×4', master:'12', img:'rambo-333.jpg'},
+    {sku:'RAMBO-333-R1-PLUS', name:'RAMBO 333 R1 Plus', series:'RAMBO', price:1160, gst:18, inner:'3×4', master:'12', img:'rambo-333-r1-plus.jpg'},
+    {sku:'RAMBO-333-R1', name:'RAMBO 333 R1', series:'RAMBO', price:1100, gst:5, inner:'3×4', master:'12', img:'rambo-333-r1.jpg'},
+    {sku:'RAMBO-111-PLUS', name:'RAMBO 111 Plus', series:'RAMBO', price:680, gst:18, inner:'6×4', master:'24', img:'rambo-111-plus.jpg'},
+    {sku:'RAMBO-111', name:'RAMBO 111', series:'RAMBO', price:620, gst:5, inner:'6×4', master:'24', img:'rambo-111.jpg'},
+    {sku:'RAMBO-100-PLUS', name:'RAMBO 100 Plus', series:'RAMBO', price:620, gst:18, inner:'6×4', master:'24', img:'rambo-100-plus.jpg'},
+    {sku:'RAMBO-100', name:'RAMBO 100', series:'RAMBO', price:560, gst:5, inner:'6×4', master:'24', img:'rambo-100.jpg'},
+    {sku:'LEON-R1-GREY-PLUS', name:'LEON R1 Grey Plus', series:'LEON', price:1200, gst:18, inner:'1×1 / 3×4', master:'15 / 12', img:'leon-r1-grey-plus.jpg'},
+    {sku:'LEON-R1-GREY', name:'LEON R1 Grey', series:'LEON', price:1140, gst:5, inner:'1×1 / 3×4', master:'15 / 12', img:'leon-r1-grey.jpg'},
+    {sku:'LION-R1-PLUS', name:'LION R1 Plus', series:'LION', price:1140, gst:18, inner:'1×1 / 3×4', master:'15 / 12', img:'lion-r1-plus.jpg'},
+    {sku:'LION-R1', name:'LION R1', series:'LION', price:1070, gst:5, inner:'1×1 / 3×4', master:'15 / 12', img:'lion-r1.jpg'},
+    {sku:'CHARLIE-R1-PLUS', name:'CHARLIE R1 Plus', series:'CHARLIE', price:1020, gst:18, inner:'1×1 / 4×4', master:'15 / 16', img:'charlie-r1-plus.jpg'},
+    {sku:'CHARLIE-R1', name:'CHARLIE R1', series:'CHARLIE', price:970, gst:5, inner:'1×1 / 4×4', master:'15 / 16', img:'charlie-r1.jpg'},
+    {sku:'CHARLIE-PLUS', name:'CHARLIE Plus', series:'CHARLIE', price:820, gst:18, inner:'1×1 / 5×4', master:'15 / 20', img:'charlie-plus.jpg'},
+    {sku:'CHARLIE-BASE', name:'CHARLIE', series:'CHARLIE', price:770, gst:5, inner:'1×1 / 5×4', master:'15 / 20', img:'charlie.jpg'},
+    {sku:'EMMA-R1-PLUS', name:'EMMA R1 Plus', series:'EMMA', price:1100, gst:18, inner:'1×1 / 4×4', master:'15 / 16', img:'emma-r1-plus.jpg'},
+    {sku:'EMMA-R1', name:'EMMA R1', series:'EMMA', price:1050, gst:5, inner:'1×1 / 4×4', master:'15 / 16', img:'emma-r1.jpg'},
+    {sku:'EMMA-PLUS', name:'EMMA Plus', series:'EMMA', price:880, gst:18, inner:'1×1 / 5×4', master:'15 / 20', img:'emma-plus.jpg'},
+    {sku:'EMMA-BASE', name:'EMMA', series:'EMMA', price:830, gst:5, inner:'1×1 / 5×4', master:'15 / 20', img:'emma.jpg'},
+    {sku:'HULK-PRO-PLUS', name:'HULK Pro Plus', series:'HULK', price:870, gst:18, inner:'1×1 / 4×4', master:'15 / 16', img:'hulk-pro-plus.jpg'},
+    {sku:'HULK-PRO', name:'HULK Pro', series:'HULK', price:820, gst:5, inner:'1×1 / 4×4', master:'15 / 16', img:'hulk-pro.jpg'},
+    {sku:'HULK-PLUS', name:'HULK Plus', series:'HULK', price:850, gst:18, inner:'1×1 / 4×4', master:'15 / 16', img:'hulk-plus.jpg'},
+    {sku:'HULK-BASE', name:'HULK', series:'HULK', price:800, gst:5, inner:'1×1 / 4×4', master:'15 / 16', img:'hulk.jpg'},
 ];
-const grid = document.getElementById('product-grid');
-products.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'product-card';
-    const imgWrap = document.createElement('div'); imgWrap.className = 'product-card-img';
-    const img = document.createElement('img'); img.src = 'products/' + p.img; img.alt = p.name; imgWrap.appendChild(img);
-    const body = document.createElement('div'); body.className = 'product-card-body';
-    const sku = document.createElement('div'); sku.className = 'sku'; sku.textContent = p.sku;
-    const h4 = document.createElement('h4'); h4.textContent = p.name;
-    const pack = document.createElement('div'); pack.className = 'pack'; pack.textContent = 'Pack: ' + p.pack;
-    const gstBadge = document.createElement('span'); gstBadge.className = 'gst-badge gst-' + p.gst; gstBadge.textContent = p.gst + '% GST';
-    const quote = document.createElement('a'); quote.className = 'quote'; quote.href = '#dealer'; quote.textContent = 'Login or Request Quote';
-    body.append(sku, h4, pack, gstBadge, quote);
-    card.append(imgWrap, body);
-    grid.appendChild(card);
+
+const grid = document.getElementById('cat-grid');
+const visibleCount = document.getElementById('visible-count');
+const iconMusic = document.getElementById('icon-music');
+const iconLeaf  = document.getElementById('icon-leaf');
+let activeTier = 'all';
+let activeSeries = 'all';
+
+function el(tag, opts) {
+    const e = document.createElement(tag);
+    if (opts) {
+        if (opts.cls) e.className = opts.cls;
+        if (opts.text) e.textContent = opts.text;
+        if (opts.attrs) for (const k in opts.attrs) e.setAttribute(k, opts.attrs[k]);
+    }
+    return e;
+}
+
+function buildBadge(gst) {
+    const isMusical = gst === 18;
+    const wrap = el('span', { cls: 'cat-tier-badge ' + (isMusical ? 'musical' : 'normal') });
+    const tpl = isMusical ? iconMusic : iconLeaf;
+    if (tpl) wrap.appendChild(tpl.content.cloneNode(true));
+    wrap.appendChild(el('span', { text: isMusical ? 'Musical · 18%' : 'Normal · 5%' }));
+    return wrap;
+}
+
+function buildMetaRow(k, v) {
+    const row = el('div', { cls: 'cat-meta-row' });
+    row.appendChild(el('span', { cls: 'k', text: k }));
+    row.appendChild(el('span', { cls: 'v', text: v }));
+    return row;
+}
+
+function renderProducts() {
+    while (grid.firstChild) grid.removeChild(grid.firstChild);
+    let visible = 0;
+    PRODUCTS.forEach(p => {
+        const tierMatch = activeTier === 'all'
+            || (activeTier === 'musical' && p.gst === 18)
+            || (activeTier === 'normal' && p.gst === 5);
+        const seriesMatch = activeSeries === 'all' || p.series === activeSeries;
+        if (!(tierMatch && seriesMatch)) return;
+        visible++;
+
+        const item = el('div', { cls: 'cat-item' });
+        const imgWrap = el('div', { cls: 'cat-img' });
+        imgWrap.appendChild(buildBadge(p.gst));
+        const img = el('img', { attrs: { src: 'products/' + p.img, alt: p.name, loading: 'lazy' } });
+        imgWrap.appendChild(img);
+
+        item.appendChild(imgWrap);
+        item.appendChild(el('div', { cls: 'cat-sku', text: p.sku }));
+        item.appendChild(el('h4', { cls: 'cat-name', text: p.name }));
+
+        const meta = el('div', { cls: 'cat-meta' });
+        meta.appendChild(buildMetaRow('Pack', p.inner + ' · ' + p.master));
+        meta.appendChild(buildMetaRow('Price', 'Login'));
+        item.appendChild(meta);
+
+        const cta = el('a', { cls: 'cat-cta', text: 'Login or Request Quote', attrs: { href: '#cta' } });
+        item.appendChild(cta);
+        grid.appendChild(item);
+    });
+    visibleCount.textContent = visible;
+}
+
+document.querySelectorAll('.chip[data-filter]').forEach(c => {
+    c.addEventListener('click', () => {
+        document.querySelectorAll('.chip[data-filter]').forEach(x => x.classList.remove('active'));
+        c.classList.add('active');
+        activeTier = c.dataset.filter;
+        renderProducts();
+    });
 });
+
+document.querySelectorAll('.chip[data-series]').forEach(c => {
+    c.addEventListener('click', () => {
+        document.querySelectorAll('.chip[data-series]').forEach(x => x.classList.remove('active'));
+        c.classList.add('active');
+        activeSeries = c.dataset.series;
+        renderProducts();
+    });
+});
+
+renderProducts();
+
+// Mobile nav toggle
+document.getElementById('mobile-toggle-btn').addEventListener('click', () => {
+    document.getElementById('nav').classList.toggle('open');
+});
+
+// Scroll reveal
+const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.section-head, .tier-card, .pact-item, .testimonial, .stat-cell').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+});
+
+// Hero parallax (subtle)
+const heroFeature = document.querySelector('.hero-feature');
+const heroImg = document.querySelector('.hero-feature-img img');
+if (heroFeature && heroImg && window.matchMedia('(min-width: 980px)').matches) {
+    heroFeature.addEventListener('mousemove', (e) => {
+        const rect = heroFeature.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        heroImg.style.transform = 'translate(' + (x * 12) + 'px, ' + (y * 12) + 'px) scale(1.01)';
+    });
+    heroFeature.addEventListener('mouseleave', () => { heroImg.style.transform = ''; });
+}
 </script>
 
 </body>

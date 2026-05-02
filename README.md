@@ -68,7 +68,7 @@ define('LUVRON_BANK_BANK',     'HDFC Bank');
 define('LUVRON_BANK_ACCOUNT',  'XXXXXXXXXXXX');
 define('LUVRON_BANK_IFSC',     'HDFC0000000');
 define('LUVRON_BANK_BRANCH',   'Loni, Ghaziabad');
-define('LUVRON_BANK_GSTIN',    '09XXXXXXXXXXX1Z5');
+define('LUVRON_BANK_GSTIN',    '09GOCPP5350G1ZQ');
 
 define('LUVRON_SMTP_HOST',     'smtp-relay.brevo.com');
 define('LUVRON_SMTP_PORT',     587);

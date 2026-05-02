@@ -16,7 +16,7 @@ function luvron_bank_details() {
         'account_no'  => defined('LUVRON_BANK_ACCOUNT')     ? LUVRON_BANK_ACCOUNT    : 'XXXXXXXXXXXX',
         'ifsc'        => defined('LUVRON_BANK_IFSC')        ? LUVRON_BANK_IFSC       : 'HDFC0000000',
         'branch'      => defined('LUVRON_BANK_BRANCH')      ? LUVRON_BANK_BRANCH     : 'Loni, Ghaziabad',
-        'gstin'       => defined('LUVRON_BANK_GSTIN')       ? LUVRON_BANK_GSTIN      : '09XXXXXXXXXXX1Z5',
+        'gstin'       => defined('LUVRON_BANK_GSTIN')       ? LUVRON_BANK_GSTIN      : '09GOCPP5350G1ZQ',
     ];
 }
 
@@ -27,7 +27,7 @@ function luvron_seller_details() {
         'address'    => 'OFF-D-337, T-04, Indraprastha Colony, Jawli Road, Loni, Ghaziabad UP – 201102',
         'phone'      => '+91-9212389139',
         'email'      => 'orders@luvron.in',
-        'gstin'      => $trust['gstin'] ?? '09XXXXXXXXXXX1Z5',
+        'gstin'      => $trust['gstin'] ?? '09GOCPP5350G1ZQ',
         'state'      => 'Uttar Pradesh',
         'state_code' => '09',
     ];
