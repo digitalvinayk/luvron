@@ -117,7 +117,8 @@ ul { list-style: none; }
     padding: 18px 0;
 }
 .logo-link { display: flex; align-items: center; flex-shrink: 0; }
-.logo-link img { height: 46px; width: auto; }
+.logo-link img { height: 64px; width: auto; }
+@media (max-width: 720px) { .logo-link img { height: 52px; } }
 
 .site-nav ul { display: flex; gap: 32px; align-items: center; }
 .site-nav a {
@@ -513,140 +514,194 @@ ul { list-style: none; }
    ============================================================ */
 .prod-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
 }
 .prod-card {
     background: var(--white);
     border-radius: var(--radius-lg);
     overflow: hidden;
     border: 1px solid var(--line);
-    transition: transform .25s var(--transition), box-shadow .25s var(--transition), border-color .25s;
+    transition: transform .3s var(--transition), box-shadow .3s var(--transition), border-color .3s;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .prod-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-2);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-3);
     border-color: var(--coral-soft);
 }
 .prod-card .img-wrap {
-    aspect-ratio: 1 / 1.05;
+    aspect-ratio: 1 / 1;
     background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-peach) 100%);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding: 20px;
 }
+/* Soft pastel rotation per card position */
+.prod-card:nth-child(5n+1) .img-wrap { background: linear-gradient(135deg, var(--bg-cream), var(--bg-peach)); }
+.prod-card:nth-child(5n+2) .img-wrap { background: linear-gradient(135deg, var(--bg-sky), #d8e8fa); }
+.prod-card:nth-child(5n+3) .img-wrap { background: linear-gradient(135deg, var(--bg-mint), #d4f1d8); }
+.prod-card:nth-child(5n+4) .img-wrap { background: linear-gradient(135deg, var(--bg-lavender), #e7dffa); }
+.prod-card:nth-child(5n)   .img-wrap { background: linear-gradient(135deg, var(--bg-peach), #ffd9d3); }
+
 .prod-card .img-wrap img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 92%;
+    max-height: 92%;
     object-fit: contain;
-    transition: transform .35s var(--transition);
-    filter: drop-shadow(0 12px 18px rgba(15, 23, 42, 0.1));
+    transition: transform .4s var(--transition);
+    filter: drop-shadow(0 20px 28px rgba(15, 23, 42, 0.14));
 }
-.prod-card:hover .img-wrap img { transform: scale(1.06) rotate(-2deg); }
+.prod-card:hover .img-wrap img { transform: scale(1.08) rotate(-3deg); }
 
 .prod-card .badge {
     position: absolute;
-    top: 12px;
-    padding: 5px 10px;
+    top: 14px;
+    padding: 6px 12px;
     border-radius: 999px;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px);
+    letter-spacing: 0.02em;
+    z-index: 2;
 }
 .prod-card .badge.musical {
-    left: 12px;
-    background: rgba(245, 158, 11, 0.15);
-    color: var(--marigold-deep);
-    border: 1px solid var(--marigold-soft);
+    left: 14px;
+    background: rgba(245, 158, 11, 0.95);
+    color: white;
+    border: 1px solid var(--marigold-deep);
 }
 .prod-card .badge.normal {
-    left: 12px;
-    background: rgba(81, 207, 102, 0.15);
-    color: var(--mint-deep);
-    border: 1px solid var(--mint-soft);
+    left: 14px;
+    background: rgba(47, 158, 68, 0.95);
+    color: white;
+    border: 1px solid var(--mint-deep);
 }
 .prod-card .badge svg { width: 11px; height: 11px; }
 .prod-card .badge.bestseller {
-    right: 12px;
+    right: 14px;
     background: var(--ink);
     color: var(--white);
 }
 
-.prod-card .body { padding: 18px 18px 20px; flex: 1; display: flex; flex-direction: column; }
+.prod-card .body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .prod-card .series-pill {
     display: inline-block;
-    font-size: 10.5px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     color: var(--coral);
     text-transform: uppercase;
-    margin-bottom: 6px;
 }
 .prod-card h3 {
     font-family: "Bricolage Grotesque", sans-serif;
-    font-variation-settings: "opsz" 24;
-    font-size: 16px;
+    font-variation-settings: "opsz" 32;
+    font-size: 22px;
     color: var(--ink);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
     font-weight: 700;
-    margin-bottom: 8px;
-    flex: 1;
+    margin: 0;
 }
 .prod-card .sku {
     font-family: "SFMono-Regular", "Consolas", monospace;
-    font-size: 10.5px;
+    font-size: 11px;
     color: var(--ink-faint);
-    letter-spacing: 0.04em;
-    margin-bottom: 12px;
+    letter-spacing: 0.06em;
 }
 .prod-card .meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 12.5px;
     color: var(--ink-soft);
+    margin-top: 6px;
+    padding-top: 14px;
     border-top: 1px solid var(--line);
-    padding-top: 12px;
-    margin-bottom: 12px;
 }
-.prod-card .meta strong { color: var(--ink); font-weight: 600; }
-.prod-card .price-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
+.prod-card .meta-item .k {
+    display: block;
+    font-size: 10.5px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+    font-weight: 600;
 }
-.prod-card .price-wrap .price {
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-weight: 700;
+.prod-card .meta-item .v {
     color: var(--ink);
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 13px;
 }
-.prod-card .price-wrap .price .from {
+.prod-card .price-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+}
+.prod-card .price-line .from {
     font-size: 11px;
     color: var(--ink-faint);
     font-weight: 500;
-    margin-right: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
-.prod-card .quote-link {
-    font-size: 12.5px;
-    color: var(--coral);
-    font-weight: 600;
-    display: inline-flex;
+.prod-card .price-line .price {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-variation-settings: "opsz" 32;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 22px;
+    letter-spacing: -0.01em;
+}
+.prod-card .price-line .price-note {
+    font-size: 11px;
+    color: var(--ink-faint);
+    margin-left: auto;
+}
+.prod-card .quote-btn {
+    display: flex;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 16px;
+    margin-top: 16px;
+    background: var(--ink);
+    color: var(--white);
+    border-radius: 999px;
+    font-size: 13.5px;
+    font-weight: 600;
+    transition: background .2s, transform .2s;
 }
-.prod-card .quote-link svg { width: 12px; height: 12px; }
+.prod-card:hover .quote-btn {
+    background: var(--coral);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glow);
+}
+.prod-card .quote-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
 
-@media (max-width: 1100px) { .prod-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 720px) { .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } .prod-card .body { padding: 14px; } }
+@media (max-width: 1024px) { .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+@media (max-width: 600px) {
+    .prod-grid { grid-template-columns: 1fr; gap: 16px; }
+    .prod-card .body { padding: 20px; }
+    .prod-card h3 { font-size: 20px; }
+}
 
 /* ============================================================
    FEATURE GRID — Why Luvron etc.
@@ -932,7 +987,7 @@ ul { list-style: none; }
     gap: 48px;
     margin-bottom: 56px;
 }
-.footer-brand img { height: 50px; margin-bottom: 24px; filter: brightness(0) invert(1); }
+.footer-brand img { height: 80px; margin-bottom: 24px; filter: brightness(0) invert(1); }
 .footer-brand .nap { font-size: 14px; line-height: 1.7; margin-bottom: 20px; max-width: 340px; }
 .footer-brand .nap strong { color: var(--white); font-weight: 600; }
 .footer-brand .nap a { color: rgba(255, 255, 255, 0.85); border-bottom: 1px dotted rgba(255, 255, 255, 0.3); }

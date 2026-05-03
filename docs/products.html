@@ -34,54 +34,63 @@
     </div>
 </header>
 
-<section class="hero-slim">
+<section class="hero-slim" style="padding: 64px 0 80px;">
     <div class="wrap">
         <div class="breadcrumb"><a href="index.html">Home</a> · <span>Products</span></div>
-        <h1 class="display">The Full <span class="accent">Catalogue.</span></h1>
-        <p class="lead">All 44 SKUs across 11 series. Filter by tier or series, sort by price. Login as a dealer to unlock wholesale pricing.</p>
+        <h1 class="display">All <span class="accent">forty-four</span> tricycles.<br>One catalogue.</h1>
+        <p class="lead">Eleven series, two pricing tiers (Musical 18% &amp; Normal 5%), all packed in master cartons. Click any product to request a wholesale quote on WhatsApp — dealer pricing unlocks after account approval.</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; align-items: center;">
+            <a href="contact.html" class="btn btn-primary">Apply for Dealer Account</a>
+            <a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%27d%20like%20to%20discuss%20wholesale%20pricing%20across%20the%20full%20catalogue." class="btn btn-ghost" target="_blank">💬 Chat on WhatsApp</a>
+            <span style="font-size: 13px; color: var(--ink-soft);">or call <a href="tel:+919212389139" style="color: var(--coral); font-weight: 600;">+91 9212 389 139</a></span>
+        </div>
     </div>
 </section>
 
-<section class="section">
+<section class="section" style="padding-top: 48px;">
     <div class="wrap">
-        <div class="filter-bar">
-            <div class="filter-group">
-                <span class="label">Tier</span>
-                <button class="chip" data-tier="all">All</button>
-                <button class="chip musical-filter" data-tier="musical"><span class="dot"></span>Musical · 18%</button>
-                <button class="chip normal-filter" data-tier="normal"><span class="dot"></span>Normal · 5%</button>
+        <div class="filter-bar" style="background: var(--white); border-radius: var(--radius-lg); padding: 24px 28px; border: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start;">
+            <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0;">
+                <div class="filter-group" style="flex-wrap: wrap;">
+                    <span class="label">PRICING TIER</span>
+                    <button class="chip" data-tier="all">All Tiers</button>
+                    <button class="chip musical-filter" data-tier="musical"><span class="dot"></span>Musical · 18% GST</button>
+                    <button class="chip normal-filter" data-tier="normal"><span class="dot"></span>Normal · 5% GST</button>
+                </div>
+
+                <div class="filter-group" style="flex-wrap: wrap;">
+                    <span class="label">SERIES</span>
+                    <button class="chip" data-series="all">All</button>
+                    <button class="chip" data-series="SIGMA">SIGMA</button>
+                    <button class="chip" data-series="AURA">AURA</button>
+                    <button class="chip" data-series="EAGLE">EAGLE</button>
+                    <button class="chip" data-series="ALEX">ALEX</button>
+                    <button class="chip" data-series="ECOTECH">ECOTECH</button>
+                    <button class="chip" data-series="RAMBO">RAMBO</button>
+                    <button class="chip" data-series="LEON">LEON</button>
+                    <button class="chip" data-series="LION">LION</button>
+                    <button class="chip" data-series="CHARLIE">CHARLIE</button>
+                    <button class="chip" data-series="EMMA">EMMA</button>
+                    <button class="chip" data-series="HULK">HULK</button>
+                </div>
             </div>
 
-            <div class="filter-group">
-                <span class="label">Series</span>
-                <button class="chip" data-series="all">All</button>
-                <button class="chip" data-series="SIGMA">SIGMA</button>
-                <button class="chip" data-series="AURA">AURA</button>
-                <button class="chip" data-series="EAGLE">EAGLE</button>
-                <button class="chip" data-series="ALEX">ALEX</button>
-                <button class="chip" data-series="ECOTECH">ECOTECH</button>
-                <button class="chip" data-series="RAMBO">RAMBO</button>
-                <button class="chip" data-series="LEON">LEON</button>
-                <button class="chip" data-series="LION">LION</button>
-                <button class="chip" data-series="CHARLIE">CHARLIE</button>
-                <button class="chip" data-series="EMMA">EMMA</button>
-                <button class="chip" data-series="HULK">HULK</button>
-            </div>
-
-            <div class="filter-group" style="gap: 14px;">
-                <input type="search" id="search-input" placeholder="Search SKU or model" style="padding: 8px 14px; border: 1.5px solid var(--line); border-radius: 999px; font: inherit; min-width: 200px;">
-                <select id="sort-by" style="padding: 8px 14px; border: 1.5px solid var(--line); border-radius: 999px; font: inherit; background: var(--white);">
+            <div style="display: flex; flex-direction: column; gap: 10px; min-width: 220px;">
+                <div style="position: relative;">
+                    <svg style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--ink-faint);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    <input type="search" id="search-input" placeholder="Search SKU or model" style="width: 100%; padding: 11px 14px 11px 38px; border: 1.5px solid var(--line); border-radius: 999px; font: inherit; font-size: 14px;">
+                </div>
+                <select id="sort-by" style="padding: 11px 14px; border: 1.5px solid var(--line); border-radius: 999px; font: inherit; font-size: 14px; background: var(--white); cursor: pointer;">
                     <option value="default">Sort: Default</option>
-                    <option value="price-low">Price ↑</option>
-                    <option value="price-high">Price ↓</option>
-                    <option value="name">Name A–Z</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name: A–Z</option>
                 </select>
+                <div class="results-info" style="text-align: center; padding: 8px 0;"><strong id="result-count">44</strong> of 44 SKUs shown</div>
             </div>
-
-            <div class="results-info"><strong id="result-count">44</strong> of 44 SKUs</div>
         </div>
 
-        <div class="prod-grid" id="prod-grid"></div>
+        <div class="prod-grid" id="prod-grid" style="margin-top: 40px;"></div>
     </div>
 </section>
 

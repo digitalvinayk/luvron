@@ -85,27 +85,37 @@ function buildProductCard(p) {
     const body = el('div', { cls: 'body' });
     body.appendChild(el('span', { cls: 'series-pill', text: p.series + ' Series' }));
     body.appendChild(el('h3', { text: p.name }));
-    body.appendChild(el('div', { cls: 'sku', text: p.sku }));
+    body.appendChild(el('div', { cls: 'sku', text: 'SKU · ' + p.sku }));
 
     const meta = el('div', { cls: 'meta' });
-    const m1 = el('span'); m1.textContent = 'Pack: '; const m1s = el('strong', { text: p.inner + ' / ' + p.master }); m1.appendChild(m1s);
-    const m2 = el('span'); m2.textContent = 'GST: '; const m2s = el('strong', { text: p.gst + '%' }); m2.appendChild(m2s);
-    meta.appendChild(m1); meta.appendChild(m2);
+    const item1 = el('div', { cls: 'meta-item' });
+    item1.appendChild(el('span', { cls: 'k', text: 'Pack' }));
+    item1.appendChild(el('span', { cls: 'v', text: p.inner + ' / ' + p.master }));
+    const item2 = el('div', { cls: 'meta-item' });
+    item2.appendChild(el('span', { cls: 'k', text: 'GST' }));
+    item2.appendChild(el('span', { cls: 'v', text: p.gst + '%  · HSN ' + (p.gst === 18 ? '9503' : '8712') }));
+    meta.appendChild(item1); meta.appendChild(item2);
     body.appendChild(meta);
 
-    const priceWrap = el('div', { cls: 'price-wrap' });
-    const price = el('div', { cls: 'price' });
-    const fromSpan = el('span', { cls: 'from', text: 'from' });
-    price.appendChild(fromSpan);
-    price.appendChild(document.createTextNode(' ₹' + p.price));
-    priceWrap.appendChild(price);
+    const priceLine = el('div', { cls: 'price-line' });
+    priceLine.appendChild(el('span', { cls: 'from', text: 'From' }));
+    priceLine.appendChild(el('span', { cls: 'price', text: '₹' + p.price.toLocaleString('en-IN') }));
+    priceLine.appendChild(el('span', { cls: 'price-note', text: 'wholesale · login for tier' }));
+    body.appendChild(priceLine);
 
-    const link = el('a', { cls: 'quote-link', attrs: { href: 'contact.html' } });
-    link.appendChild(document.createTextNode('Login'));
-    const arrIco = getIcon('icon-arr');
-    if (arrIco) link.appendChild(arrIco);
-    priceWrap.appendChild(link);
-    body.appendChild(priceWrap);
+    // Quote button → real WhatsApp link with product context (works on static preview AND live WP)
+    const waMsg = 'Hi Luvron, I would like a wholesale quote for *' + p.name + '* (SKU: ' + p.sku + '). Please share dealer pricing, dispatch lead-time, and freight to my location.';
+    const waUrl = 'https://wa.me/919212389139?text=' + encodeURIComponent(waMsg);
+    const btn = el('a', { cls: 'quote-btn', attrs: { href: waUrl, target: '_blank', rel: 'noopener' } });
+    const waIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    waIcon.setAttribute('viewBox', '0 0 24 24');
+    waIcon.setAttribute('fill', 'currentColor');
+    const waPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    waPath.setAttribute('d', 'M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5-1.3c1.5.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z');
+    waIcon.appendChild(waPath);
+    btn.appendChild(waIcon);
+    btn.appendChild(document.createTextNode('Request Quote on WhatsApp'));
+    body.appendChild(btn);
 
     card.appendChild(imgWrap);
     card.appendChild(body);
