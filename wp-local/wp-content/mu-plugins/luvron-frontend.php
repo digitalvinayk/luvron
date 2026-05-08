@@ -20,7 +20,6 @@ add_action('after_setup_theme', function () {
     // Custom logo
     $logo_id = attachment_url_to_postid(content_url('uploads/luvron-logo.png'));
     if (!$logo_id && file_exists(ABSPATH . 'wp-content/uploads/luvron-logo.png')) {
-        // Sideload as attachment if not present in media library
         $logo_path = ABSPATH . 'wp-content/uploads/luvron-logo.png';
         $filetype  = wp_check_filetype('luvron-logo.png');
         $att_id = wp_insert_attachment([
@@ -38,9 +37,26 @@ add_action('after_setup_theme', function () {
         set_theme_mod('custom_logo', $logo_id);
     }
 
-    // Astra-specific settings
-    set_theme_mod('site-title-color',     '#0f172a');
-    set_theme_mod('header-bg-obj-responsive', ['desktop' => ['background-color' => '#ffffff'], 'tablet' => [], 'mobile' => []]);
+    // Hide site title text — only show logo
+    update_option('blogname', 'Luvron');           // shorter title where it appears
+    set_theme_mod('display-site-title',     false);
+    set_theme_mod('display-site-tagline',   false);
+    set_theme_mod('site-title-color',       '#0f172a');
+
+    // Hide Astra page title bar on all pages (we use block patterns)
+    set_theme_mod('ast-banner-title-area',  ['default' => 'disable']);
+    set_theme_mod('ast-dynamic-single-page-title-layout', 'layout-1');
+    set_theme_mod('ast-dynamic-single-page-title', false);
+    set_theme_mod('ast-single-post-title',          ['default' => 0]);
+    set_theme_mod('ast-dynamic-single-page-title-display', false);
+    set_theme_mod('breadcrumb-position',     'none');
+
+    // Container = full width so block patterns can reach edge-to-edge
+    set_theme_mod('site-content-layout',    'plain-container');
+    set_theme_mod('single-page-content-layout', 'plain-container');
+    set_theme_mod('site-sidebar-layout',    'no-sidebar');
+    set_theme_mod('single-page-sidebar-layout', 'no-sidebar');
+    set_theme_mod('site-content-width',     1280);
 }, 20);
 
 // Enqueue brand fonts + stylesheet
@@ -398,13 +414,61 @@ input:focus, textarea:focus, select:focus {
     max-width: none !important;
 }
 
-/* Hide Astra page title bar on Home */
-body.home .ast-archive-title,
-body.home .ast-single-post-banner,
-body.page-id-130 .entry-header,
-body.page-id-130 .ast-single-post-banner {
+/* Hide Astra default page title bar / page title text on ALL pages
+   (we use block patterns for headers; redundant page titles look broken) */
+.ast-single-post-banner,
+.ast-archive-title,
+.ast-single-banner-area,
+.ast-banner-image-bg-disable,
+body.page .entry-header,
+body.page article .entry-title,
+body.home .entry-header,
+body.home article .entry-title,
+.ast-page-builder-template .entry-header,
+header.entry-header,
+.ast-no-thumbnail .entry-header {
     display: none !important;
 }
+
+/* Hide site-title text — only the logo image should appear */
+.ast-site-identity .ast-site-title-wrap,
+.ast-site-title-wrap,
+.site-title,
+.site-description,
+.site-header .site-title,
+.site-header .site-description {
+    display: none !important;
+}
+
+/* Constrain the logo strictly */
+.custom-logo,
+.custom-logo-link img,
+.site-logo-img img {
+    max-height: 56px !important;
+    height: auto !important;
+    width: auto !important;
+}
+@media (max-width: 720px) {
+    .custom-logo,
+    .custom-logo-link img,
+    .site-logo-img img { max-height: 44px !important; }
+}
+
+/* Astra page wrapper should not add inner padding when Home page is full-width */
+body.home #primary,
+body.home #content,
+body.home .site-content > .ast-container {
+    padding: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+body.home article.page {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+body.home .entry-content { margin: 0 !important; padding: 0 !important; }
+body.home .entry-content > * { margin-top: 0 !important; margin-bottom: 0 !important; }
 
 /* Section-style block patterns get full breathing room */
 .entry-content {
@@ -417,33 +481,65 @@ body.home .entry-content > * {
 CSS;
 }
 
-// Set a primary menu with Luvron pages if no primary menu exists
+// Set up primary menu with curated Luvron items. Recreate cleanly on each load
+// so we own this menu (vs Astra's auto-pages fallback that lists every page alphabetically).
+add_action('after_switch_theme', 'luvron_create_primary_menu');
 add_action('init', function () {
-    $locations = get_theme_mod('nav_menu_locations', []);
-    if (!empty($locations['primary'])) return;
+    if (get_option('luvron_menu_v2_done')) return;
+    luvron_create_primary_menu();
+    update_option('luvron_menu_v2_done', current_time('mysql'));
+}, 30);
+
+function luvron_create_primary_menu() {
+    // Delete any existing menu to start clean
+    $existing = wp_get_nav_menu_object('Luvron Primary');
+    if ($existing) wp_delete_nav_menu($existing->term_id);
 
     $menu_id = wp_create_nav_menu('Luvron Primary');
     if (is_wp_error($menu_id)) return;
 
     $items = [
-        ['Home',         home_url('/')],
-        ['Catalogue',    home_url('/catalogue/')],
-        ['Bulk Order',   home_url('/bulk-order/')],
+        ['Home',            home_url('/')],
+        ['Catalogue',       home_url('/shop/')],
+        ['Bulk Order',      home_url('/bulk-order/')],
         ['Become a Dealer', home_url('/become-a-dealer/')],
-        ['About',        home_url('/about-luvron/')],
-        ['Contact',      home_url('/contact/')],
+        ['About',           home_url('/about-luvron/')],
+        ['Contact',         home_url('/contact/')],
     ];
     foreach ($items as $i => $row) {
         wp_update_nav_menu_item($menu_id, 0, [
             'menu-item-title'    => $row[0],
             'menu-item-url'      => $row[1],
             'menu-item-status'   => 'publish',
+            'menu-item-type'     => 'custom',
             'menu-item-position' => $i + 1,
         ]);
     }
-    $locations['primary'] = $menu_id;
+
+    // Assign to primary location AND all other Astra menu locations
+    $locations = get_theme_mod('nav_menu_locations', []);
+    foreach (['primary', 'main', 'top', 'header', 'mobile_menu', 'menu-1'] as $loc) {
+        $locations[$loc] = $menu_id;
+    }
     set_theme_mod('nav_menu_locations', $locations);
-}, 30);
+}
+
+// Filter wp_nav_menu fallback to never show "all pages alphabetically"
+add_filter('wp_nav_menu_args', function ($args) {
+    // If theme falls back to wp_page_menu, force-hide the wrong pages
+    if (empty($args['theme_location']) || empty(get_theme_mod('nav_menu_locations')[$args['theme_location']] ?? null)) {
+        $exclude_slugs = ['cart', 'checkout', 'my-account', 'sample-page', 'privacy-policy',
+                          'terms-of-service', 'refund-policy', 'shipping-policy', 'dealer-dashboard',
+                          'request-quote', 'catalogue'];
+        $exclude_ids = [];
+        foreach ($exclude_slugs as $slug) {
+            $p = get_page_by_path($slug);
+            if ($p) $exclude_ids[] = $p->ID;
+        }
+        $args['exclude'] = implode(',', $exclude_ids);
+    }
+    return $args;
+});
 
 // Add subtle body class for our custom styling targets
 add_filter('body_class', function ($classes) {
