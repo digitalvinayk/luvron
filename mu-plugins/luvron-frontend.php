@@ -72,8 +72,656 @@ add_action('wp_enqueue_scripts', function () {
     // Brand stylesheet — the design system from docs/styles.css adapted for WordPress
     wp_register_style('luvron-brand', false, ['luvron-fonts'], '1.0.0');
     wp_enqueue_style('luvron-brand');
-    wp_add_inline_style('luvron-brand', luvron_brand_css());
+    wp_add_inline_style('luvron-brand', luvron_brand_css() . luvron_blocks_css());
 }, 100);
+
+function luvron_blocks_css() {
+    return <<<CSS
+
+/* ============================================================
+   LUVRON NATIVE BLOCK PATTERN STYLES
+   Hooks into native Gutenberg blocks via .lv-* className attrs.
+   The home page uses wp:group / wp:cover / wp:columns / wp:image
+   / wp:heading / wp:paragraph / wp:buttons — all editable in admin.
+   ============================================================ */
+
+/* HERO */
+.lv-hero {
+    padding: 100px 0 120px !important;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff !important;
+}
+.lv-hero::before {
+    content: ""; position: absolute; top: -150px; left: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, #ffd9d3, transparent 70%);
+    filter: blur(80px); opacity: .55; pointer-events: none;
+}
+.lv-hero::after {
+    content: ""; position: absolute; bottom: -150px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, #c7e2fb, transparent 70%);
+    filter: blur(80px); opacity: .45; pointer-events: none;
+}
+.lv-hero .lv-hero-columns { position: relative; z-index: 1; gap: 60px; }
+.lv-hero .lv-eyebrow {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #ffd9d3;
+    color: #c93a30;
+    border-radius: 999px;
+    font-size: 12.5px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px !important;
+    box-shadow: 0 4px 12px rgba(232,74,63,.08);
+    text-transform: none !important;
+    line-height: 1 !important;
+}
+.lv-hero h1.lv-h1 {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: clamp(40px, 6.5vw, 76px) !important;
+    font-weight: 700 !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.025em !important;
+    margin: 0 0 24px !important;
+    color: #0f172a !important;
+}
+.lv-hero h1.lv-h1 em {
+    color: #ff6b5b;
+    font-style: normal;
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    font-size: 0.92em;
+    display: inline-block;
+    transform: rotate(-2deg);
+}
+.lv-hero p.lv-lead {
+    font-size: 18px !important;
+    color: #475569 !important;
+    line-height: 1.6 !important;
+    max-width: 520px;
+    margin: 0 0 32px !important;
+}
+.lv-hero p.lv-lead strong { color: #0f172a; font-weight: 600; }
+.lv-hero .lv-hero-actions { gap: 12px !important; margin-bottom: 32px !important; }
+.lv-hero .lv-trust-row {
+    color: #64748b !important;
+    font-size: 13.5px !important;
+    line-height: 1.7 !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+.lv-hero .lv-trust-row strong { color: #2f9e44; font-weight: 800; }
+.lv-hero-visual figure.lv-hero-product {
+    position: relative;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #fff7e6 0%, #fff0ec 50%, #ffd9d3 100%);
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 30px 80px rgba(15,23,42,.10);
+    margin: 0 !important;
+    padding: 8%;
+}
+.lv-hero-visual figure.lv-hero-product img {
+    max-width: 80% !important;
+    max-height: 80% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    animation: lv-float 6s ease-in-out infinite;
+    filter: drop-shadow(0 25px 35px rgba(15,23,42,.18));
+}
+@keyframes lv-float {
+    0%,100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-14px) rotate(1deg); }
+}
+
+/* STATS */
+.lv-stats {
+    padding: 0 !important;
+    background: #ffffff !important;
+    margin-top: -60px !important;
+    position: relative;
+    z-index: 3;
+}
+.lv-stats-grid {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 24px rgba(15,23,42,.04);
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    overflow: hidden;
+}
+.lv-stats-grid .lv-stat {
+    padding: 36px 24px !important;
+    text-align: center;
+    border-right: 1px solid #e5e7eb;
+    margin: 0 !important;
+}
+.lv-stats-grid .lv-stat:last-child { border-right: 0; }
+.lv-stat-num {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: 48px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 0 8px !important;
+    letter-spacing: -0.02em !important;
+}
+.lv-stat-label {
+    font-size: 11.5px !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+/* SECTION HEAD */
+.lv-section {
+    padding: 96px 0 !important;
+    background: #ffffff;
+}
+.lv-bg-cream { background: #fff7e6 !important; }
+.lv-section .lv-eyebrow-section {
+    color: #ff6b5b !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em;
+    text-transform: uppercase !important;
+    margin: 0 0 14px !important;
+}
+.lv-section .lv-section-h2 {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: clamp(32px, 4.5vw, 52px) !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+    margin: 0 auto 16px !important;
+    max-width: 720px;
+    color: #0f172a !important;
+}
+.lv-section .lv-section-blurb {
+    font-size: 17px !important;
+    color: #475569 !important;
+    line-height: 1.55 !important;
+    margin: 0 auto 56px !important;
+    max-width: 720px;
+}
+
+/* PRODUCT GRID (Best Sellers) */
+.lv-prod-grid {
+    margin: 0 0 24px !important;
+    gap: 24px !important;
+}
+.lv-prod-grid .lv-prod {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    transition: all .3s cubic-bezier(.23,1,.32,1) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-basis: auto !important;
+}
+.lv-prod-grid .lv-prod:hover {
+    transform: translateY(-8px);
+    border-color: #ffd9d3 !important;
+    box-shadow: 0 24px 60px rgba(15,23,42,.10);
+}
+.lv-prod figure.lv-prod-img {
+    aspect-ratio: 1;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    overflow: hidden;
+    position: relative;
+}
+.lv-prod figure.lv-prod-img img {
+    max-width: 80% !important;
+    max-height: 80% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    transition: transform .4s cubic-bezier(.23,1,.32,1);
+    filter: drop-shadow(0 14px 24px rgba(15,23,42,.12));
+}
+.lv-prod:hover figure.lv-prod-img img { transform: scale(1.08) rotate(-3deg); }
+.lv-prod figure.lv-prod-img.lv-prod-musical { background: linear-gradient(135deg, #fff7e6, #fff0ec); }
+.lv-prod figure.lv-prod-img.lv-prod-normal { background: linear-gradient(135deg, #ecfdf5, #d4f1d8); }
+.lv-prod figure.lv-prod-img.lv-prod-musical::before {
+    content: "♪ MUSICAL";
+    position: absolute;
+    top: 14px; left: 14px;
+    background: rgba(180,83,9,.95);
+    color: #fff;
+    padding: 5px 11px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    z-index: 2;
+}
+.lv-prod figure.lv-prod-img.lv-prod-normal::before {
+    content: "⚙ NORMAL";
+    position: absolute;
+    top: 14px; left: 14px;
+    background: rgba(47,158,68,.95);
+    color: #fff;
+    padding: 5px 11px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    z-index: 2;
+}
+.lv-prod p.lv-prod-series {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em;
+    color: #ff6b5b !important;
+    text-transform: uppercase !important;
+    margin: 18px 22px 4px !important;
+}
+.lv-prod h3.lv-prod-name {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+    margin: 0 22px 10px !important;
+}
+.lv-prod p.lv-prod-meta {
+    font-size: 13px !important;
+    color: #64748b !important;
+    margin: 0 22px 22px !important;
+    padding-top: 14px !important;
+    border-top: 1px solid #f1f5f9;
+}
+.lv-prod p.lv-prod-meta a {
+    color: #ff6b5b !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+/* CATEGORY GRID */
+.lv-cat-grid {
+    margin: 0 0 20px !important;
+    gap: 20px !important;
+}
+.lv-cat-grid .lv-cat {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    padding: 28px !important;
+    margin: 0 !important;
+    text-align: center;
+    transition: all .3s cubic-bezier(.23,1,.32,1) !important;
+    aspect-ratio: 1;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 4px 16px rgba(15,23,42,.04);
+    flex-basis: auto !important;
+}
+.lv-cat-grid .lv-cat:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(15,23,42,.12);
+}
+.lv-cat-grid .lv-cat figure.wp-block-image {
+    flex: 1;
+    margin: 0 0 16px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+.lv-cat-grid .lv-cat figure.wp-block-image img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    transition: transform .4s cubic-bezier(.23,1,.32,1);
+    filter: drop-shadow(0 12px 22px rgba(15,23,42,.15));
+}
+.lv-cat-grid .lv-cat:hover figure.wp-block-image img { transform: scale(1.08) rotate(-3deg); }
+.lv-cat-grid .lv-cat h3 {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 0 4px !important;
+    letter-spacing: -0.01em !important;
+}
+.lv-cat-grid .lv-cat h3 a { color: inherit !important; text-decoration: none !important; }
+.lv-cat-grid .lv-cat p {
+    font-size: 12.5px !important;
+    color: #475569 !important;
+    margin: 0 !important;
+    font-weight: 500 !important;
+}
+.lv-cat-coral { background: linear-gradient(135deg, #fff0ec 0%, #ffd9d3 100%); }
+.lv-cat-sky { background: linear-gradient(135deg, #eef5ff 0%, #d8e8fa 100%); }
+.lv-cat-mint { background: linear-gradient(135deg, #ecfdf5 0%, #d4f1d8 100%); }
+.lv-cat-cream { background: linear-gradient(135deg, #fff7e6 0%, #ffe9a8 100%); }
+.lv-cat-lavender { background: linear-gradient(135deg, #f3eeff 0%, #e7dffa 100%); }
+
+/* WHY LUVRON FEATURES */
+.lv-feat-grid {
+    margin: 0 0 24px !important;
+    gap: 24px !important;
+}
+.lv-feat-grid .lv-feat {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 20px !important;
+    padding: 36px 32px !important;
+    margin: 0 !important;
+    transition: all .3s cubic-bezier(.23,1,.32,1) !important;
+    flex-basis: auto !important;
+    position: relative;
+}
+.lv-feat-grid .lv-feat::before {
+    content: "";
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    display: block;
+    margin-bottom: 20px;
+    background: var(--feat-bg, #fff0ec);
+}
+.lv-feat-coral::before { background: #fff0ec !important; box-shadow: inset 0 0 0 4px #ffd9d3; }
+.lv-feat-sky::before { background: #eef5ff !important; box-shadow: inset 0 0 0 4px #c7e2fb; }
+.lv-feat-mint::before { background: #ecfdf5 !important; box-shadow: inset 0 0 0 4px #d4f1d8; }
+.lv-feat-cream::before { background: #fff7e6 !important; box-shadow: inset 0 0 0 4px #ffe9a8; }
+.lv-feat-lavender::before { background: #f3eeff !important; box-shadow: inset 0 0 0 4px #e7dffa; }
+.lv-feat-grid .lv-feat:hover {
+    transform: translateY(-4px);
+    border-color: #ffd9d3 !important;
+    box-shadow: 0 18px 40px rgba(15,23,42,.06);
+}
+.lv-feat-grid .lv-feat h3 {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: 21px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 0 10px !important;
+    letter-spacing: -0.01em !important;
+}
+.lv-feat-grid .lv-feat p {
+    font-size: 14.5px !important;
+    color: #475569 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* TIERS */
+.lv-tier-grid {
+    margin: 32px 0 0 !important;
+    gap: 28px !important;
+}
+.lv-tier-grid .lv-tier {
+    border-radius: 24px !important;
+    padding: 44px 40px !important;
+    margin: 0 !important;
+    position: relative;
+    overflow: hidden;
+    flex-basis: auto !important;
+}
+.lv-tier-musical { background: linear-gradient(135deg, #fff7e6, #fff5d3) !important; }
+.lv-tier-normal { background: linear-gradient(135deg, #ecfdf5, #d4f4d8) !important; }
+.lv-tier::before {
+    content: ""; position: absolute;
+    top: -60px; right: -60px;
+    width: 240px; height: 240px;
+    border-radius: 50%; opacity: .18;
+}
+.lv-tier-musical::before { background: #d4a847; }
+.lv-tier-normal::before { background: #7aae8e; }
+.lv-tier .lv-tier-marker {
+    display: inline-block !important;
+    padding: 7px 16px !important;
+    border-radius: 999px;
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+    background: #ffffff;
+    margin: 0 0 20px !important;
+    position: relative;
+    z-index: 1;
+    width: auto !important;
+    line-height: 1 !important;
+}
+.lv-tier-musical .lv-tier-marker { color: #b45309 !important; }
+.lv-tier-normal .lv-tier-marker { color: #2f9e44 !important; }
+.lv-tier h3 {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: 42px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+    margin: 0 0 10px !important;
+    position: relative;
+    z-index: 1;
+}
+.lv-tier .lv-tier-price {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    margin: 0 0 24px !important;
+    position: relative;
+    z-index: 1;
+}
+.lv-tier ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    position: relative;
+    z-index: 1;
+}
+.lv-tier ul li {
+    padding: 14px 0 14px 30px !important;
+    font-size: 14.5px !important;
+    color: #475569 !important;
+    border-top: 1px solid rgba(15,23,42,.08);
+    position: relative;
+}
+.lv-tier ul li:first-child { border-top: 0; }
+.lv-tier ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0; top: 14px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 12px;
+}
+.lv-tier-musical ul li::before { color: #b45309; }
+.lv-tier-normal ul li::before { color: #2f9e44; }
+.lv-tier ul li strong { color: #0f172a !important; font-weight: 600 !important; }
+.lv-tier .lv-tier-hsn {
+    margin-top: 24px !important;
+    padding-top: 20px !important;
+    border-top: 1px solid rgba(15,23,42,.08);
+    font-size: 12.5px !important;
+    color: #475569 !important;
+    position: relative;
+    z-index: 1;
+}
+.lv-tier .lv-tier-hsn code {
+    font-family: "SFMono-Regular", monospace !important;
+    background: #ffffff;
+    padding: 3px 9px;
+    border-radius: 5px;
+    font-size: 11.5px !important;
+    font-weight: 600;
+}
+
+/* TESTIMONIALS */
+.lv-testi-grid {
+    margin: 0 0 24px !important;
+    gap: 24px !important;
+}
+.lv-testi-grid .lv-testi {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 20px !important;
+    padding: 36px 32px !important;
+    margin: 0 !important;
+    flex-basis: auto !important;
+    transition: transform .25s cubic-bezier(.23,1,.32,1) !important;
+    position: relative;
+}
+.lv-testi-grid .lv-testi:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(15,23,42,.06);
+}
+.lv-testi-grid .lv-testi::before {
+    content: "\"";
+    position: absolute;
+    top: -14px; left: 24px;
+    background: #ff6b5b;
+    color: #fff;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bricolage Grotesque", serif;
+    font-size: 36px;
+    line-height: 0.9;
+    box-shadow: 0 8px 20px rgba(255,107,91,.30);
+}
+.lv-testi p.lv-stars {
+    color: #f59e0b !important;
+    font-size: 17px !important;
+    margin: 8px 0 16px !important;
+    letter-spacing: 2px;
+}
+.lv-testi p.lv-quote {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #0f172a !important;
+    margin: 0 0 26px !important;
+    font-weight: 500;
+}
+.lv-testi figure.lv-who-img {
+    margin: 22px 0 12px !important;
+    padding-top: 22px;
+    border-top: 1px solid #f1f5f9;
+}
+.lv-testi figure.lv-who-img img {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #ffd9d3;
+}
+.lv-testi p.lv-who-name {
+    font-size: 13px !important;
+    color: #64748b !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+.lv-testi p.lv-who-name strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+/* CTA COVER */
+.lv-cta-cover {
+    border-radius: 0 !important;
+    padding: 80px 32px !important;
+}
+.lv-cta-cover .lv-cta-title {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: clamp(32px, 4.5vw, 52px) !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+    margin: 0 auto 18px !important;
+    max-width: 760px;
+}
+.lv-cta-cover .lv-cta-blurb {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    margin: 0 auto 32px !important;
+    max-width: 580px;
+    opacity: 0.92;
+}
+.lv-cta-cover .lv-cta-buttons { gap: 14px !important; }
+.lv-cta-cover .lv-btn-light .wp-block-button__link {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+.lv-cta-cover .lv-btn-yellow .wp-block-button__link {
+    background: #ffc93c !important;
+    color: #0f172a !important;
+}
+
+/* HERO SLIM (subpages) */
+.lv-hero-slim { padding: 80px 0 !important; }
+.lv-hero-slim .lv-breadcrumb {
+    font-size: 13px !important;
+    color: #475569 !important;
+    margin: 0 0 18px !important;
+}
+.lv-hero-slim .lv-breadcrumb a { color: inherit; }
+.lv-hero-slim h1.lv-hero-slim-h1 {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: clamp(36px, 5vw, 56px) !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+    margin: 0 0 16px !important;
+    color: #0f172a !important;
+}
+.lv-hero-slim p.lv-hero-slim-p {
+    font-size: 18px !important;
+    color: #475569 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* MOBILE */
+@media (max-width: 980px) {
+    .lv-hero { padding: 60px 0 80px !important; }
+    .lv-stats { margin-top: 0 !important; }
+    .lv-stats-grid { flex-wrap: wrap !important; }
+    .lv-stats-grid .lv-stat { flex-basis: 50% !important; border-right: 1px solid #e5e7eb !important; border-bottom: 1px solid #e5e7eb !important; }
+    .lv-stats-grid .lv-stat:nth-child(2n) { border-right: 0 !important; }
+    .lv-stats-grid .lv-stat:last-child { flex-basis: 100% !important; border-bottom: 0 !important; }
+    .lv-section { padding: 64px 0 !important; }
+}
+@media (max-width: 720px) {
+    .lv-cat-grid, .lv-prod-grid, .lv-feat-grid, .lv-tier-grid, .lv-testi-grid {
+        flex-direction: column !important;
+    }
+    .lv-cat-grid > *, .lv-prod-grid > *, .lv-feat-grid > *, .lv-tier-grid > *, .lv-testi-grid > * {
+        flex-basis: 100% !important;
+    }
+}
+CSS;
+}
 
 function luvron_brand_css() {
     return <<<CSS
