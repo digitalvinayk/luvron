@@ -579,83 +579,129 @@ function luvron_blocks_css() {
     margin: 0 !important;
 }
 
-/* TIERS */
+/* TIERS — redesigned with featured product image instead of empty decorative circle */
 .lv-tier-grid {
     margin: 32px 0 0 !important;
     gap: 28px !important;
 }
 .lv-tier-grid .lv-tier {
     border-radius: 24px !important;
-    padding: 44px 40px !important;
+    padding: 36px 36px 28px !important;
     margin: 0 !important;
     position: relative;
     overflow: hidden;
     flex-basis: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
-.lv-tier-musical { background: linear-gradient(135deg, #fff7e6, #fff5d3) !important; }
-.lv-tier-normal { background: linear-gradient(135deg, #ecfdf5, #d4f4d8) !important; }
-.lv-tier::before {
-    content: ""; position: absolute;
-    top: -60px; right: -60px;
-    width: 240px; height: 240px;
-    border-radius: 50%; opacity: .18;
+.lv-tier-musical {
+    background:
+        radial-gradient(circle at 100% 0%, rgba(212,168,71,0.18), transparent 50%),
+        linear-gradient(135deg, #fff7e6, #fff5d3) !important;
 }
-.lv-tier-musical::before { background: #d4a847; }
-.lv-tier-normal::before { background: #7aae8e; }
+.lv-tier-normal {
+    background:
+        radial-gradient(circle at 100% 0%, rgba(122,174,142,0.20), transparent 50%),
+        linear-gradient(135deg, #ecfdf5, #d4f4d8) !important;
+}
+/* Featured product image floats top-right corner instead of empty pastel circle */
+.lv-tier figure.lv-tier-image {
+    position: absolute !important;
+    top: -10px !important;
+    right: -20px !important;
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 !important;
+    z-index: 1;
+    pointer-events: none;
+    transform: rotate(8deg);
+    transition: transform .4s cubic-bezier(.23,1,.32,1);
+}
+.lv-tier:hover figure.lv-tier-image {
+    transform: rotate(4deg) scale(1.04) translateY(-4px);
+}
+.lv-tier figure.lv-tier-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 18px 24px rgba(15,23,42,.18));
+}
 .lv-tier .lv-tier-marker {
-    display: inline-block !important;
-    padding: 7px 16px !important;
+    display: inline-flex !important;
+    align-items: center;
+    padding: 7px 14px !important;
     border-radius: 999px;
-    font-size: 12.5px !important;
+    font-size: 12px !important;
     font-weight: 700 !important;
     background: #ffffff;
-    margin: 0 0 20px !important;
+    margin: 0 0 22px !important;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: auto !important;
-    line-height: 1 !important;
+    line-height: 1.2 !important;
+    box-shadow: 0 4px 12px rgba(15,23,42,.06);
+    letter-spacing: 0.02em;
 }
 .lv-tier-musical .lv-tier-marker { color: #b45309 !important; }
 .lv-tier-normal .lv-tier-marker { color: #2f9e44 !important; }
 .lv-tier h3 {
     font-family: "Bricolage Grotesque", sans-serif !important;
-    font-size: 42px !important;
+    font-size: 38px !important;
     font-weight: 700 !important;
     color: #0f172a !important;
     line-height: 1.05 !important;
     letter-spacing: -0.025em !important;
-    margin: 0 0 10px !important;
+    margin: 0 0 6px !important;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    max-width: 60%;
 }
 .lv-tier .lv-tier-price {
-    font-family: "Bricolage Grotesque", sans-serif !important;
-    font-size: 22px !important;
-    font-weight: 600 !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-size: 15px !important;
     color: #475569 !important;
-    margin: 0 0 24px !important;
+    margin: 0 0 22px !important;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    line-height: 1.3 !important;
+    max-width: 60%;
+}
+.lv-tier .lv-tier-price strong {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    letter-spacing: -0.02em;
+    display: block;
+    margin-bottom: 2px;
+}
+.lv-tier .lv-tier-price span {
+    font-size: 12.5px !important;
+    color: #64748b !important;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
 }
 .lv-tier ul {
     margin: 0 !important;
     padding: 0 !important;
     list-style: none !important;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 .lv-tier ul li {
-    padding: 14px 0 14px 30px !important;
-    font-size: 14.5px !important;
+    padding: 12px 0 12px 30px !important;
+    font-size: 14px !important;
     color: #475569 !important;
     border-top: 1px solid rgba(15,23,42,.08);
     position: relative;
+    line-height: 1.55;
 }
-.lv-tier ul li:first-child { border-top: 0; }
+.lv-tier ul li:first-child { border-top: 0; padding-top: 4px !important; }
 .lv-tier ul li::before {
     content: "✓";
     position: absolute;
-    left: 0; top: 14px;
+    left: 0; top: 12px;
     width: 22px; height: 22px;
     border-radius: 50%;
     background: #ffffff;
@@ -663,27 +709,81 @@ function luvron_blocks_css() {
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 12px;
+    font-size: 11px;
+    box-shadow: 0 2px 6px rgba(15,23,42,.06);
 }
 .lv-tier-musical ul li::before { color: #b45309; }
 .lv-tier-normal ul li::before { color: #2f9e44; }
+.lv-tier-musical ul li:first-child::before { top: 4px; }
+.lv-tier-normal ul li:first-child::before { top: 4px; }
 .lv-tier ul li strong { color: #0f172a !important; font-weight: 600 !important; }
-.lv-tier .lv-tier-hsn {
+
+/* Footer row: HSN tag pill (left) + CTA arrow (right) */
+.lv-tier .lv-tier-foot {
     margin-top: 24px !important;
-    padding-top: 20px !important;
-    border-top: 1px solid rgba(15,23,42,.08);
-    font-size: 12.5px !important;
-    color: #475569 !important;
+    padding-top: 18px !important;
+    border-top: 1px solid rgba(15,23,42,.10);
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 16px;
+    flex-wrap: wrap;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+.lv-tier .lv-tier-hsn {
+    margin: 0 !important;
+    font-size: 12px !important;
+    color: #475569 !important;
+    line-height: 1.4 !important;
 }
 .lv-tier .lv-tier-hsn code {
     font-family: "SFMono-Regular", monospace !important;
     background: #ffffff;
     padding: 3px 9px;
     border-radius: 5px;
-    font-size: 11.5px !important;
-    font-weight: 600;
+    font-size: 11px !important;
+    font-weight: 700;
+    color: #0f172a;
+    margin-right: 4px;
+    box-shadow: 0 1px 3px rgba(15,23,42,.06);
+}
+.lv-tier .lv-tier-cta {
+    margin: 0 !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+}
+.lv-tier .lv-tier-cta a {
+    text-decoration: none !important;
+    transition: gap .2s, color .2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.lv-tier-musical .lv-tier-cta a {
+    color: #b45309 !important;
+}
+.lv-tier-musical .lv-tier-cta a:hover {
+    color: #92400e !important;
+    gap: 8px;
+}
+.lv-tier-normal .lv-tier-cta a {
+    color: #2f9e44 !important;
+}
+.lv-tier-normal .lv-tier-cta a:hover {
+    color: #166534 !important;
+    gap: 8px;
+}
+@media (max-width: 720px) {
+    .lv-tier figure.lv-tier-image {
+        width: 130px !important;
+        height: 130px !important;
+        top: -5px !important;
+        right: -10px !important;
+    }
+    .lv-tier h3 { font-size: 32px !important; max-width: 65% !important; }
+    .lv-tier .lv-tier-price { max-width: 65% !important; }
+    .lv-tier .lv-tier-price strong { font-size: 24px !important; }
 }
 
 /* TESTIMONIALS */

@@ -440,28 +440,40 @@ function luvron_homepage_pattern_content() {
 <div class="wp-block-columns lv-tier-grid">
 <!-- wp:column {"className":"lv-tier lv-tier-musical"} -->
 <div class="wp-block-column lv-tier lv-tier-musical">
+<!-- wp:image {"className":"lv-tier-image"} --><figure class="wp-block-image lv-tier-image"><img src="{$p}sigma-plus.jpg" alt="Plus variant — musical model with horn, lights, music"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-tier-marker"} --><p class="lv-tier-marker">♪ Musical · 18% GST</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Plus Variants</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-tier-price"} --><p class="lv-tier-price">₹680 – ₹1,760 wholesale</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-tier-price"} --><p class="lv-tier-price"><strong>₹680 – ₹1,760</strong> <span>wholesale, ex-Loni</span></p><!-- /wp:paragraph -->
 <!-- wp:list --><ul>
 <li><strong>Horn, lights &amp; music</strong> on the handlebar — kids' top decision driver</li>
 <li><strong>Premium retail boxed</strong> packaging with brand graphics</li>
 <li>Higher margin tier — better shelf attraction</li>
 </ul><!-- /wp:list -->
+<!-- wp:group {"className":"lv-tier-foot","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group lv-tier-foot">
 <!-- wp:paragraph {"className":"lv-tier-hsn"} --><p class="lv-tier-hsn">HSN <code>9503</code> · Toys with mechanical sound</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-tier-cta"} --><p class="lv-tier-cta"><a href="/shop/?tier=musical">View 22 Musical SKUs →</a></p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-tier lv-tier-normal"} -->
 <div class="wp-block-column lv-tier lv-tier-normal">
+<!-- wp:image {"className":"lv-tier-image"} --><figure class="wp-block-image lv-tier-image"><img src="{$p}sigma.jpg" alt="Base variant — clean ride, no electronics"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-tier-marker"} --><p class="lv-tier-marker">⚙ Normal · 5% GST</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Base Variants</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-tier-price"} --><p class="lv-tier-price">₹560 – ₹1,700 wholesale</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-tier-price"} --><p class="lv-tier-price"><strong>₹560 – ₹1,700</strong> <span>wholesale, ex-Loni</span></p><!-- /wp:paragraph -->
 <!-- wp:list --><ul>
 <li><strong>Same chassis &amp; wheels</strong> as Plus — ride identical</li>
 <li><strong>Lower price point</strong> — best for tier-2/3 markets</li>
 <li>Lower GST — customer-friendly tax pass-through</li>
 </ul><!-- /wp:list -->
+<!-- wp:group {"className":"lv-tier-foot","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group lv-tier-foot">
 <!-- wp:paragraph {"className":"lv-tier-hsn"} --><p class="lv-tier-hsn">HSN <code>8712</code> · Children's bicycles &amp; tricycles</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-tier-cta"} --><p class="lv-tier-cta"><a href="/shop/?tier=normal">View 22 Normal SKUs →</a></p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
 </div>
 <!-- /wp:column -->
 </div>
