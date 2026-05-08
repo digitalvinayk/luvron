@@ -161,7 +161,8 @@ function luvron_homepage_pattern_content() {
 <!-- wp:image {"className":"lv-prod-img lv-prod-musical"} --><figure class="wp-block-image lv-prod-img lv-prod-musical"><img src="{$p}sigma-plus.jpg" alt="SIGMA Plus"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">SIGMA SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">SIGMA Plus Tricycle</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">Pack 1×1/12 · 18% GST · <a href="/shop/">Login →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -169,7 +170,8 @@ function luvron_homepage_pattern_content() {
 <!-- wp:image {"className":"lv-prod-img lv-prod-musical"} --><figure class="wp-block-image lv-prod-img lv-prod-musical"><img src="{$p}aura-plus.jpg" alt="AURA Plus"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">AURA SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">AURA Plus Tricycle</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">Pack 1×1/12 · 18% GST · <a href="/shop/">Login →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -177,7 +179,8 @@ function luvron_homepage_pattern_content() {
 <!-- wp:image {"className":"lv-prod-img lv-prod-musical"} --><figure class="wp-block-image lv-prod-img lv-prod-musical"><img src="{$p}eagle-plus.jpg" alt="EAGLE Plus"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">EAGLE SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">EAGLE Plus Tricycle</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">Pack 1×1/12 · 18% GST · <a href="/shop/">Login →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -185,7 +188,8 @@ function luvron_homepage_pattern_content() {
 <!-- wp:image {"className":"lv-prod-img lv-prod-musical"} --><figure class="wp-block-image lv-prod-img lv-prod-musical"><img src="{$p}alex-plus.jpg" alt="ALEX Plus"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">ALEX SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">ALEX Plus Tricycle</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">Pack 1×1/12 · 18% GST · <a href="/shop/">Login →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 </div>
@@ -198,7 +202,8 @@ function luvron_homepage_pattern_content() {
 <!-- wp:image {"className":"lv-prod-img lv-prod-normal"} --><figure class="wp-block-image lv-prod-img lv-prod-normal"><img src="{$p}rambo-333.jpg" alt="RAMBO 333"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">RAMBO SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">RAMBO 333 Tricycle</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">Pack 3×4/12 · 5% GST · <a href="/shop/">Login →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 3×4 inner pack</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -206,7 +211,8 @@ function luvron_homepage_pattern_content() {
 <!-- wp:image {"className":"lv-prod-img lv-prod-normal"} --><figure class="wp-block-image lv-prod-img lv-prod-normal"><img src="{$p}hulk-pro.jpg" alt="HULK Pro"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">HULK SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">HULK Pro Tricycle</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">Pack 1×1/15 · 5% GST · <a href="/shop/">Login →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">15 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -214,7 +220,8 @@ function luvron_homepage_pattern_content() {
 <!-- wp:image {"className":"lv-prod-img lv-prod-musical"} --><figure class="wp-block-image lv-prod-img lv-prod-musical"><img src="{$p}charlie-r1-plus.jpg" alt="CHARLIE R1 Plus"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">CHARLIE SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">CHARLIE R1 Plus</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">Pack 1×1/15 · 18% GST · <a href="/shop/">Login →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">15 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -222,7 +229,8 @@ function luvron_homepage_pattern_content() {
 <!-- wp:image {"className":"lv-prod-img lv-prod-normal"} --><figure class="wp-block-image lv-prod-img lv-prod-normal"><img src="{$p}emma-r1.jpg" alt="EMMA R1"/></figure><!-- /wp:image -->
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">EMMA SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">EMMA R1 Tricycle</h3><!-- /wp:heading -->
-<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">Pack 1×1/15 · 5% GST · <a href="/shop/">Login →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">15 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 </div>

@@ -343,16 +343,49 @@ function luvron_blocks_css() {
     margin: 0 22px 10px !important;
 }
 .lv-prod p.lv-prod-meta {
-    font-size: 13px !important;
+    font-size: 12.5px !important;
     color: #64748b !important;
-    margin: 0 22px 22px !important;
+    margin: 0 22px 16px !important;
     padding-top: 14px !important;
     border-top: 1px solid #f1f5f9;
+    line-height: 1.5;
 }
-.lv-prod p.lv-prod-meta a {
-    color: #ff6b5b !important;
+
+/* Separated CTA — proper button style at bottom of card */
+.lv-prod p.lv-prod-cta {
+    margin: 0 22px 22px !important;
+    padding: 0 !important;
+}
+.lv-prod p.lv-prod-cta a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 12px 16px !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1.5px solid #0f172a !important;
+    border-radius: 999px !important;
+    font-size: 13px !important;
     font-weight: 600 !important;
     text-decoration: none !important;
+    transition: all .2s cubic-bezier(.23,1,.32,1);
+    letter-spacing: 0.01em;
+}
+.lv-prod p.lv-prod-cta a:hover {
+    background: #ff6b5b !important;
+    border-color: #ff6b5b !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(255,107,91,.30);
+}
+.lv-prod:hover p.lv-prod-cta a {
+    background: #0f172a !important;
+    color: #ffffff !important;
+}
+.lv-prod:hover p.lv-prod-cta a:hover {
+    background: #ff6b5b !important;
+    border-color: #ff6b5b !important;
 }
 
 /* CATEGORY GRID */
