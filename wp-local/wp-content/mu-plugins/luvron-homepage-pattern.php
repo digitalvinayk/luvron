@@ -363,12 +363,58 @@ function luvron_homepage_pattern_content() {
 <!-- wp:paragraph --><p>Distributors get exclusive PIN-code zones. We don't appoint competing dealers in your area.</p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
-<!-- wp:column {"className":"lv-feat lv-feat-coral"} -->
-<div class="wp-block-column lv-feat lv-feat-coral">
-<!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Founder Direct Line</h3><!-- /wp:heading -->
-<!-- wp:paragraph --><p>Rajneesh Pandey picks up the phone — WhatsApp +91 9212 389 139. Rare in this category.</p><!-- /wp:paragraph -->
+<!-- wp:column {"className":"lv-feat lv-feat-support"} -->
+<div class="wp-block-column lv-feat lv-feat-support">
+<!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Pan-India Sales Network</h3><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Regional sales managers across India respond to dealer queries within 4 working hours. Order tracking, payments, and dispute resolution under a single point of accountability.</p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","className":"lv-section lv-bg-canvas lv-catalog","layout":{"type":"constrained","contentSize":"1280px"}} -->
+<div class="wp-block-group alignfull lv-section lv-bg-canvas lv-catalog">
+
+<!-- wp:columns {"verticalAlignment":"center","className":"lv-catalog-cols"} -->
+<div class="wp-block-columns are-vertically-aligned-center lv-catalog-cols">
+
+<!-- wp:column {"verticalAlignment":"center","width":"55%","className":"lv-catalog-info"} -->
+<div class="wp-block-column is-vertically-aligned-center lv-catalog-info" style="flex-basis:55%">
+<!-- wp:paragraph {"className":"lv-eyebrow-section"} --><p class="lv-eyebrow-section">2026 PRODUCT CATALOGUE</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":2,"className":"lv-section-h2"} --><h2 class="wp-block-heading lv-section-h2">Download the full catalogue.</h2><!-- /wp:heading -->
+<!-- wp:paragraph --><p>44 SKUs across 11 series with full specifications, pack details, master carton sizes, GST rates, HSN codes, and pricing tiers. Updated 01 April 2026.</p><!-- /wp:paragraph -->
+<!-- wp:buttons {"className":"lv-catalog-actions"} -->
+<div class="wp-block-buttons lv-catalog-actions">
+<!-- wp:button {"className":"lv-btn-primary"} --><div class="wp-block-button lv-btn-primary"><a class="wp-block-button__link wp-element-button" href="/wp-content/uploads/luvron-catalogue-feb-26.pdf" download>Download PDF (10 MB) ↓</a></div><!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline lv-btn-ghost"} --><div class="wp-block-button is-style-outline lv-btn-ghost"><a class="wp-block-button__link wp-element-button" href="/shop/">Browse Online Catalogue</a></div><!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"45%","className":"lv-catalog-card"} -->
+<div class="wp-block-column is-vertically-aligned-center lv-catalog-card" style="flex-basis:45%">
+<!-- wp:group {"className":"lv-catalog-preview","layout":{"type":"constrained"}} -->
+<div class="wp-block-group lv-catalog-preview">
+<!-- wp:paragraph {"className":"lv-catalog-tag"} --><p class="lv-catalog-tag">PDF · 10 MB · 7 PAGES</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":3,"className":"lv-catalog-num"} --><h3 class="wp-block-heading lv-catalog-num">44 SKUs</h3><!-- /wp:heading -->
+<!-- wp:paragraph {"className":"lv-catalog-meta"} --><p class="lv-catalog-meta">Across <strong>11 series</strong> · Master cartons of <strong>12 to 24</strong> · <strong>5%</strong> &amp; <strong>18%</strong> GST</p><!-- /wp:paragraph -->
+<!-- wp:columns {"className":"lv-catalog-thumbs"} -->
+<div class="wp-block-columns lv-catalog-thumbs">
+<!-- wp:column --><div class="wp-block-column"><!-- wp:image --><figure class="wp-block-image"><img src="{$p}sigma-plus.jpg" alt=""/></figure><!-- /wp:image --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:image --><figure class="wp-block-image"><img src="{$p}aura-plus.jpg" alt=""/></figure><!-- /wp:image --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:image --><figure class="wp-block-image"><img src="{$p}eagle-plus.jpg" alt=""/></figure><!-- /wp:image --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:image --><figure class="wp-block-image"><img src="{$p}rambo-333.jpg" alt=""/></figure><!-- /wp:image --></div><!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:column -->
+
 </div>
 <!-- /wp:columns -->
 
