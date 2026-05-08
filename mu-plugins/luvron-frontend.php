@@ -604,46 +604,61 @@ function luvron_blocks_css() {
         radial-gradient(circle at 100% 0%, rgba(122,174,142,0.20), transparent 50%),
         linear-gradient(135deg, #ecfdf5, #d4f4d8) !important;
 }
-/* Featured product image floats top-right corner instead of empty pastel circle */
-.lv-tier figure.lv-tier-image {
-    position: absolute !important;
-    top: -10px !important;
-    right: -20px !important;
-    width: 200px !important;
-    height: 200px !important;
-    margin: 0 !important;
-    z-index: 1;
+/* Large translucent symbol decoration in top-right (CSS-only, no images, no broken renders) */
+.lv-tier::after {
+    content: "";
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
     pointer-events: none;
-    transform: rotate(8deg);
+    z-index: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 140px 140px;
+    opacity: 0.85;
     transition: transform .4s cubic-bezier(.23,1,.32,1);
 }
-.lv-tier:hover figure.lv-tier-image {
-    transform: rotate(4deg) scale(1.04) translateY(-4px);
+.lv-tier:hover::after {
+    transform: scale(1.05) rotate(-5deg);
 }
-.lv-tier figure.lv-tier-image img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    filter: drop-shadow(0 18px 24px rgba(15,23,42,.18));
+.lv-tier-musical::after {
+    background-color: rgba(212, 168, 71, 0.16);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b45309' fill-opacity='0.55'%3E%3Cpath d='M9 17a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm12-2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM12 2v15a3 3 0 1 1-2-2.83V5h13v10a3 3 0 1 1-2-2.83V4H12V2z'/%3E%3C/svg%3E");
 }
+.lv-tier-normal::after {
+    background-color: rgba(122, 174, 142, 0.18);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232f9e44' fill-opacity='0.55'%3E%3Cpath d='M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z'/%3E%3C/svg%3E");
+}
+
+/* Marker pill — wrap span trick: <p> is block (doesn't constrain width)
+   but the inner <span> with display:inline-flex IS the actual pill */
 .lv-tier .lv-tier-marker {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 22px !important;
+    position: relative;
+    z-index: 2;
+    line-height: 1 !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+.lv-tier .lv-tier-marker > span {
     display: inline-flex !important;
     align-items: center;
     padding: 7px 14px !important;
     border-radius: 999px;
     font-size: 12px !important;
     font-weight: 700 !important;
-    background: #ffffff;
-    margin: 0 0 22px !important;
-    position: relative;
-    z-index: 2;
-    width: auto !important;
+    background: #ffffff !important;
     line-height: 1.2 !important;
     box-shadow: 0 4px 12px rgba(15,23,42,.06);
     letter-spacing: 0.02em;
+    width: auto !important;
 }
-.lv-tier-musical .lv-tier-marker { color: #b45309 !important; }
-.lv-tier-normal .lv-tier-marker { color: #2f9e44 !important; }
+.lv-tier-musical .lv-tier-marker > span { color: #b45309 !important; }
+.lv-tier-normal .lv-tier-marker > span { color: #2f9e44 !important; }
 .lv-tier h3 {
     font-family: "Bricolage Grotesque", sans-serif !important;
     font-size: 38px !important;
@@ -654,7 +669,7 @@ function luvron_blocks_css() {
     margin: 0 0 6px !important;
     position: relative;
     z-index: 2;
-    max-width: 60%;
+    max-width: 100%;
 }
 .lv-tier .lv-tier-price {
     font-family: "Plus Jakarta Sans", sans-serif !important;
@@ -664,7 +679,7 @@ function luvron_blocks_css() {
     position: relative;
     z-index: 2;
     line-height: 1.3 !important;
-    max-width: 60%;
+    max-width: 100%;
 }
 .lv-tier .lv-tier-price strong {
     font-family: "Bricolage Grotesque", sans-serif !important;

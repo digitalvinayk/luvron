@@ -440,8 +440,7 @@ function luvron_homepage_pattern_content() {
 <div class="wp-block-columns lv-tier-grid">
 <!-- wp:column {"className":"lv-tier lv-tier-musical"} -->
 <div class="wp-block-column lv-tier lv-tier-musical">
-<!-- wp:image {"className":"lv-tier-image"} --><figure class="wp-block-image lv-tier-image"><img src="{$p}sigma-plus.jpg" alt="Plus variant — musical model with horn, lights, music"/></figure><!-- /wp:image -->
-<!-- wp:paragraph {"className":"lv-tier-marker"} --><p class="lv-tier-marker">♪ Musical · 18% GST</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-tier-marker"} --><p class="lv-tier-marker"><span>♪ Musical · 18% GST</span></p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Plus Variants</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-tier-price"} --><p class="lv-tier-price"><strong>₹680 – ₹1,760</strong> <span>wholesale, ex-Loni</span></p><!-- /wp:paragraph -->
 <!-- wp:list --><ul>
@@ -459,8 +458,7 @@ function luvron_homepage_pattern_content() {
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-tier lv-tier-normal"} -->
 <div class="wp-block-column lv-tier lv-tier-normal">
-<!-- wp:image {"className":"lv-tier-image"} --><figure class="wp-block-image lv-tier-image"><img src="{$p}sigma.jpg" alt="Base variant — clean ride, no electronics"/></figure><!-- /wp:image -->
-<!-- wp:paragraph {"className":"lv-tier-marker"} --><p class="lv-tier-marker">⚙ Normal · 5% GST</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-tier-marker"} --><p class="lv-tier-marker"><span>⚙ Normal · 5% GST</span></p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Base Variants</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-tier-price"} --><p class="lv-tier-price"><strong>₹560 – ₹1,700</strong> <span>wholesale, ex-Loni</span></p><!-- /wp:paragraph -->
 <!-- wp:list --><ul>
