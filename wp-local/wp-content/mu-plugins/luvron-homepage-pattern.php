@@ -162,7 +162,7 @@ function luvron_homepage_pattern_content() {
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">SIGMA SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">SIGMA Plus Tricycle</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%20would%20like%20a%20wholesale%20quote%20for%20%2ASIGMA%20Plus%20Tricycle%2A%20%28SKU%3A%20SIGMA-PLUS%29.%20Please%20share%20dealer%20pricing%20and%20dispatch%20lead%20time." target="_blank" rel="noopener">💬 Request Quote on WhatsApp →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -171,7 +171,7 @@ function luvron_homepage_pattern_content() {
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">AURA SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">AURA Plus Tricycle</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%20would%20like%20a%20wholesale%20quote%20for%20%2AAURA%20Plus%20Tricycle%2A%20%28SKU%3A%20AURA-PLUS%29.%20Please%20share%20dealer%20pricing%20and%20dispatch%20lead%20time." target="_blank" rel="noopener">💬 Request Quote on WhatsApp →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -180,7 +180,7 @@ function luvron_homepage_pattern_content() {
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">EAGLE SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">EAGLE Plus Tricycle</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%20would%20like%20a%20wholesale%20quote%20for%20%2AEAGLE%20Plus%20Tricycle%2A%20%28SKU%3A%20EAGLE-PLUS%29.%20Please%20share%20dealer%20pricing%20and%20dispatch%20lead%20time." target="_blank" rel="noopener">💬 Request Quote on WhatsApp →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -189,7 +189,7 @@ function luvron_homepage_pattern_content() {
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">ALEX SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">ALEX Plus Tricycle</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%20would%20like%20a%20wholesale%20quote%20for%20%2AALEX%20Plus%20Tricycle%2A%20%28SKU%3A%20ALEX-PLUS%29.%20Please%20share%20dealer%20pricing%20and%20dispatch%20lead%20time." target="_blank" rel="noopener">💬 Request Quote on WhatsApp →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 </div>
@@ -203,7 +203,7 @@ function luvron_homepage_pattern_content() {
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">RAMBO SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">RAMBO 333 Tricycle</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">12 pcs per master carton · 3×4 inner pack</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%20would%20like%20a%20wholesale%20quote%20for%20%2ARAMBO%20333%20Tricycle%2A%20%28SKU%3A%20RAMBO-333%29.%20Please%20share%20dealer%20pricing%20and%20dispatch%20lead%20time." target="_blank" rel="noopener">💬 Request Quote on WhatsApp →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -212,7 +212,7 @@ function luvron_homepage_pattern_content() {
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">HULK SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">HULK Pro Tricycle</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">15 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%20would%20like%20a%20wholesale%20quote%20for%20%2AHULK%20Pro%20Tricycle%2A%20%28SKU%3A%20HULK-PRO%29.%20Please%20share%20dealer%20pricing%20and%20dispatch%20lead%20time." target="_blank" rel="noopener">💬 Request Quote on WhatsApp →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -221,7 +221,7 @@ function luvron_homepage_pattern_content() {
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">CHARLIE SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">CHARLIE R1 Plus</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">15 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%20would%20like%20a%20wholesale%20quote%20for%20%2ACHARLIE%20R1%20Plus%2A%20%28SKU%3A%20CHARLIE-R1-PLUS%29.%20Please%20share%20dealer%20pricing%20and%20dispatch%20lead%20time." target="_blank" rel="noopener">💬 Request Quote on WhatsApp →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"className":"lv-prod"} -->
@@ -230,7 +230,7 @@ function luvron_homepage_pattern_content() {
 <!-- wp:paragraph {"className":"lv-prod-series"} --><p class="lv-prod-series">EMMA SERIES</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"lv-prod-name"} --><h3 class="wp-block-heading lv-prod-name">EMMA R1 Tricycle</h3><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"lv-prod-meta"} --><p class="lv-prod-meta">15 pcs per master carton · 1×1 inner pack</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="/shop/">View Wholesale Pricing →</a></p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"lv-prod-cta"} --><p class="lv-prod-cta"><a href="https://wa.me/919212389139?text=Hi%20Luvron%2C%20I%20would%20like%20a%20wholesale%20quote%20for%20%2AEMMA%20R1%20Tricycle%2A%20%28SKU%3A%20EMMA-R1%29.%20Please%20share%20dealer%20pricing%20and%20dispatch%20lead%20time." target="_blank" rel="noopener">💬 Request Quote on WhatsApp →</a></p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 </div>
